@@ -1,0 +1,42 @@
+---
+hide:
+  - toc
+---
+
+# Glossary {: .glossary-page }
+
+## Audit log
+
+Records of actions, configurations, versions, and other events associated with a system or workflow. Audit logs allow activities and results to be traced over time.
+
+## Bias
+
+Systematic error that can produce uneven or distorted results across groups, populations, or contexts. Bias can arise at multiple stages of the AI lifecycle, including data collection, preprocessing, modeling, evaluation, and deployment.
+
+## Explainability
+
+The extent to which an AI system's behavior and outputs can be understood or interpreted. What counts as a useful explanation depends on the research context and audience.
+
+## Fairness
+
+The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. Fairness can be defined and measured in different ways depending on the research context.
+
+## Provenance
+
+The documented origin, history, and handling of data, code, models, or other research artifacts.
+
+## QC & optimization
+
+Checking results and tuning performance, covering accuracy and efficiency.
+
+## RCD
+
+A research computing and data professional. Joy is found here!
+
+## Subgroup
+
+A defined segment of a population evaluated separately from the overall population. Subgroup analysis can reveal differences that are obscured by aggregate results.
+
+## Transparency
+
+The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented. That information should be accessible to the audiences who need it.

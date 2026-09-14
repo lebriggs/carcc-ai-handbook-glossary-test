@@ -1,0 +1,58 @@
+/* Custom styling for the CaRCC AI Facilitation Handbook. */
+
+/* STYLE GLOSSARY */
+
+/* START glossary styling. */
+
+/* Glossary terms are wrapped in <abbr> by the abbr extension.
+   Material's default underline is 1px dotted at low opacity, which is
+   too faint to read as interactive. This code makes it more visible. */
+
+.md-typeset abbr {
+  border-bottom: 2px dashed var(--md-accent-fg-color);
+}
+
+/* Increase the size of the tooltip text. */
+
+.md-tooltip2__inner {
+  font-size: 0.8rem;
+}
+
+/* Keep clickable glossary terms styled like glossary terms, not regular links. */
+
+.md-typeset a.glossary-link,
+.md-typeset a.glossary-link:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Turn off underling and tooltips for glossary terms in headings. */
+
+.md-typeset h1 abbr,
+.md-typeset h2 abbr,
+.md-typeset h3 abbr,
+.md-typeset h4 abbr,
+.md-typeset h5 abbr,
+.md-typeset h6 abbr {
+  border-bottom: none;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+/* Turn off underlining for terms on the full glossary.md page. */
+
+.md-typeset:has(.glossary-page) abbr {
+  border-bottom: none;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+/* Turn off the tooltip on devices that do not support hover.
+   Tapping a term goes straight to the glossary entry. */
+@media (hover: none) {
+  .md-tooltip2 {
+    display: none;
+  }
+}
+
+/* END glossary styling. */

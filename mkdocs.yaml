@@ -1,0 +1,23 @@
+site_name: The CaRCC AI Facilitation Handbook - Glossary Test
+
+hooks:
+  - hooks/glossary_links.py
+
+nav:
+  - Cross-Cutting Section: index.md
+  - Glossary: glossary.md
+
+theme:
+  name: material
+  features:
+    - content.tooltips
+
+markdown_extensions:
+  - abbr
+  - attr_list
+  - pymdownx.snippets:
+      auto_append:
+        - includes/glossary_tooltips.md
+
+extra_css:
+  - stylesheets/style.css
