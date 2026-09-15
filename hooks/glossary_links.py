@@ -28,7 +28,11 @@ log = logging.getLogger(f"mkdocs.hooks.{__name__}")
 
 # Glossary file locations
 
+# GLOSSARY_PAGE is the glossary page address used when building links.
+# Example: "fairness" links to glossary/#fairness
 GLOSSARY_PAGE = "glossary/"
+
+# GLOSSARY_SOURCE is the glossary.md file inside docs/.
 GLOSSARY_SOURCE = "glossary.md"
 
 # Regex patterns for finding terms in the rendered HTML
@@ -70,14 +74,17 @@ def on_page_content(html, page, config, files, **kwargs):
     )
 
     # Replace each glossary tooltip with a link.
+    # Flow: tooltip text → compare against full glossary definitions → find the matching glossary heading 
+    # → build the link to that heading
 
     def replace(match):
 
         # Get the tooltip definition and the term as it appears on the page.
         title, term = match.group(1), match.group(2)
 
-        # Find the glossary heading whose full definition starts with
-        # the shorter tooltip definition. 
+        # Match the short tooltip definition to the full glossary definition.
+        # The tooltip text must match the beginning of the glossary definition,
+        # and the matching heading is used as the link destination. 
 
         heading = next(
             (
@@ -89,6 +96,7 @@ def on_page_content(html, page, config, files, **kwargs):
         )
 
         # Error Handling:
+        
         # Warn if the tooltip definition does not match an entry in glossary.md.
         # Warn once per term so a repeated term does not flood the output.
         # Leave the term as a tooltip without a link so the site can still build.
