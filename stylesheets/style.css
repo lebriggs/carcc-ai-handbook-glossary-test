@@ -28,22 +28,6 @@
 
 /* WHERE GLOSSARY TERMS ARE SWITCHED OFF */
 
-/* Turn off underling and tooltips for glossary terms in headings and table headers. */
-
-.md-typeset h1 abbr,
-.md-typeset h2 abbr,
-.md-typeset h3 abbr,
-.md-typeset h4 abbr,
-.md-typeset h5 abbr,
-.md-typeset h6 abbr,
-.md-typeset th abbr {
-  border-bottom: none;
-  cursor: inherit;
-  pointer-events: none;
-}
-
-/* THE GLOSSARY PAGE */
-
 /* Turn off underlining for terms on the glossary.md page. */
 
 .md-typeset:has(.glossary-page) abbr {
@@ -51,6 +35,8 @@
   cursor: inherit;
   pointer-events: none;
 }
+
+/* THE GLOSSARY PAGE */
 
 /* Increase the size of the text of the A–Z index on the glossary.md page. */
 .glossary-index {
