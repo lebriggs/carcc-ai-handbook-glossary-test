@@ -158,11 +158,13 @@ def on_page_content(html, page, config, files, **kwargs):
             f'<abbr title="{title}">{term}</abbr></a>'
         )
 
-    # Leave headings, table headers, and existing links unchanged.
-    # Add glossary links everywhere else.
+    # Remove glossary markup from headings, table headers, and existing links.
+    # These occurrences do not count toward the per-page marking limit.
+    def strip_abbr(match):
+        return match.group(2)
 
     parts = EXCLUDED.split(html)
     return "".join(
-        part if i % 2 else ABBR.sub(replace, part)
+        ABBR.sub(strip_abbr, part) if i % 2 else ABBR.sub(replace, part)
         for i, part in enumerate(parts)
     )
