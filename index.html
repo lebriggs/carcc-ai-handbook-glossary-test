@@ -10,7 +10,7 @@
       
       
       
-        <link rel="next" href="glossary/">
+        <link rel="next" href="data-preparation/">
       
       
         
@@ -303,10 +303,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-cases" class="md-nav__link">
+  <a href="#test-edge-cases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test Cases
+        Test &amp; Edge Cases
       
     </span>
   </a>
@@ -322,6 +322,33 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -427,10 +454,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#test-cases" class="md-nav__link">
+  <a href="#test-edge-cases" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Test Cases
+        Test &amp; Edge Cases
       
     </span>
   </a>
@@ -464,28 +491,33 @@
 <h1 id="cross-cutting-section">Cross-Cutting Section</h1>
 <h2 id="ai-ethics">AI Ethics</h2>
 <h3 id="fairness-non-discrimination-and-bias"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">Fairness</abbr>, Non-Discrimination, and <abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts.">Bias</abbr></h3>
-<p><a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">Fairness</abbr></a> concerns whether AI systems perform equitably across relevant groups, populations, contexts, or use cases. <a class="glossary-link" href="glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts.">Bias</abbr></a> can enter at multiple stages, including data collection, labeling, preprocessing, model selection, evaluation, deployment, and interpretation. <a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> decisions around data, software, platforms, and infrastructure can introduce, amplify, or help mitigate <a class="glossary-link" href="glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts.">bias</abbr></a> at the data, model, and evaluation stages. <a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> facilitators can help researchers select and run tooling to detect disparate performance across <a class="glossary-link" href="glossary/#subgroup"><abbr title="A defined segment of a population evaluated separately from the overall population.">subgroups</abbr></a> and ensure evaluation environments are representative, documented, and reproducible. See the Benchmarking and Results &amp; Reporting sections for <a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">fairness</abbr></a>, interpretability, and reporting tooling.</p>
+<p><a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">Fairness</abbr></a> concerns whether AI systems perform equitably across relevant groups, populations, contexts, or use cases. <a class="glossary-link" href="glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts.">Bias</abbr></a> can enter at multiple stages, including data collection, labeling, preprocessing, model selection, evaluation, deployment, and interpretation. <a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> decisions around data, software, platforms, and infrastructure can introduce, amplify, or help mitigate bias at the data, model, and evaluation stages. RCD facilitators can help researchers select and run tooling to detect disparate performance across <a class="glossary-link" href="glossary/#subgroup"><abbr title="A defined segment of a population evaluated separately from the overall population.">subgroups</abbr></a> and ensure evaluation environments are representative, documented, and reproducible. See the Benchmarking and Results &amp; Reporting sections for fairness, interpretability, and reporting tooling.</p>
 <h3 id="accountability-and-responsibility">Accountability and Responsibility</h3>
-<p><a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">Fairness</abbr></a> and the other goals in this section remain aspirational unless a project team can show how a result was produced, who made key decisions, and who is responsible for addressing errors, harms, or unexpected outcomes. From an <a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> perspective, accountability is supported through auditability, <a class="glossary-link" href="glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>, and documentation: <a class="glossary-link" href="glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow.">audit logs</abbr></a> of experiment configurations, datasets, and results; version control for data, code, and model artifacts; documented approval pathways; and structured reporting such as model cards 3. These practices allow a team to trace biased, anomalous, or non-reproducible outcomes back to their source and assign clear ownership for remediation. See the Results &amp; Reporting section for reporting and documentation practices.</p>
+<p>Fairness and the other goals in this section remain aspirational unless a project team can show how a result was produced, who made key decisions, and who is responsible for addressing errors, harms, or unexpected outcomes. From an RCD perspective, accountability is supported through auditability, <a class="glossary-link" href="glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>, and documentation: <a class="glossary-link" href="glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow.">audit logs</abbr></a> of experiment configurations, datasets, and results; version control for data, code, and model artifacts; documented approval pathways; and structured reporting such as model cards 3. These practices allow a team to trace biased, anomalous, or non-reproducible outcomes back to their source and assign clear ownership for remediation. See the Results &amp; Reporting section for reporting and documentation practices.</p>
 <h3 id="transparency-and-explainability"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.">Transparency</abbr> and <abbr title="The extent to which an AI system's behavior and outputs can be understood or interpreted.">Explainability</abbr></h3>
-<p><a class="glossary-link" href="glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.">Transparency</abbr></a> concerns whether the assumptions, data sources, methods, limitations, and decision pathways of an AI system are documented and accessible to appropriate stakeholders. <a class="glossary-link" href="glossary/#explainability"><abbr title="The extent to which an AI system's behavior and outputs can be understood or interpreted.">Explainability</abbr></a> concerns whether model behavior and outputs can be interpreted in ways that are meaningful for the research context. <a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> facilitators can support <a class="glossary-link" href="glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.">transparency</abbr></a> and <a class="glossary-link" href="glossary/#explainability"><abbr title="The extent to which an AI system's behavior and outputs can be understood or interpreted.">explainability</abbr></a> by encouraging version-controlled workflows, documented software environments, data and model <a class="glossary-link" href="glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>, experiment tracking, reproducible pipelines, and structured reporting artifacts such as model cards 3 and datasheets 4. These practices help researchers explain not only what a model produced, but how the result was generated.</p>
-<h3 id="test-cases">Test Cases</h3>
+<p><a class="glossary-link" href="glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.">Transparency</abbr></a> concerns whether the assumptions, data sources, methods, limitations, and decision pathways of an AI system are documented and accessible to appropriate stakeholders. <a class="glossary-link" href="glossary/#explainability"><abbr title="The extent to which an AI system's behavior and outputs can be understood or interpreted.">Explainability</abbr></a> concerns whether model behavior and outputs can be interpreted in ways that are meaningful for the research context. RCD facilitators can support transparency and explainability by encouraging version-controlled workflows, documented software environments, data and model provenance, experiment tracking, reproducible pipelines, and structured reporting artifacts such as model cards 3 and datasheets 4. These practices help researchers explain not only what a model produced, but how the result was generated.</p>
+<h3 id="test-edge-cases">Test &amp; Edge Cases</h3>
 <ol>
 <li>
-<p>Add a test for <a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">Fairness</abbr></a> versus <a class="glossary-link" href="glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.">fairness</abbr></a>.</p>
+<p>Add a test for stemming. Variants of a term share one count, so the number of underlined occurrences depends on what the MARKS_PER_PAGE variable is set to in the glossary_links hook. At the <strong>default of 1</strong>: the first Fairness is underlined and the later fairness is not. Similarly, audit logs is underlined but audit log is not.</p>
 </li>
 <li>
-<p>Add a test for <a class="glossary-link" href="glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow.">audit log</abbr></a> verus <a class="glossary-link" href="glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow.">audit logs</abbr></a>.</p>
+<p>Add a test for <a class="glossary-link" href="glossary/#qc-optimization"><abbr title="Checking results and tuning performance, covering accuracy and efficiency.">QC &amp; optimization</abbr></a>. Ampersands are tricky for links.</p>
 </li>
 <li>
-<p>Add a test for <a class="glossary-link" href="glossary/#qc-optimization"><abbr title="Checking results and tuning performance, covering accuracy and efficiency.">QC &amp; optimization</abbr></a> and <a class="glossary-link" href="glossary/#qc-optimization"><abbr title="Checking results and tuning performance, covering accuracy and efficiency.">QC &amp; Optimization</abbr></a>. Ampersands are tricky for links.</p>
+<p>Add a test for a term that begins with a number:
+<a class="glossary-link" href="glossary/#3-2-1-backup-rule"><abbr title="A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite.">3-2-1 backup rule</abbr></a>.</p>
+</li>
+<li>
+<p>Add a test for a term that includes an accent:
+<a class="glossary-link" href="glossary/#uberanpassung"><abbr title="German term for overfitting, seen in German-language machine learning literature.">Überanpassung</abbr></a> and <a class="glossary-link" href="glossary/#naive-bayes"><abbr title="A classification method that applies Bayes' theorem while assuming every feature is independent of the others.">naïve Bayes</abbr></a>.</p>
 </li>
 <li>
 <p>Add a failure test where the tooltip defintion does not match the glossary definition:<br />
-<a class="glossary-link" href="glossary/#rcd"><abbr title="A research computing and data professional.">RCD</abbr></a> (correct) versus <abbr title="Research computing and data professionals.">RCDs</abbr> (incorrect).</p>
+RCD (correct) versus <abbr title="Research computing and data professionals.">RCDs</abbr> (incorrect).</p>
 </li>
 <li>
-<p>Add <abbr title="Research computing and data professionals.">RCDs</abbr> and <abbr title="Research computing and data professionals.">RCDs</abbr> to test the handling of unmatched term logging. You will only see one error warning, even though there are three failures. The build will still be successful.</p>
+<p>Add a test for <a class="glossary-link" href="glossary/#aiml"><abbr title="Artificial intelligence and machine learning considered together.">AI/ML</abbr></a>. The slash should be removed from the heading ID rather than turned into a hyphen.</p>
 </li>
 </ol>
 <!--
