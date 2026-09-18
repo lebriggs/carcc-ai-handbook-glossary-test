@@ -11,6 +11,8 @@ summary, what are its edge cases, and what type of problem needs to be addressed
 with it. This stage is essentially an extension of the Problem Definition and
 RCD Resource Planning phase.
 
+Test: RCD professionals bring so much joy to the world.
+
 ## Examples of Specific Tasks
 
 * Cleaning and curating raw global record of 4.3 billion tweets spanning time,
