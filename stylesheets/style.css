@@ -42,13 +42,6 @@
   pointer-events: none;
 }
 
-/* Turn off underlining and tooltips for glossary terms inside other links. */
-a:not(.glossary-link) abbr {
-  border-bottom: none;
-  cursor: inherit;
-  pointer-events: none;
-}
-
 /* THE GLOSSARY PAGE */
 
 /* Turn off underlining for terms on the glossary.md page. */
