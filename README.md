@@ -1,33 +1,55 @@
-## Purpose
+# Test Glossary for the CaRCC AI Facilitation Handbook
 
-Test site for adding a glossary to the CaRCC AI Facilitation Handbook. Glossary terms are underlined wherever they appear in the handbook. On desktop, they show a short definition on hover and link to the full definition on the glossary page.
+## Summary
 
-Live site: https://lebriggs.github.io/carcc-ai-handbook-glossary-test/
+Test site for adding a glossary to the CaRCC AI Facilitation Handbook. By default, the first occurrence of each glossary entry on a page is underlined. On desktop, it shows a short definition on hover and links to the full definition on the glossary page.
 
-The page text is one real section from the handbook. The glossary definitions are rough drafts used to test how the glossary works, not definitions for review.
+## Live Site
+
+[https://lebriggs.github.io/carcc-ai-handbook-glossary-test/](https://lebriggs.github.io/carcc-ai-handbook-glossary-test/)
 
 ## How The Glossary Works
 
-The `abbr` Markdown extension finds glossary terms in the page text and adds the tooltip definition. A small Python hook turns each term into a link to its full entry on the glossary page.
+The `abbr` Markdown extension finds glossary terms in the page text and adds the tooltip definition. A small Python hook links the first occurrence of each glossary entry on a page to its full entry on the glossary page.
 
 On devices that do not support hover, the tooltip is turned off so tapping a term goes straight to the glossary entry.
 
+A second Python hook builds the A–Z index at the top of the glossary page and adds a letter heading before the first term under each letter. Letters with no entries stay as plain text in the index. Terms that do not begin with a letter file under a `0-9` heading, and accented letters file under their plain letter, so Überanpassung appears under U. The hook also sorts the terms in `glossary.md` in alphabetical order.
+
+The page text comes from two real sections of the handbook. The glossary definitions are rough drafts used to test how the glossary works, not definitions for review.
+
+## Exclusions
+
+Glossary links are not added to:
+
+- the glossary page itself
+- headings
+- table header cells
+- terms that are already inside another link
+
 ## Error Handling
 
-If a term has no matching entry, the build prints a warning naming the term, once per page. The term keeps its tooltip but gets no link. The site
-still builds.
+If the glossary files contain a problem, the build prints a warning naming it. Matching problems leave the affected term as a tooltip without a link. Duplicate glossary terms and a missing A–Z index span also trigger warnings. Each problem is reported once per build, and the site still builds.
 
 ## Files
 
-`docs/glossary.md` contains the full glossary entries.
+- `docs/glossary.md` contains the full glossary entries. It also holds the empty span that the A–Z index is written into at build time.
+- `includes/glossary_tooltips.md` contains the terms that `abbr` looks for and the shorter definitions used in the tooltips. Capitalized and plural forms each need their own line because `abbr` matches the text exactly. The tooltip definition must match the beginning of the full definition in `glossary.md`, because the hook uses that text to find the correct glossary entry.
+- `hooks/glossary_links.py` adds the links from glossary terms to their full entries.
+- `hooks/glossary_index.py` sorts the glossary terms and builds the A–Z index and letter headings.
+- `docs/stylesheets/style.css` styles the glossary terms, the tooltips, the A–Z index, and the letter headings.
 
-`includes/glossary_tooltips.md` contains the terms that `abbr` looks for and the shorter definitions used in the tooltips. Capitalized and plural forms each need their own line because `abbr` matches the text exactly.
+## What The Glossary Needs In mkdocs.yaml
 
-The tooltip definition must match the beginning of the full definition in `glossary.md`. The Python hook uses that text to find the correct glossary entry.
+Everything in `mkdocs.yaml` except `site_name` and `nav` is there for the glossary. Moving this into the handbook means bringing across:
 
-`hooks/glossary_links.py` adds the links from glossary terms to their full entries and warns when it cannot find a matching glossary entry.
+- `hooks`, listing both `hooks/glossary_links.py` and `hooks/glossary_index.py`.
+- `content.tooltips` under theme features, which is what draws the tooltip.
+- `markdown_extensions`, all of it: `abbr` for the tooltip definitions, `attr_list` for the `{.glossary-page }` class on the glossary heading, and `pymdownx.snippets` with `auto_append` so the tooltip file is added to every page.
+- `extra_css`, pointing at `stylesheets/style.css`.
 
 ## Running The Test Site Locally
 
-py -m pip install -r requirements.txt
-py -m mkdocs serve
+    py -m pip install -r requirements.txt
+    py -m mkdocs serve
+    

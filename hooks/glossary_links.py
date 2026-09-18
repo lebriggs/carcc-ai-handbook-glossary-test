@@ -4,7 +4,7 @@ The abbr extension wraps matching terms in <abbr title="...">.
 After each page is rendered, this code replaces those elements with links to
 the matching heading on glossary.md while preserving the tooltip text.
 
-Terms found in headings and glossary.md are excluded.
+Terms found in headings, table headings, and glossary.md are excluded.
 """
 
 # Imports
@@ -12,19 +12,23 @@ Terms found in headings and glossary.md are excluded.
 # logging sends the warnings to MkDocs so they show up coloured
 # re is Python's regex module
 # unescape turns things like &amp; back into normal characters
-# get_relative_url works out the path from the current page to the glossary.
+# markdown_slugify creates the same heading IDs that Markdown uses
+# get_relative_url works out the path from the current page to the glossary
 
 import logging
 import re
 from html import unescape
 
 from mkdocs.utils import get_relative_url
+from markdown.extensions.toc import slugify as markdown_slugify
 
 # Set up the logger
 # The name has to start with mkdocs. so MkDocs formats the warnings
 # hooks says what this file actually is
 
 log = logging.getLogger(f"mkdocs.hooks.{__name__}")
+
+# SETTINGS
 
 # Glossary file locations
 
@@ -35,17 +39,38 @@ GLOSSARY_PAGE = "glossary/"
 # GLOSSARY_SOURCE is the glossary.md file inside docs/.
 GLOSSARY_SOURCE = "glossary.md"
 
+# How many times each glossary term is marked on a page
+
+# Variants of the same term share one count, so Fairness and fairness count as one term
+# 0 marks every Fairness and every fairness on the page
+# 1 marks whichever of them comes first and leaves the rest plain (default)
+# 2 marks the first two of them, and so on
+
+# This is the variable you change:
+
+MARKS_PER_PAGE = 1
+
+# Terms already warned about during this build, so each problem is only reported once.
+seen = set()
+
+# Clear warning history at the start of each build.
+def on_pre_build(config):
+    seen.clear()
+
 # Regex patterns for finding terms in the rendered HTML
 # ABBR matches the <abbr> tags wrapped around each glossary term
-# HEADING matches a whole heading, so terms inside one can be left alone
+# EXCLUDED matches headings, table header cells, and existing links,
+# so glossary terms inside them are left alone
 
 ABBR = re.compile(r'<abbr title="([^"]*)">(.*?)</abbr>', re.DOTALL)
-HEADING = re.compile(r'(<h[1-6][^>]*>.*?</h[1-6]>)', re.DOTALL)
+EXCLUDED = re.compile(
+    r'(<h[1-6][^>]*>.*?</h[1-6]>|<th[^>]*>.*?</th>|<a\b[^>]*>.*?</a>)',
+    re.DOTALL,
+)
 
-# Turn a term into a URL-friendly heading ID
-
+# Turn a term into the same URL-friendly heading ID that Markdown uses
 def slugify(term):
-    return re.sub(r"[^a-z0-9]+", "-", unescape(term).lower().strip()).strip("-")
+    return markdown_slugify(unescape(term), "-")
 
 # Run after MkDocs renders each page
 
@@ -55,10 +80,10 @@ def on_page_content(html, page, config, files, **kwargs):
 
     if page.file.src_uri == GLOSSARY_SOURCE:
         return html
+    
+    # How many times each glossary entry has been marked on this page.
 
-    # Terms already warned about on this page, so each one is only reported once.
-
-    seen = set()
+    marked = {}
 
     # Work out the relative path from the current page to glossary.md.
 
@@ -70,11 +95,11 @@ def on_page_content(html, page, config, files, **kwargs):
         glossary = f.read()
 
     glossary_entries = re.findall(
-        r"^##\s+(.+?)\s*$\n+\s*(.+)$", glossary, re.MULTILINE
+        r"^###\s+(.+?)\s*$\n+\s*(.+)$", glossary, re.MULTILINE
     )
 
     # Replace each glossary tooltip with a link.
-    # Flow: tooltip text → compare against full glossary definitions → find the matching glossary heading 
+    # Flow: tooltip text → compare against full glossary definitions → find the matching glossary heading
     # → build the link to that heading
 
     def replace(match):
@@ -84,19 +109,26 @@ def on_page_content(html, page, config, files, **kwargs):
 
         # Match the short tooltip definition to the full glossary definition.
         # The tooltip text must match the beginning of the glossary definition,
-        # and the matching heading is used as the link destination. 
+        # and the matching heading is used as the link destination.
 
-        heading = next(
-            (
-                heading.strip()
-                for heading, definition in glossary_entries
-                if definition.strip().startswith(title)
-            ),
-            None,
-        )
+        matches = [
+            heading.strip()
+            for heading, definition in glossary_entries
+            if definition.strip().startswith(title)
+        ]
 
-        # Error Handling:
-        
+        # Warn if the tooltip definition matches more than one glossary entry.
+        # An ambiguous match cannot be linked reliably.
+        if len(matches) > 1:
+            if term not in seen:
+                seen.add(term)
+                log.warning(
+                    f"HEY! There's a problem. More than one glossary entry matches: `{term}`"
+                )
+            return f'<abbr title="{title}">{term}</abbr>'
+
+        heading = matches[0] if matches else None
+
         # Warn if the tooltip definition does not match an entry in glossary.md.
         # Warn once per term so a repeated term does not flood the output.
         # Leave the term as a tooltip without a link so the site can still build.
@@ -108,7 +140,16 @@ def on_page_content(html, page, config, files, **kwargs):
                     f"HEY! There's a problem. No matching glossary entry found for: `{term}`"
                 )
             return f'<abbr title="{title}">{term}</abbr>'
-        
+
+        # Count this occurrence against the entry's budget for this page.
+
+        marked[heading] = marked.get(heading, 0) + 1
+
+        # Leave later occurrences as plain text, with no underline and no link.
+
+        if MARKS_PER_PAGE and marked[heading] > MARKS_PER_PAGE:
+            return term
+
         # Keep the <abbr> element for tooltip styling, but wrap it in
         # a link to the matching heading on the full glossary page.
 
@@ -117,9 +158,10 @@ def on_page_content(html, page, config, files, **kwargs):
             f'<abbr title="{title}">{term}</abbr></a>'
         )
 
-    # Leave headings unchanged and add glossary links everywhere else.
+    # Leave headings, table headers, and existing links unchanged.
+    # Add glossary links everywhere else.
 
-    parts = HEADING.split(html)
+    parts = EXCLUDED.split(html)
     return "".join(
         part if i % 2 else ABBR.sub(replace, part)
         for i, part in enumerate(parts)
