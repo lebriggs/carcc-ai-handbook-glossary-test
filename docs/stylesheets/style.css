@@ -2,7 +2,7 @@
 
 /* STYLE GLOSSARY */
 
-/* START glossary styling. */
+/* GLOSSARY TERMS IN THE TEXT */
 
 /* Glossary terms are wrapped in <abbr> by the abbr extension.
    Material's default underline is 1px dotted at low opacity, which is
@@ -26,26 +26,56 @@
   text-decoration: none;
 }
 
-/* Turn off underling and tooltips for glossary terms in headings. */
+/* WHERE GLOSSARY TERMS ARE SWITCHED OFF */
+
+/* Turn off underling and tooltips for glossary terms in headings and table headers. */
 
 .md-typeset h1 abbr,
 .md-typeset h2 abbr,
 .md-typeset h3 abbr,
 .md-typeset h4 abbr,
 .md-typeset h5 abbr,
-.md-typeset h6 abbr {
+.md-typeset h6 abbr,
+.md-typeset th abbr {
   border-bottom: none;
   cursor: inherit;
   pointer-events: none;
 }
 
-/* Turn off underlining for terms on the full glossary.md page. */
+/* Turn off underlining and tooltips for glossary terms inside other links. */
+a:not(.glossary-link) abbr {
+  border-bottom: none;
+  cursor: inherit;
+  pointer-events: none;
+}
+
+/* THE GLOSSARY PAGE */
+
+/* Turn off underlining for terms on the glossary.md page. */
 
 .md-typeset:has(.glossary-page) abbr {
   border-bottom: none;
   cursor: inherit;
   pointer-events: none;
 }
+
+/* Increase the size of the text of the A–Z index on the glossary.md page. */
+.glossary-index {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* Increase the weight of the A–Z letter headings and add a divider line, on the glossary.md page. */
+h1.glossary-page ~ h2 {
+    font-weight: 500;
+    font-size: 1.25rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* MOBILE */
 
 /* Turn off the tooltip on devices that do not support hover.
    Tapping a term goes straight to the glossary entry. */
@@ -55,4 +85,4 @@
   }
 }
 
-/* END glossary styling. */
+/* END GLOSSARY STYLING. */

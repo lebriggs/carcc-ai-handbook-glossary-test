@@ -13,6 +13,10 @@ The tooltip definition must match the beginning of the full definition in glossa
 
 <!-- markdownlint-disable MD041 -->
 
+*[3-2-1 backup rule]: A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite.
+
+*[AI/ML]: Artificial intelligence and machine learning considered together.
+
 *[audit logs]: Records of actions, configurations, versions, and other events associated with a system or workflow.
 *[audit log]: Records of actions, configurations, versions, and other events associated with a system or workflow.
 
@@ -24,6 +28,9 @@ The tooltip definition must match the beginning of the full definition in glossa
 
 *[fairness]: The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.
 *[Fairness]: The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases.
+
+*[naïve Bayes]: A classification method that applies Bayes' theorem while assuming every feature is independent of the others.
+*[Naïve Bayes]: A classification method that applies Bayes' theorem while assuming every feature is independent of the others.
 
 *[provenance]: The documented origin, history, and handling of data, code, models, or other research artifacts.
 *[Provenance]: The documented origin, history, and handling of data, code, models, or other research artifacts.
@@ -39,3 +46,6 @@ The tooltip definition must match the beginning of the full definition in glossa
 
 *[transparency]: The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.
 *[Transparency]: The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented.
+
+*[überanpassung]: German term for overfitting, seen in German-language machine learning literature.
+*[Überanpassung]: German term for overfitting, seen in German-language machine learning literature.
