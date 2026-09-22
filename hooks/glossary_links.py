@@ -12,15 +12,20 @@ Terms found in headings, table headings, and glossary.md are excluded.
 # logging sends the warnings to MkDocs so they show up coloured
 # re is Python's regex module
 # unescape turns things like &amp; back into normal characters
+# Path lets us get the hook name from this Python file
 # markdown_slugify creates the same heading IDs that Markdown uses
 # get_relative_url works out the path from the current page to the glossary
 
 import logging
 import re
 from html import unescape
+from pathlib import Path
 
-from mkdocs.utils import get_relative_url
 from markdown.extensions.toc import slugify as markdown_slugify
+from mkdocs.utils import get_relative_url
+
+# Get the hook name from this Python file for warning messages.
+HOOK_NAME = Path(__file__).stem
 
 # Set up the logger
 # The name has to start with mkdocs. so MkDocs formats the warnings
@@ -53,9 +58,11 @@ MARKS_PER_PAGE = 1
 # Terms already warned about during this build, so each problem is only reported once.
 seen = set()
 
+
 # Clear warning history at the start of each build.
 def on_pre_build(config):
     seen.clear()
+
 
 # Regex patterns for finding terms in the rendered HTML
 # ABBR matches the <abbr> tags wrapped around each glossary term
@@ -64,23 +71,26 @@ def on_pre_build(config):
 
 ABBR = re.compile(r'<abbr title="([^"]*)">(.*?)</abbr>', re.DOTALL)
 EXCLUDED = re.compile(
-    r'(<h[1-6][^>]*>.*?</h[1-6]>|<th[^>]*>.*?</th>|<a\b[^>]*>.*?</a>)',
+    r"(<h[1-6][^>]*>.*?</h[1-6]>|<th[^>]*>.*?</th>|<a\b[^>]*>.*?</a>)",
     re.DOTALL,
 )
+
 
 # Turn a term into the same URL-friendly heading ID that Markdown uses
 def slugify(term):
     return markdown_slugify(unescape(term), "-")
 
+
 # Run after MkDocs renders each page
+
 
 def on_page_content(html, page, config, files, **kwargs):
 
     # Do not add glossary links to the glossary page itself.
 
-    if page.file.src_uri == GLOSSARY_SOURCE:
-        return html
-    
+    if page.file.src_uri == "glossary.md":
+        return ABBR.sub(lambda match: match.group(2), html)
+
     # How many times each glossary entry has been marked on this page.
 
     marked = {}
@@ -119,12 +129,19 @@ def on_page_content(html, page, config, files, **kwargs):
 
         # Warn if the tooltip definition matches more than one glossary entry.
         # An ambiguous match cannot be linked reliably.
+        # Report the conflicting glossary entries together and only once.
+
         if len(matches) > 1:
-            if term not in seen:
-                seen.add(term)
+            warning_key = ("ambiguous", tuple(matches))
+
+            if warning_key not in seen:
+                seen.add(warning_key)
                 log.warning(
-                    f"HEY! There's a problem. More than one glossary entry matches: `{term}`"
+                    f"HEY! From: [{HOOK_NAME}]. There's a problem. "
+                    f"More than one glossary entry shares a definition: "
+                    + ", ".join(f"`{heading}`" for heading in matches)
                 )
+
             return f'<abbr title="{title}">{term}</abbr>'
 
         heading = matches[0] if matches else None
@@ -137,7 +154,7 @@ def on_page_content(html, page, config, files, **kwargs):
             if term not in seen:
                 seen.add(term)
                 log.warning(
-                    f"HEY! There's a problem. No matching glossary entry found for: `{term}`"
+                    f"HEY! From: [{HOOK_NAME}]. There's a problem. No matching glossary entry found for: `{term}`"
                 )
             return f'<abbr title="{title}">{term}</abbr>'
 

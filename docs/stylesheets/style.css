@@ -26,16 +26,6 @@
   text-decoration: none;
 }
 
-/* WHERE GLOSSARY TERMS ARE SWITCHED OFF */
-
-/* Turn off underlining for terms on the glossary.md page. */
-
-.md-typeset:has(.glossary-page) abbr {
-  border-bottom: none;
-  cursor: inherit;
-  pointer-events: none;
-}
-
 /* THE GLOSSARY PAGE */
 
 /* Increase the size of the text of the A–Z index on the glossary.md page. */

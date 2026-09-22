@@ -29,7 +29,11 @@ Glossary links are not added to:
 
 ## Error Handling
 
-If the glossary files contain a problem, the build prints a warning naming it. Matching problems leave the affected term as a tooltip without a link. Duplicate glossary terms and a missing A–Z index span also trigger warnings. Each problem is reported once per build, and the site still builds.
+- If no glossary entry matches a tooltip definition, the build warns and leaves the term as a tooltip without a link.
+- If more than one glossary entry shares a definition, the build warns and lists the matching entries. The term remains a tooltip without a link.
+- If glossary terms would use the same link, the build warns and lists the conflicting terms.
+- If the A–Z index span is missing, the build warns and leaves the glossary page as written without building the index.
+- Each problem is reported once per build, and the site still builds.
 
 ## Files
 
