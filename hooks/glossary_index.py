@@ -12,15 +12,25 @@ Terms are sorted at build time, so they can be added to glossary.md in any order
 # logging reports problems through the MkDocs build output
 # re is Python's regex module
 # unicodedata lets us fold accented letters back to a plain letter
+# Path lets us get the hook name from this Python file
 # ascii_uppercase gives us the letters A through Z
+# markdown_slugify creates the same heading IDs that Markdown uses
 
 import logging
 import re
 import unicodedata
+from pathlib import Path
 from string import ascii_uppercase
+
+from markdown.extensions.toc import slugify as markdown_slugify
+
+# Get the hook name from this Python file for warning messages.
+HOOK_NAME = Path(__file__).stem
 
 # Logger for messages from this hook
 log = logging.getLogger("mkdocs.hooks")
+
+# SETTINGS
 
 # Glossary file location
 GLOSSARY_SOURCE = "glossary.md"
@@ -42,6 +52,7 @@ INDEX_SPAN = re.compile(
 # Accented letters fold to the plain letter, so Überanpassung files under U.
 # Some letters, such as Ł, Ø, and Æ, do not decompose this way and will fall under 0-9.
 # Everything else files under 0-9.
+
 
 def bucket(term):
     first = unicodedata.normalize("NFKD", term.strip()[:1])[:1].upper()
@@ -67,22 +78,27 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # Warn and stop if the index span is missing, rather than failing quietly.
     if not INDEX_SPAN.search(markdown):
         log.warning(
-            f"HEY! There's a problem. No glossary-index span found in {GLOSSARY_SOURCE}, so the A to Z index was not built."
+            f"HEY! From: [{HOOK_NAME}]. There's a problem. No glossary-index span found in {GLOSSARY_SOURCE}, so the A to Z index was not built."
         )
         return markdown
 
-    # Warn if the same glossary term appears more than once.
-    # Duplicate headings get different IDs, but glossary links only know the term text,
-    # so links can only reliably point to the first matching heading.
-    # Solution: delete the duplicate term
-    
-    duplicates = sorted({term for term in terms if terms.count(term) > 1})
+    # Warn if two glossary terms would generate the same link.
+    # Markdown gives duplicate heading IDs different suffixes, but glossary links
+    # only know the term text, so only the first heading can be linked reliably.
+    # Solution: rename or delete one of the terms.
 
-    if duplicates:
-        log.warning(
-            "HEY! There's a problem. Duplicate glossary term(s) found: "
-        + ", ".join(f"`{term}`" for term in duplicates)
-        )
+    links = {}
+
+    for term in terms:
+        link = markdown_slugify(term, "-")
+        links.setdefault(link, []).append(term)
+
+    for matching_terms in links.values():
+        if len(matching_terms) > 1:
+            log.warning(
+                f"HEY! From: [{HOOK_NAME}]. These glossary terms would use the same link: "
+                + ", ".join(f"`{term}`" for term in matching_terms)
+            )
 
     # Sort the terms alphabetically
 
@@ -90,7 +106,7 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # parts holds the page top, then a term and a body, alternating, for each entry
     parts = TERM_HEADING.split(markdown)
 
-   # Pair each term with its body, then order by letter group first and term second
+    # Pair each term with its body, then order by letter group first and term second
     entries = sorted(
         zip(parts[1::2], parts[2::2]),
         key=lambda entry: (
@@ -110,7 +126,7 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # Tell the user if the terms had to be sorted.
     if [term for term, _ in entries] != terms:
         log.info(
-            f"HEY! The terms in {GLOSSARY_SOURCE} weren't in alphabetical order. "
+            f"HEY! From: [{HOOK_NAME}]. The terms in {GLOSSARY_SOURCE} weren't in alphabetical order. "
             "I sorted them for you."
         )
 
@@ -121,9 +137,7 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # Headings with entries become links; the rest stay as plain text.
     # \u00a0 is a non-breaking space, so a dot never starts a wrapped line.
     index = "\u00a0· ".join(
-        f"[{heading}](#{heading.lower()})"
-        if heading in headings_used
-        else heading
+        f"[{heading}](#{heading.lower()})" if heading in headings_used else heading
         for heading in [NUMERIC_BUCKET, *ascii_uppercase]
     )
 
