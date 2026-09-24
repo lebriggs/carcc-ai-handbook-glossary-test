@@ -2,7 +2,7 @@
 
 ## Summary
 
-Test site for adding a glossary to the CaRCC AI Facilitation Handbook. By default, the first occurrence of each glossary entry on a page is underlined. On desktop, it shows a short definition on hover and links to the full definition on the glossary page.
+Test site for adding a glossary to the CaRCC AI Facilitation Handbook. By default, the first occurrence of each glossary entry on a page is underlined. On desktop, it shows a short definition on hover and links to the full definition on the glossary page. The glossary page is automatically sorted and an A–Z index is generated at build time.
 
 ## Live Site
 
@@ -14,7 +14,7 @@ The `abbr` Markdown extension finds glossary terms in the page text and adds the
 
 On devices that do not support hover, the tooltip is turned off so tapping a term goes straight to the glossary entry.
 
-A second Python hook builds the A–Z index at the top of the glossary page and adds a letter heading before the first term under each letter. Letters with no entries stay as plain text in the index. Terms that do not begin with a letter file under a `0-9` heading, and accented letters file under their plain letter, so Überanpassung appears under U. The hook also sorts the terms in `glossary.md` in alphabetical order.
+A second Python hook builds the A–Z index at the top of the glossary page and adds a section heading before the first term under each letter. Letters with no entries stay as plain text in the index. Terms that do not begin with a letter file under a `0-9` heading, and accented letters file under their plain letter, so Überanpassung appears under U. The hook also sorts the terms in `glossary.md` in alphabetical order.
 
 The page text comes from two real sections of the handbook. The glossary definitions are rough drafts used to test how the glossary works, not definitions for review.
 
@@ -30,7 +30,7 @@ Glossary links are not added to:
 ## Error Handling
 
 - If no glossary entry matches a tooltip definition, the build warns and leaves the term as a tooltip without a link.
-- If more than one glossary entry shares a definition, the build warns and lists the matching entries. The term remains a tooltip without a link.
+- If a tooltip definition matches more than one glossary entry, the build warns and lists the matching entries.
 - If glossary terms would use the same link, the build warns and lists the conflicting terms.
 - If the A–Z index span is missing, the build warns and leaves the glossary page as written without building the index.
 - Each problem is reported once per build, and the site still builds.

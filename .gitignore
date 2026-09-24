@@ -5,3 +5,6 @@ site/
 
 # Ignore Python cache files created when the MkDocs hook runs.
 __pycache__/
+
+# Ruff cache
+.ruff_cache/
