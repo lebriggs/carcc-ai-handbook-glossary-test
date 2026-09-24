@@ -1,8 +1,8 @@
 """Builds the glossary index and alphabetical section headings.
 
 The glossary terms are stored as ### headings in glossary.md.
-This hook sorts those terms, generates the A to Z index, and inserts the
-matching ## letter heading before the first term for each letter.
+This hook sorts those terms, generates the A to Z index, and inserts a
+matching ## section heading before the first term for each letter.
 
 Terms are sorted at build time, so they can be added to glossary.md in any order.
 """
@@ -39,6 +39,7 @@ GLOSSARY_SOURCE = "glossary.md"
 NUMERIC_BUCKET = "0-9"
 
 # Find glossary terms stored as ### headings
+# Capture the heading text so each term can be sorted and added to the index
 TERM_HEADING = re.compile(r"^###\s+(.+?)\s*$", re.MULTILINE)
 
 # Find the span used for the A to Z glossary index
@@ -104,10 +105,13 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
 
     # Cut the page at each ### heading
     # parts holds the page top, then a term and a body, alternating, for each entry
+    # After splitting, odd-numbered parts are term headings and
+    # even-numbered parts after the first are their matching entry bodies.
     parts = TERM_HEADING.split(markdown)
 
     # Pair each term with its body, then order by letter group first and term second
     entries = sorted(
+        # Pair each term heading with the entry body that follows it.
         zip(parts[1::2], parts[2::2]),
         key=lambda entry: (
             bucket(entry[0]),
