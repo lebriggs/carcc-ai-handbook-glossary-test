@@ -1,5 +1,8 @@
 site_name: The CaRCC AI Facilitation Handbook - Glossary Test
 
+watch:
+  - includes
+
 hooks:
   - hooks/glossary_links.py
   - hooks/glossary_index.py
@@ -7,6 +10,7 @@ hooks:
 nav:
   - Cross-Cutting Section: index.md
   - Data Preparation: data-preparation.md
+  - Results & Reporting: results-reporting.md
   - Glossary: glossary.md
 
 theme:

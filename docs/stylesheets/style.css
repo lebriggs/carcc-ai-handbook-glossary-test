@@ -9,7 +9,7 @@
    too faint to read as interactive. This code makes it more visible. */
 
 .md-typeset abbr {
-  border-bottom: 2px dashed var(--md-accent-fg-color);
+  border-bottom: 1.5px dashed var(--md-accent-fg-color);
 }
 
 /* Increase the size of the tooltip text. */
