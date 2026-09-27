@@ -23,15 +23,10 @@ Transparency concerns whether the assumptions, data sources, methods, limitation
 
 1. Add a test for stemming. Variants of a term share one count, so the number of underlined occurrences depends on what the MARKS_PER_PAGE variable is set to in the glossary_links hook. At the **default of 1**: the first Fairness is underlined and the later fairness is not. Similarly, audit logs is underlined but audit log is not.
 
-2. Add a test for QC & optimization. Ampersands are tricky for links.
+2. Add a test for QC & optimization. Checks that an ampersand is handled correctly in the glossary link.
 
-3. Add a test for a term that begins with a number:
-3-2-1 backup rule.
+3. Add a test for a term that begins with a number: 3-2-1 backup rule. Checks that a term beginning with a number links correctly to its glossary entry.
 
-4. Add a test for a term that includes an accent:
-Überanpassung and naïve Bayes.
+4. Add a test for a term that includes an accent: Überanpassung and naïve Bayes. Checks that accented characters produce the correct glossary links.
 
-5. Add a failure test where the tooltip defintion does not match the glossary definition:  
-RCD (correct) versus RCDs (incorrect).
-
-6. Add a test for AI/ML. The slash should be removed from the heading ID rather than turned into a hyphen.
+5. Add a test for AI/ML. The slash should be removed from the heading ID rather than turned into a hyphen.

@@ -1,0 +1,28 @@
+# Term variants (or stemming) used when generating glossary tooltips.
+# The first item on each line must match the glossary term exactly.
+# Add any additional variants after it, separated by |.
+# Pattern: Canonical term | variant
+# Example: Audit log | audit log | audit logs
+# Each variant will use the same tooltip definition as the glossary term.
+
+# Variant Terms List
+
+Audit log | audit log | audit logs
+Benchmarking | benchmarking
+Bias | bias
+Calibration plot | calibration plots
+Container | containers
+Controlled-access deposit | controlled-access deposit
+Explainability | explainability
+Fairness | fairness
+Fairness assessment | fairness assessment
+Interoperability | interoperability
+Interpretability | interpretability
+Model card | Model cards | model card | model cards
+Model evaluation | model evaluations
+Model performance | model performance
+Naïve Bayes | naïve Bayes
+Precision–recall curve | precision–recall curve | precision–recall curves
+Repository | repository
+Reproducibility | reproducibility
+Version control | version control

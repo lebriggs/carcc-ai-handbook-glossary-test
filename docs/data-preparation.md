@@ -11,7 +11,7 @@ summary, what are its edge cases, and what type of problem needs to be addressed
 with it. This stage is essentially an extension of the Problem Definition and
 RCD Resource Planning phase.
 
-Test: RCD professionals bring so much joy to the world.
+**Test:** RCD professionals bring so much joy to the world. RCD should not be marked because RCD is underlined in the previous paragraph. 
 
 ## Examples of Specific Tasks
 
@@ -110,6 +110,6 @@ and propose solutions, resources, and services to overcome those challenges.
 * [Data Anonymization - Definition, Meaning,
   Techniques](https://www.geeksforgeeks.org/data-analysis/what-is-data-anonymization/) - Quick tutorial on understanding data anonymization, which data to anonymize, and how to execute it
 
-## Test Case
+## Test
 
-* [AI/ML Workflow Fun](https://example.org/ai-ml-workflows) - Test link to confirm that a glossary term, AI/ML,  inside an existing hyperlink stays a normal link without being turned into a glossary link.
+* [AI/ML Workflow Fun](https://example.org/ai-ml-workflows) - Test link to confirm that a glossary term, AI/ML, inside an existing hyperlink stays a normal link instead of being turned into a glossary link.

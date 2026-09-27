@@ -14,6 +14,7 @@ are excluded from glossary behavior.
 # re is Python's regex module
 # unescape turns things like &amp; back into normal characters
 # Path lets us get the hook name from this Python file
+# here builds file paths from the project root
 # markdown_slugify creates the same heading IDs that Markdown uses
 # get_relative_url works out the path from the current page to the glossary
 
@@ -21,7 +22,7 @@ import logging
 import re
 from html import unescape
 from pathlib import Path
-
+from herepath import here
 from markdown.extensions.toc import slugify as markdown_slugify
 from mkdocs.utils import get_relative_url
 
@@ -40,10 +41,13 @@ log = logging.getLogger(f"mkdocs.hooks.{__name__}")
 
 # GLOSSARY_PAGE is the glossary page address used when building links.
 # Example: "fairness" links to glossary/#fairness
-GLOSSARY_PAGE = "glossary/"
+GLOSSARY_URL = "glossary/"
 
-# GLOSSARY_SOURCE is the glossary.md file inside docs/.
-GLOSSARY_SOURCE = "glossary.md"
+# Glossary page used by MkDocs
+GLOSSARY_PAGE = "glossary.md"
+
+# Glossary source file
+GLOSSARY_SOURCE = here("docs", "glossary.md")
 
 # How many times each glossary term is marked on a page
 
@@ -91,7 +95,7 @@ def on_page_content(html, page, config, files, **kwargs):
 
     # Do not add glossary links to the glossary page itself.
 
-    if page.file.src_uri == GLOSSARY_SOURCE:
+    if page.file.src_uri == GLOSSARY_PAGE:
         return ABBR.sub(lambda match: match.group(2), html)
 
     # How many times each glossary entry has been marked on this page.
@@ -100,12 +104,12 @@ def on_page_content(html, page, config, files, **kwargs):
 
     # Work out the relative path from the current page to glossary.md.
 
-    target = get_relative_url(GLOSSARY_PAGE, page.url)
+    target = get_relative_url(GLOSSARY_URL, page.url)
 
     # Read glossary headings and definitions.
     # Each glossary term must be a ### heading, followed by its full definition.
 
-    with open(f"{config['docs_dir']}/{GLOSSARY_SOURCE}", encoding="utf-8") as f:
+    with open(GLOSSARY_SOURCE, encoding="utf-8") as f:
         glossary = f.read()
 
     glossary_entries = re.findall(
@@ -121,6 +125,9 @@ def on_page_content(html, page, config, files, **kwargs):
         # Get the tooltip definition and the term as it appears on the page.
         title, term = match.group(1), match.group(2)
 
+        # Remove the continuation marker only when matching to the glossary definition.
+        match_title = title.removesuffix("\u00a0[...]")
+
         # Match the short tooltip definition to the full glossary definition.
         # The tooltip text must match the beginning of the glossary definition,
         # and the matching heading is used as the link destination.
@@ -128,7 +135,7 @@ def on_page_content(html, page, config, files, **kwargs):
         matches = [
             heading.strip()
             for heading, definition in glossary_entries
-            if definition.strip().startswith(title)
+            if definition.strip().startswith(match_title)
         ]
 
         # Warn if the tooltip definition matches more than one glossary entry.
@@ -158,7 +165,8 @@ def on_page_content(html, page, config, files, **kwargs):
             if term not in seen:
                 seen.add(term)
                 log.warning(
-                    f"HEY! From: [{HOOK_NAME}]. There's a problem. No matching glossary entry found for: `{term}`"
+                    f"HEY! From: [{HOOK_NAME}]. There's a problem. "
+                    f"The tooltip definition for `{term}` does not match any glossary definition."
                 )
             return f'<abbr title="{title}">{term}</abbr>'
 

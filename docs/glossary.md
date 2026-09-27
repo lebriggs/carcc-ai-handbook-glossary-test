@@ -32,10 +32,6 @@ Records of actions, configurations, versions, and other events associated with a
 
 Systematic error that can produce uneven or distorted results across groups, populations, or contexts. Bias can arise at multiple stages of the AI lifecycle, including data collection, preprocessing, modeling, evaluation, and deployment.
 
-### Explainability
-
-The extent to which an AI system's behavior and outputs can be understood or interpreted. What counts as a useful explanation depends on the research context and audience.
-
 ### Fairness
 
 The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. Fairness can be defined and measured in different ways depending on the research context.
@@ -70,4 +66,64 @@ German term for overfitting, seen in German-language machine learning literature
 
 ### Übung
 
-A German word meaning exercise or practice.
+A glorious German word meaning exercise or practice.
+
+### Benchmarking
+
+The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. Benchmarking helps determine how models or model versions perform under comparable conditions.
+
+### Calibration plot
+
+A plot used to assess how closely a model’s predicted probabilities correspond to observed outcomes. A well-calibrated model assigns probabilities that approximate how often the predicted event actually occurs.
+
+### Container
+
+An isolated computing environment that packages an application with the software and dependencies needed to run it. Containers provide a consistent runtime environment that helps software run portably and reproducibly across computing systems.
+
+### Controlled-access deposit
+
+The submission of research data to a repository where access is restricted to approved users rather than made openly available. Access is governed by a review process and data-use conditions, which may reflect participant consent and institutional requirements.
+
+### Explainability
+
+The extent to which the reasons or factors behind a particular output or decision of a machine learning or AI model can be communicated with enough context for a human to understand why it occurred.
+
+### Fairness assessment
+
+The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. This may involve comparing outcomes or error rates across groups using criteria selected to reflect relevant stakeholder, social, and technical considerations.
+
+### Interoperability
+
+The ability of different systems, tools, or platforms to exchange and use data or functionality across environments. This capability often depends on shared standards, formats, or protocols.
+
+### Interpretability
+
+The extent to which the overall behavior and results of a machine learning or AI model can be understood by humans.
+
+### Model card
+
+A document that accompanies a trained model. It summarizes the model’s intended use, training and evaluation data, performance metrics and results, and relevant limitations. This information helps users assess whether the model is appropriate for a particular context.
+
+### Model evaluation
+
+The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.
+
+### Model performance
+
+The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.
+
+### Precision–recall curve
+
+A plot used to evaluate a classification model by showing the tradeoff between precision and recall. Precision measures how often positive predictions are correct, while recall measures how many of the actual positive cases the model successfully identifies.
+
+### Repository
+
+A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. Repositories may provide metadata, persistent identifiers, access controls, and other services that support discovery, reuse, and long-term preservation.
+
+### Reproducibility
+
+The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.
+
+### Version control
+
+A system for tracking changes to code over time so that specific versions can be identified and restored. This helps connect computational results to the exact code used to produce them.

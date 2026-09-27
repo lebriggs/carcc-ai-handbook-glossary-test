@@ -32,8 +32,8 @@ log = logging.getLogger("mkdocs.hooks")
 
 # SETTINGS
 
-# Glossary file location
-GLOSSARY_SOURCE = "glossary.md"
+# Glossary page used by MkDocs
+GLOSSARY_PAGE = "glossary.md"
 
 # Heading used for terms that do not start with a letter
 NUMERIC_BUCKET = "0-9"
@@ -64,7 +64,7 @@ def bucket(term):
 def on_page_markdown(markdown, page, config, files, **kwargs):
 
     # Only make these changes on glossary.md.
-    if page.file.src_uri != GLOSSARY_SOURCE:
+    if page.file.src_uri != GLOSSARY_PAGE:
         return markdown
 
     # Find all glossary terms.
@@ -79,7 +79,8 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     # Warn and stop if the index span is missing, rather than failing quietly.
     if not INDEX_SPAN.search(markdown):
         log.warning(
-            f"HEY! From: [{HOOK_NAME}]. There's a problem. No glossary-index span found in {GLOSSARY_SOURCE}, so the A to Z index was not built."
+            f"HEY! From: [{HOOK_NAME}]. There's a problem. "
+            f"No glossary-index span found in {GLOSSARY_PAGE}, so the A to Z index was not built."
         )
         return markdown
 
@@ -97,7 +98,8 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
     for matching_terms in links.values():
         if len(matching_terms) > 1:
             log.warning(
-                f"HEY! From: [{HOOK_NAME}]. These glossary terms would use the same link: "
+                f"HEY! From: [{HOOK_NAME}]. There's a problem. "
+                f"These glossary terms would use the same link, so only the first can be linked reliably: "
                 + ", ".join(f"`{term}`" for term in matching_terms)
             )
 
@@ -127,10 +129,10 @@ def on_page_markdown(markdown, page, config, files, **kwargs):
         f"### {term}\n\n{body.strip()}\n" for term, body in entries
     )
 
-    # Tell the user if the terms had to be sorted.
+    # Tell the user if the glossary terms had to be sorted.
     if [term for term, _ in entries] != terms:
         log.info(
-            f"HEY! From: [{HOOK_NAME}]. The terms in {GLOSSARY_SOURCE} weren't in alphabetical order. "
+            f"HEY! From: [{HOOK_NAME}]. The terms in {GLOSSARY_PAGE} weren't in alphabetical order. "
             "I sorted them for you."
         )
 
