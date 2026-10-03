@@ -127,3 +127,18 @@ The ability to recreate computational research results by repeating the original
 ### Version control
 
 A system for tracking changes to code over time so that specific versions can be identified and restored. This helps connect computational results to the exact code used to produce them.
+
+### Auditable infrastructure
+
+Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. An auditor should be able to determine:
+
+- Who performed an action?
+- When was it performed?
+- What was changed?
+- Why was the change made?
+- Was it authorized?
+- Can the system's state be reconstructed?
+
+### Datasheet
+
+Documentation that describes why a dataset was created and what it contains. It also documents how the data were collected or processed, along with intended uses and limitations.

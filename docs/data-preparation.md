@@ -11,8 +11,6 @@ summary, what are its edge cases, and what type of problem needs to be addressed
 with it. This stage is essentially an extension of the Problem Definition and
 RCD Resource Planning phase.
 
-**Test:** RCD professionals bring so much joy to the world. RCD should not be marked because RCD is underlined in the previous paragraph. 
-
 ## Examples of Specific Tasks
 
 * Cleaning and curating raw global record of 4.3 billion tweets spanning time,
@@ -95,21 +93,22 @@ and propose solutions, resources, and services to overcome those challenges.
 ## Selected Learning Resources
 
 * [DataCamp Guide to Data
-  Augmentation](https://www.datacamp.com/tutorial/complete-guide-data-augmentation) - Techniques to augment data, when to perform it, its limitations, use cases,
+  Augmentation](https://www.datacamp.com/tutorial/complete-guide-data-augmentation)
+  - Techniques to augment data, when to perform it, its limitations, use cases,
     ethical implications, and tools needed to carry this out
 * [*Data Science from Scratch* by Joel
-  Grus](https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data%20Science%20from%20Scratch%20by%20Joel%20Grus.pdf) - A book to build tools and implement algorithms geared around data science
+  Grus](https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data%20Science%20from%20Scratch%20by%20Joel%20Grus.pdf)
+  - A book to build tools and implement algorithms geared around data science
     while providing a crash course in Python
 * [*Feature Engineering for Machine Learning* by Zheng &
-  Casari](https://cdn.bookey.app/files/pdf/book/en/feature-engineering-for-machine-learning.pdf) - A practical guide on how to transform raw data into meaningful features for
+  Casari](https://cdn.bookey.app/files/pdf/book/en/feature-engineering-for-machine-learning.pdf)
+  - A practical guide on how to transform raw data into meaningful features for
     carrying out effective machine learning
 * [Anonymization: The imperfect science of using data while preserving
   privacy](https://doi.org/10.1126/sciadv.adn7053) - Review of anonymization
   techniques, their limitations, and their connection to privacy approaches such
   as differential privacy and synthetic data
 * [Data Anonymization - Definition, Meaning,
-  Techniques](https://www.geeksforgeeks.org/data-analysis/what-is-data-anonymization/) - Quick tutorial on understanding data anonymization, which data to anonymize, and how to execute it
-
-## Test
-
-* [AI/ML Workflow Fun](https://example.org/ai-ml-workflows) - Test link to confirm that a glossary term, AI/ML, inside an existing hyperlink stays a normal link instead of being turned into a glossary link.
+  Techniques](https://www.geeksforgeeks.org/data-analysis/what-is-data-anonymization/)
+  - Quick tutorial on understanding data anonymization, which data to anonymize,
+    and how to execute it

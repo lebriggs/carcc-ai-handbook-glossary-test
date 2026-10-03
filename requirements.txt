@@ -3,3 +3,5 @@
 mkdocs==1.6.1
 mkdocs-material==9.7.6
 herepath==0.1.4
+inflect==7.5.0
+mkdocs-bibtex==4.4.0
