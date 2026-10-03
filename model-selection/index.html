@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../problem-definition/">
+        <link rel="prev" href="../data-preparation/">
       
       
-        <link rel="next" href="../model-selection/">
+        <link rel="next" href="../model-training/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>Data Preparation - The CaRCC AI Facilitation Handbook - Glossary Test</title>
+        <title>Model Selection & Development - The CaRCC AI Facilitation Handbook - Glossary Test</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-preparation" class="md-skip">
+        <a href="#model-selection-andor-development" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data Preparation
+              Model Selection & Development
             
           </span>
         </div>
@@ -249,6 +249,33 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-preparation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -268,7 +295,7 @@
   <span class="md-ellipsis">
     
   
-    Data Preparation
+    Model Selection & Development
   
 
     
@@ -286,7 +313,7 @@
   <span class="md-ellipsis">
     
   
-    Data Preparation
+    Model Selection & Development
   
 
     
@@ -334,10 +361,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-tasks-and-tools" class="md-nav__link">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Tasks and Tools
+        When Are RCD Resources Needed?
       
     </span>
   </a>
@@ -345,10 +372,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#researcher-and-educator-challenges" class="md-nav__link">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Researcher and Educator Challenges
+        RCD Challenges, Implications, &amp; Solutions
       
     </span>
   </a>
@@ -356,10 +383,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rcd-involvement-and-solutions" class="md-nav__link">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RCD Involvement and Solutions
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
       
     </span>
   </a>
@@ -381,33 +419,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../model-selection/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Model Selection & Development
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -650,10 +661,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#user-tasks-and-tools" class="md-nav__link">
+  <a href="#when-are-rcd-resources-needed" class="md-nav__link">
     <span class="md-ellipsis">
       
-        User Tasks and Tools
+        When Are RCD Resources Needed?
       
     </span>
   </a>
@@ -661,10 +672,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#researcher-and-educator-challenges" class="md-nav__link">
+  <a href="#rcd-challenges-implications-solutions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Researcher and Educator Challenges
+        RCD Challenges, Implications, &amp; Solutions
       
     </span>
   </a>
@@ -672,10 +683,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rcd-involvement-and-solutions" class="md-nav__link">
+  <a href="#tips-tricks-and-troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RCD Involvement and Solutions
+        Tips, Tricks, and Troubleshooting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rcd-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RCD Considerations
       
     </span>
   </a>
@@ -710,178 +732,194 @@
 
 
 
-<h1 id="data-preparation">Data Preparation</h1>
+<h1 id="model-selection-andor-development">Model Selection and/or Development</h1>
 <h2 id="definition">Definition</h2>
-<p>Data preparation for an <a class="glossary-link" href="../glossary/#aiml"><abbr title="Artificial intelligence and machine learning considered together.">AI/ML</abbr></a>-based workflow involves acquiring, cleaning,
-transforming, exploring, and curating raw data to make it suitable for further
-processing and analysis. This includes gathering an understanding of how it was
-created, how it was collected, identifying its type (numerical, categorical,
-time series, mixed), why it is needed, what it signifies, its statistical
-summary, what are its edge cases, and what type of problem needs to be addressed
-with it. This stage is essentially an extension of the Problem Definition and
-<a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a> Resource Planning phase.</p>
+<p>Foundation Model Selection and/or Development is the process of identifying,
+creating, training, and optimizing large-scale neural network architectures that
+serves as the basis for the project's various AI applications. Work typically
+includes:</p>
+<ul>
+<li>Evaluating existing foundation models - including Large Language Models (LLMs)
+  and vision or multimodal models - and their license agreements (open
+  weight/open source)</li>
+<li>Collecting and preprocessing massive datasets in preparation for large-scale
+  model training, while adhering to the data management plan.</li>
+<li>Designing or adapting model architectures (with hundreds of millions or
+  trillions of parameters), or tuning existing foundation models.</li>
+<li>Comprehensive AI <a class="glossary-link" href="../glossary/#model-evaluation"><abbr title="The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.">Model Evaluation</abbr></a>.</li>
+</ul>
 <h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
 <ul>
-<li>Cleaning and curating raw global record of 4.3 billion tweets spanning time,
-  geography, and language (geotweets) using Jupyter notebook for sentiment
-  analysis with natural language processing (NLP) models, such as BERT.</li>
-<li>Converting raw sequencing data into a table of gene-level counts (or a count
-  matrix), with rows representing genes and columns corresponding to samples,
-  using HPC batch resources.</li>
-<li>Extracting and cleaning Slurm data using Jupyter notebook for predicting job
-  wait times for an HPC cluster running a Slurm scheduler.</li>
-<li>Introducing a labeling scheme for behavioral sensor data and parallelizing the
-  annotation workflow for downstream machine learning using Jupyter notebook,
-  Label Studio, or Apache Spark.</li>
-<li>Evaluating cost model associated with data preparation and downstream storage
-  requirements while utilizing on-prem vs cloud computing vs local device
-  resources.</li>
+<li>Decision: Select/Adopt an existing foundational model, ensuring its licensing
+  terms permit the project's intended aims, or develop a new model if necessary.</li>
+<li>Selecting a pre-trained Time-Series Transformer model architecture and
+  adapting it for integration into an existing HPC batch process to generate
+  ensemble forecasts for regional climate prediction</li>
+<li>Adapting a general Whisper model by fine-tuning it on a secured GPU cluster
+  with a proprietary dataset of legal depositions to achieve high accuracy when
+  automatically transcribing highly specialized legal terminology</li>
+<li>Fine-tuning an open foundation model, such as Llama 3.x, using PEFT/LoRA
+  techniques on internal scientific literature hosted on <a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a>-managed object
+  store to create a domain-specific conversational AI tool for summarizing
+  research findings</li>
+<li>Evaluate model for <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">bias</abbr></a> with a medical language model (like BERT) using tools
+  like Fairlearn and RCD-provided JupyterHub to ensure equal prediction accuracy
+  across diverse patient groups before deployment</li>
+<li>Creating a standardized <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document that accompanies a trained model. [...]">Model Card</abbr></a> for a fine-tuned ResNet model used in
+  microscopic image classification, documenting key parameters, performance
+  metrics (precision-recall), and publishing it through an RCD-supported data
+  <a class="glossary-link" href="../glossary/#repository"><abbr title="A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]">repository</abbr></a></li>
 </ul>
-<h2 id="user-tasks-and-tools">User Tasks and Tools</h2>
-<table>
-<thead>
-<tr>
-<th>Task Area</th>
-<th>Description</th>
-<th>Tools/Resources</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Data Cleaning</strong></td>
-<td>Remove duplicates, handle outliers, missing values, formatting issues, errors</td>
-<td>OpenRefine, Pandas, Tidyverse, Scikit-learn, Jupyter</td>
-</tr>
-<tr>
-<td><strong>Quality Assurance</strong></td>
-<td>Ensure data quality, remove <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">bias</abbr></a>, check for completeness, consistency, &amp; outliers</td>
-<td>Custom scripts (Python/R), DVC (Data <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code over time so that specific versions can be identified and restored. [...]">Version Control</abbr></a>), FAIR principles</td>
-</tr>
-<tr>
-<td><strong>Privacy</strong></td>
-<td>Remove, mask, or swap identifiers, aggregate sensitive fields, document methods to support <a class="glossary-link" href="../glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented. [...]">transparency</abbr></a> and privacy compliance</td>
-<td>OpenRefine, R (sdcMicro, anonymizer, custom scripts with tidyverse), Python (Faker, custom scripts with pandas), ARX</td>
-</tr>
-<tr>
-<td><strong>Transformation</strong></td>
-<td>Normalize, scale, augment (audio, image, video), index data, text tokenization, optimize storage &amp; query performance</td>
-<td>Scikit-learn, Pandas, spaCy, R (dplyr, stringr, spaCy, tidytext), Hadoop/Spark</td>
-</tr>
-<tr>
-<td><strong>Exploratory Data Analysis</strong></td>
-<td>Visualize distributions, spot anomalies, patterns, and correlations</td>
-<td>Matplotlib, Seaborn, Plotly, Bokeh, Excel, R (dplyr, ggplot2)</td>
-</tr>
-<tr>
-<td><strong>Feature Engineering</strong></td>
-<td>Create/select/dimension reduce/encode/transform features, address multicollinearity</td>
-<td>FeatureTools, Scikit-learn, Pandas, R (tidyverse, tidymodels, data.table)</td>
-</tr>
-<tr>
-<td><strong><a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.">Reproducibility</abbr></a> &amp; Versioning</strong></td>
-<td>Track data transformations and versions, ensure transparency</td>
-<td>DVC, git</td>
-</tr>
-</tbody>
-</table>
-<h2 id="researcher-and-educator-challenges">Researcher and Educator Challenges</h2>
-<p>This section highlights the challenges that a researcher or an educator might
-face during this stage, which might warrant approaching their local RCD team and
-utilizing RCD resources. For example,</p>
+<h2 id="when-are-rcd-resources-needed">When Are RCD Resources Needed?</h2>
+<p>RCD resources become essential in several AI development and deployment phases:</p>
+<p><strong>Pre-Training Phase:</strong></p>
 <ul>
-<li>Dataset too large for local resources to process in a reasonable time due to
-  reaching bottlenecks associated with storage and RAM constraints, CPU limits,
-  disk I/O, etc.</li>
-<li>Crashes/errors due to memory limits, such as out of memory errors, on local
-  device during large-scale ingestion or transformation</li>
-<li>Distributed processing required for parallelized tasks</li>
-<li>Data with privacy concerns, such as Personally Identifiable Information (PII),
-  Controlled Unclassified Information (CUI), Data Use Agreement (DUA), data
-  governed by Indigenous sovereignty frameworks that are unsuitable for
-  local/cloud processing</li>
-<li>Cloud compute becomes cost-prohibitive for routine data preparation due either
-  to the volume of data or frequency of jobs</li>
-<li>Performance requires GPUs or accelerators to enrich large datasets with
-  metadata, such as subject- and keyword-enrichment of social sciences,
-  humanities, and medical data</li>
+<li>When assembling domain-specific data beyond public datasets</li>
+<li>When privacy/security concerns prohibit using commercial cloud platforms</li>
+<li>When dataset size exceeds typical departmental storage capabilities</li>
 </ul>
-<h2 id="rcd-involvement-and-solutions">RCD Involvement and Solutions</h2>
-<p>RCD facilitators can facilitate an AI project, during its data preparation stage
-in multiple ways, to address the challenges faced by researchers and educators
-and propose solutions, resources, and services to overcome those challenges.</p>
+<p><strong>Fine-Tuning Stage:</strong></p>
+<ul>
+<li>When adapting models like Llama 2 to institutional research domains</li>
+<li>When implementing PEFT/LoRA techniques on specialized datasets</li>
+<li>When balancing between Notebook/Google Colab and full cluster-scale approaches</li>
+<li>Executing distributed training across GPU/TPU clusters</li>
+</ul>
+<p><strong>Evaluation &amp; Iteration:</strong></p>
+<ul>
+<li>When developing rigorous domain-specific benchmarks</li>
+<li>When computing comprehensive bias/<a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a> metrics</li>
+</ul>
+<p><strong>Deployment &amp; Maintenance:</strong></p>
+<ul>
+<li>When model serving requires continuous data refreshing</li>
+<li>When building inference pipelines with research data integration</li>
+</ul>
+<p><strong>Collaboration &amp; Scaling:</strong></p>
+<ul>
+<li>When coordinating multi-institution data sharing initiatives</li>
+<li>When bridging on-prem resources with cloud academic grants</li>
+</ul>
+<h2 id="rcd-challenges-implications-solutions">RCD Challenges, Implications, &amp; Solutions</h2>
 <table>
 <thead>
 <tr>
 <th>Challenge</th>
-<th>RCD Implication</th>
+<th>Implications</th>
 <th>Solutions</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Inadequate software stack for complex, multi-modal, distributed data prep involving multiple cores &amp;/or accelerators</td>
-<td>Limits scalability and analysis pipelines</td>
-<td>Provide appropriate libraries and tools (e.g., Python, R, IDEs, Core Compilers)</td>
+<td>Training New Foundation Models from Scratch</td>
+<td>Parameters: Billions to trillions; Data requirements: Petabytes of data; Computational resources: Multiple thousands of GPU/TPU hours; Training time and cost: Weeks to months, millions of dollars</td>
+<td>Leveraging Open Weight Models; Using cloud academic infrastructure grants; Parameter-efficient fine-tuning methods</td>
 </tr>
 <tr>
-<td>Lack of shared infrastructure</td>
-<td>Scattered data across uncoordinated systems</td>
-<td>Enable shared filesystems, data management platforms, Globus</td>
+<td>Model Selection Complexity</td>
+<td>Different models (GPT-4, Claude, Gemini, LLaMA) have varying capabilities and resource requirements. Systematic evaluation frameworks</td>
+<td>Domain-specific <a class="glossary-link" href="../glossary/#benchmarking"><abbr title="The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]">benchmarking</abbr></a>; Balancing performance vs. resource constraints</td>
 </tr>
 <tr>
-<td>Privacy, compliance, or data-sharing issues</td>
-<td>Risk of data misuse or non-compliance</td>
-<td>Provide secure storage, access control, and support for regulatory compliance</td>
+<td>Limited Computational Resources</td>
+<td>Makes full model training impractical for most institutions; Restricts scope of AI research projects</td>
+<td>Parameter-efficient methods (LoRA); Cloud Academic Infrastructure: Google, IBM, AWS/VAST/Azure/NVIDIA/NAIRR grants; Gradient accumulation techniques</td>
 </tr>
 <tr>
-<td>Limited understanding of differential privacy concepts</td>
-<td>Undermines data usability and trust in privacy protections</td>
-<td>Provide guidance for using appropriate tools (e.g., Python libraries like opendp, smartnoise-synth, PyDP, diffprivlib), help researchers understand their appropriateness, limitations, etc.</td>
+<td>Data Privacy and Security</td>
+<td>Sensitive research data cannot use commercial platforms; Regulatory compliance issues</td>
+<td>On-premises HPC solutions; Secure data preprocessing pipelines; Privacy-preserving fine-tuning approaches</td>
 </tr>
 <tr>
-<td>Poor data quality or non-FAIR datasets</td>
-<td>Hampers downstream modeling efforts</td>
-<td>Promote FAIR data practices and offer assistance in data curation</td>
+<td>Model Deployment Scale</td>
+<td>Full-scale models require significant inference resources</td>
+<td>Model quantization; Distributed inference architectures; Weights &amp; Biases for tracking experiment performance</td>
 </tr>
 </tbody>
 </table>
+<h2 id="tips-tricks-and-troubleshooting">Tips, Tricks, and Troubleshooting</h2>
 <ul>
-<li>Ensure data version control from the start (DVC, Git)</li>
-<li>Use lightweight libraries for small-scale/local testing before scaling up</li>
-<li>Monitor data pipeline bottlenecks (I/O, memory)</li>
-<li>Prefer reproducible workflows: <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]">containers</abbr></a>, notebooks, and tracked
-  transformations</li>
-<li>Type and amount of storage: local vs S3 vs shared POSIX vs parallel vs object
-  store</li>
-<li>Storage size, file count, and directory structure can affect performance and
-  data management downstream</li>
-<li>Consider data security classification and encryption needs (at rest, in
-  transit, in use)</li>
-<li>Track cloud costs for data transfer and storage; budget for cloud egress if
-  applicable</li>
+<li>Evaluate foundation model options thoroughly: Consider GPT series, BERT,
+  Claude, Gemini, and LLaMA models based on your specific research needs and
+  available resources</li>
+<li>Start with open foundation models access through Hugging Face Hub, Llama 2,
+  Falcon, BLOOM, Ollama, or vLLM before attempting to train from scratch</li>
+<li>For smaller experiments with limited budgets, utilize Colab Pro or Kaggle
+  before scaling to institutional resources. This staged approach preserves
+  costly HPC allocations for production-scale training and lowers the barrier to
+  entry for researchers new to AI workflows.</li>
+<li>When fine-tuning large models, leverage parameter-efficient techniques like
+  PEFT/LoRA combined with memory optimization frameworks such as DeepSpeed or
+  PyTorch FSDP to reduce memory requirements</li>
+<li>Use experiment tracking tools like Weights &amp; Biases to monitor training
+  progress and <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a></li>
+<li>For multimodal applications, consider specialized models like DALL-E, Stable
+  Diffusion, or Flamingo rather than building custom solutions. For example,
+  generating images from textual descriptions.</li>
+<li>When computational resources are limited, consider leveraging pre-trained
+  weights rather than training from scratch, as this can reduce data
+  requirements from petabytes to gigabytes or terabytes</li>
+</ul>
+<h2 id="rcd-considerations">RCD Considerations</h2>
+<ul>
+<li>Model Selection Framework: Choose between general-purpose models (GPT-4,
+  Claude, Gemini) versus specialized models (AlphaCode, BloombergGPT) based on
+  research domain requirements</li>
+<li>Computational Resource Planning: Assess whether fine-tuning (dozens to
+  hundreds of GPUs) versus full training (thousands of GPUs/TPUs) is appropriate
+  for research goals</li>
+<li>Data Infrastructure Requirements: Evaluate storage needs ranging from
+  gigabytes (for fine-tuning) to petabytes (for pre-training)</li>
+<li>Model Adaptation Strategy: Determine if parameter-efficient adaptation
+  techniques can meet research needs versus full model re-training</li>
+<li>Cross-institutional Collaboration: Consider data sharing initiatives and
+  resource pooling for projects exceeding single-institution capabilities</li>
+<li>Deployment Environment: Balance between cloud academic infrastructure (Google,
+  AWS, Azure) and on-premises solutions based on data privacy requirements and
+  computational needs</li>
 </ul>
 <h2 id="selected-learning-resources">Selected Learning Resources</h2>
 <ul>
-<li><a href="https://www.datacamp.com/tutorial/complete-guide-data-augmentation">DataCamp Guide to Data
-  Augmentation</a></li>
-<li>Techniques to augment data, when to perform it, its limitations, use cases,
-    ethical implications, and tools needed to carry this out</li>
-<li><a href="https://jcer.in/jcer-docs/E-Learning/Digital%20Library%20/E-Books/Data%20Science%20from%20Scratch%20by%20Joel%20Grus.pdf"><em>Data Science from Scratch</em> by Joel
-  Grus</a></li>
-<li>A book to build tools and implement algorithms geared around data science
-    while providing a crash course in Python</li>
-<li><a href="https://cdn.bookey.app/files/pdf/book/en/feature-engineering-for-machine-learning.pdf"><em>Feature Engineering for Machine Learning</em> by Zheng &amp;
-  Casari</a></li>
-<li>A practical guide on how to transform raw data into meaningful features for
-    carrying out effective machine learning</li>
-<li><a href="https://doi.org/10.1126/sciadv.adn7053">Anonymization: The imperfect science of using data while preserving
-  privacy</a> - Review of anonymization
-  techniques, their limitations, and their connection to privacy approaches such
-  as differential privacy and synthetic data</li>
-<li><a href="https://www.geeksforgeeks.org/data-analysis/what-is-data-anonymization/">Data Anonymization - Definition, Meaning,
-  Techniques</a></li>
-<li>Quick tutorial on understanding data anonymization, which data to anonymize,
-    and how to execute it</li>
+<li>Selected Models<ul>
+<li><a href="https://arxiv.org/abs/1706.03762">Transformer</a> (NLP),
+  <a href="https://arxiv.org/abs/1810.04805">BERT</a> (NLP),
+  <a href="https://arxiv.org/abs/2303.08774">GPT-4</a> (NLP),
+  <a href="https://arxiv.org/abs/2302.13971">Llama</a> (NLP),
+  <a href="https://arxiv.org/abs/2310.06825">Mistral</a> (NLP),
+  <a href="https://arxiv.org/abs/1512.03385">ResNet</a> (computer vision),
+  <a href="https://arxiv.org/abs/1506.02640">YOLO</a> (computer vision),
+  <a href="https://arxiv.org/abs/2010.11929">ViT</a> (computer vision),
+  <a href="https://openai.com/index/dall-e/">DALL-E</a> (Text to image),
+  <a href="https://arxiv.org/abs/2212.04356">Whisper</a> (Audio to text),
+  <a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold</a>
+  (bioinformatics and drug discovery)</li>
+</ul>
+</li>
+<li>Online Coursera - <a href="https://info.deeplearning.ai/machine-learning-yearning-book">Machine Learning
+  Yearning</a> by
+  Andrew Ng</li>
+<li>O'Reilly Book with examples for common ML approaches, not specific to
+  Foundation Models - <a href="https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1492032646">Hands-on Machine Learning with Scikit-Learn, Keras, and
+  TensorFlow</a>,
+  by Aurelien Geron</li>
+<li><a href="https://developer.nvidia.com/join-nvidia-developer-program">NVIDIA Deep Learning Institute online
+  courses</a></li>
+<li>Concise book on many valuable concepts in Machine Learning - <a href="https://www.amazon.com/Hundred-Page-Machine-Learning-Book/dp/199957950X">The Hundred-Page
+  Machine Learning
+  Book</a>
+  by Andriy Burkov</li>
+<li>O'Reilly Book with examples for evaluation metrics - <a href="https://www.oreilly.com/content/evaluating-machine-learning-models/">Evaluating Machine
+  Learning
+  Models</a>
+  by Alice Zheng</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/machine-learning-introduction">Machine Learning
+  Specialization</a>"
+  by Stanford instructors</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/natural-language-processing">Natural Language Processing
+  Specialization</a>"</li>
+<li>Online Coursera - "<a href="https://www.coursera.org/specializations/deep-learning">Deep Learning
+  Specialization</a>" by
+  Andrew Ng</li>
 </ul>
 <!--
 Generated: Oct 3, 2026
