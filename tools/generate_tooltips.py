@@ -4,7 +4,6 @@ The glossary terms are stored as ### headings in glossary.md.
 For each glossary entry, this script takes the first sentence of the definition
 and writes it in the format expected by the abbr Markdown extension.
 
-Extra approved term variants can be listed in variant_terms.txt.
 Each variant uses the same tooltip definition as its glossary term.
 """
 
@@ -35,7 +34,7 @@ SCRIPT_NAME = Path(__file__).stem
 # Glossary source file
 GLOSSARY_SOURCE = here("docs", "glossary.md")
 
-# File containing approved term variants
+# File containing term variants
 VARIANT_SOURCE = here("tools", "variant_terms.txt")
 
 # Generated tooltip file
@@ -49,9 +48,10 @@ generation_date = f"{date.today():%b} {date.today().day}, {date.today().year}"
 HEADER = f"""<!--
 Generated: {generation_date}
 
-Terms listed in this file are matched wherever they appear in the handbook.
+Glossary behavior for terms listed in this file:
+Terms are matched wherever they appear in the handbook.
 By default, only the first occurrence of each glossary entry on a page is highlighted.
-Terms are not highlighted in headings, table header cells, existing links, or on the full glossary page.
+Terms are not highlighted in headings, table header cells, existing links, reference footnotes, or on the full glossary page.
 
 Definitions appear as tooltips on hover on desktop.
 Format: *[term]: definition
@@ -59,10 +59,8 @@ Case variants each need their own line.
 Plural variants each need their own line.
 
 The tooltip definition must match the beginning of the full definition in glossary.md.
--->
-
-<!-- markdownlint-disable MD041 -->
-"""
+Do not manually edit this file.
+-->"""
 
 
 # Read the full glossary.
@@ -142,7 +140,7 @@ entries = sorted(
 
 # Read the approved term variants.
 # The first item on each line is the canonical glossary term.
-# Everything after it is an approved variant for that term.
+# Everything after it is a variant for that term.
 variants = {}
 
 for line in Path(VARIANT_SOURCE).read_text(encoding="utf-8").splitlines():
@@ -166,8 +164,8 @@ for line in Path(VARIANT_SOURCE).read_text(encoding="utf-8").splitlines():
 
     variants[canonical_term] = parts[1:]
 
-# Build the tooltip entries in glossary order.
-# Each canonical term is followed immediately by its approved variants.
+# Build the tooltip entries in alphabetical order.
+# Each canonical term is followed immediately by its variants.
 tooltip_entries = []
 
 for term, definition, continues in entries:
@@ -178,7 +176,7 @@ for term, definition, continues in entries:
     # Add the canonical glossary term.
     tooltip_entries.append(f"*[{term}]: {definition}")
 
-    # Add any approved variants using the same definition.
+    # Add any variants using the same definition.
     for variant in variants.get(term, []):
         if variant:
             tooltip_entries.append(f"*[{variant}]: {definition}")
@@ -194,4 +192,7 @@ Path(TOOLTIP_OUTPUT).write_text(
     encoding="utf-8",
 )
 
-print(f"Generated {len(tooltip_entries)} tooltip entries in {TOOLTIP_OUTPUT}")
+print(
+    f"HEY! The tooltip generator made {len(tooltip_entries)} tooltip entries "
+    f"in {TOOLTIP_OUTPUT.name}. You're welcome."
+)

@@ -4,7 +4,7 @@ The abbr extension wraps matching terms in <abbr title="...">.
 After each page is rendered, this code replaces those elements with links to
 the matching heading on glossary.md while preserving the tooltip text.
 
-Terms found in headings, table header cells, existing links, and glossary.md
+Terms found in headings, table header cells, existing links, reference footnotes, and glossary.md
 are excluded from glossary behavior.
 """
 
@@ -76,9 +76,9 @@ def on_pre_build(config):
 ABBR = re.compile(r'<abbr title="([^"]*)">(.*?)</abbr>', re.DOTALL)
 
 # Find HTML areas where glossary behavior should be removed:
-# headings, table header cells, and links that already exist.
+# headings, table header cells, existing links, and reference footnotes.
 EXCLUDED = re.compile(
-    r"(<h[1-6][^>]*>.*?</h[1-6]>|<th[^>]*>.*?</th>|<a\b[^>]*>.*?</a>)",
+    r'(<h[1-6][^>]*>.*?</h[1-6]>|<th[^>]*>.*?</th>|<a\b[^>]*>.*?</a>|<div class="footnote">.*?</div>)',
     re.DOTALL,
 )
 
@@ -187,7 +187,7 @@ def on_page_content(html, page, config, files, **kwargs):
             f'<abbr title="{title}">{term}</abbr></a>'
         )
 
-    # Remove glossary markup from headings, table headers, and existing links.
+    # Remove glossary markup from headings, table headers, reference footnotes, and existing links.
     # These occurrences do not count toward the per-page marking limit.
     def strip_abbr(match):
         return match.group(2)

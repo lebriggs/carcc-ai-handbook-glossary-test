@@ -29,8 +29,6 @@ and long-term preservation.
 | Visualization & Reporting | Develop figures, dashboards, reports, and other outputs that communicate findings to technical and non-technical audiences. | Assist researchers with selecting tools and platforms for developing dashboards, visualizations, and other interactive reporting outputs. Support hosting and sharing of these outputs across computational and collaborative environments. |
 | Dissemination & Preservation | Prepare datasets, code, models, and related research outputs for dissemination, reuse, or long-term preservation. Consider ethical, legal, and institutional requirements related to sharing and access. | Assist researchers with repository selection, metadata requirements, and access controls for long-term preservation of research outputs. Provide guidance on proprietary or closed file formats that may limit reuse, preservation, or interoperability. Recommend institutional resources for licensing guidance. |
 
-**Test:** RCD professionals help researchers understand the concept of fairness. Check that fairness in this sentence and fairness assessment in the chart are matched as separate glossary terms.
-
 ## Selected Learning Resources
 
 * Creating an Executable Paper is a Journey Through Open Science by Lasser - A
@@ -59,4 +57,3 @@ and long-term preservation.
 * Yellowbrick: Machine Learning Visualization - A categorized gallery of model
   interpretation plots with examples and usage notes for reporting and
   diagnostics. [[Website](https://www.scikit-yb.org/en/latest/)]
-  

@@ -8,9 +8,16 @@ hooks:
   - hooks/glossary_index.py
 
 nav:
-  - Cross-Cutting Section: index.md
+  - Introduction: index.md
+  - Problem Definition & Planning: problem-definition.md
   - Data Preparation: data-preparation.md
+  - Model Selection & Development: model-selection.md
+  - Model Training & Tuning: model-training.md
+  - Benchmarking, QC & Optimization: benchmarking.md
+  - Model Application: model-application.md
   - Results & Reporting: results-reporting.md
+  - Cross-Cutting Considerations: cross-cutting.md
+  - Glossary Test Cases: tests.md
   - Glossary: glossary.md
 
 theme:
@@ -21,9 +28,17 @@ theme:
 markdown_extensions:
   - abbr
   - attr_list
+  - footnotes
   - pymdownx.snippets:
       auto_append:
         - includes/glossary_tooltips.md
 
+plugins:
+  - search
+  - bibtex:
+      bib_file: refs.bib
+      bib_by_default: true
+
 extra_css:
   - stylesheets/style.css
+  
