@@ -2,8 +2,7 @@
 
 This page lists behavior tests and edge cases for the glossary.
 
-1. Add a test for stemming. ariants of a term share one count, so the number of underlined occurrences depends on the `MARKS_PER_PAGE` setting in `glossary_links.py`. At the **default of 1**:
-This first Audit log is underlined but this later audit logs is not.
+1. Add a test for stemming. ariants of a term share one count, so the number of underlined occurrences depends on the `MARKS_PER_PAGE` setting in `glossary_links.py`. At the **default of 1**: This first Audit log is underlined but this later audit logs is not.
 
 2. Add a test for QC & optimization. Checks that an ampersand is handled correctly in the glossary link.
 
@@ -30,7 +29,7 @@ Link to my favorite: [AI/ML Workflow Fun](https://youtu.be/dQw4w9WgXcQ)
 
     | Challenge | Provenance should not be a glossary term here. | Neither should Container. |
     | --- | --- | --- |
-    | Exciting content. | More exciting content. | Even more exciting content. |
+    | Exciting content. | More exciting content. | Subgroup can have a link. |
 
-12. Add an **exclusion** test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.
+12. Add an **exclusion** test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.  
 Let's add a reference here.[@gebruDatasheetsDatasets2021; @mitchellModelCardsModel2019]  
