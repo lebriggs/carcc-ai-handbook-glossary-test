@@ -1,5 +1,5 @@
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.
@@ -16,7 +16,13 @@ Do not manually edit this file.
 -->
 *[3-2-1 backup rule]: A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite. [...]
 
-*[AI/ML]: Artificial intelligence and machine learning considered together.
+*[Access control]: Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]
+
+*[access control]: Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]
+
+*[access controls]: Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]
+
+*[AI/ML]: A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.
 
 *[Audit log]: Records of actions, configurations, versions, and other events associated with a system or workflow. [...]
 
@@ -32,27 +38,37 @@ Do not manually edit this file.
 
 *[benchmarking]: The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]
 
-*[Bias]: Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]
+*[Bias]: A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]
 
-*[bias]: Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]
+*[bias]: A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]
 
-*[Biases]: Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]
-
-*[biases]: Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]
+*[biases]: A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]
 
 *[Calibration plot]: A plot used to assess how closely a model’s predicted probabilities correspond to observed outcomes. [...]
 
 *[calibration plots]: A plot used to assess how closely a model’s predicted probabilities correspond to observed outcomes. [...]
 
-*[Container]: An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]
+*[Community governance]: Community governance is the framework of rules, decision-making processes, roles, and shared norms that a group uses to manage itself and achieve common goals. [...]
 
-*[container]: An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]
+*[community governance]: Community governance is the framework of rules, decision-making processes, roles, and shared norms that a group uses to manage itself and achieve common goals. [...]
 
-*[containers]: An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]
+*[Container]: An isolated computing environment that packages software or code with the dependencies needed to run it. [...]
+
+*[container]: An isolated computing environment that packages software or code with the dependencies needed to run it. [...]
+
+*[containers]: An isolated computing environment that packages software or code with the dependencies needed to run it. [...]
 
 *[Controlled-access deposit]: The submission of research data to a repository where access is restricted to approved users rather than made openly available. [...]
 
 *[controlled-access deposit]: The submission of research data to a repository where access is restricted to approved users rather than made openly available. [...]
+
+*[Custodianship]: The responsibility for the day-to-day management and protection of data or systems. [...]
+
+*[custodianship]: The responsibility for the day-to-day management and protection of data or systems. [...]
+
+*[Data provenance]: The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.
+
+*[data provenance]: The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.
 
 *[Datasheet]: Documentation that describes why a dataset was created and what it contains. [...]
 
@@ -80,6 +96,10 @@ Do not manually edit this file.
 
 *[interpretability]: The extent to which the overall behavior and results of a machine learning or AI model can be understood by humans.
 
+*[Lifecycle governance]: The ongoing governance of data, models, systems, or other assets as they are created, used, maintained, archived, or decommissioned. [...]
+
+*[lifecycle governance]: The ongoing governance of data, models, systems, or other assets as they are created, used, maintained, archived, or decommissioned. [...]
+
 *[Model card]: A document that accompanies a trained model. [...]
 
 *[Model Card]: A document that accompanies a trained model. [...]
@@ -96,11 +116,11 @@ Do not manually edit this file.
 
 *[model evaluations]: The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.
 
-*[Model performance]: The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.
+*[Model performance]: The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.
 
-*[Model Performance]: The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.
+*[Model Performance]: The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.
 
-*[model performance]: The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.
+*[model performance]: The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.
 
 *[Naïve Bayes]: A classification method that applies Bayes' theorem while assuming every feature is independent of the others. [...]
 
@@ -112,11 +132,11 @@ Do not manually edit this file.
 
 *[provenance]: The documented origin, history, and handling of data, code, models, or other research artifacts.
 
-*[QC & optimization]: Checking results and tuning performance, covering accuracy and efficiency.
+*[QC & optimization]: Processes used to check the quality and reliability of computational results and improve the performance or efficiency of a workflow, model, or system. [...]
 
-*[RCD]: A research computing and data professional. [...]
+*[RCD]: Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]
 
-*[RCDs]: A research computing and data professional. [...]
+*[RCDs]: Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]
 
 *[Repository]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
 
@@ -124,9 +144,13 @@ Do not manually edit this file.
 
 *[repository]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
 
-*[Reproducibility]: The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.
+*[Reproducibility]: The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]
 
-*[reproducibility]: The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.
+*[reproducibility]: The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]
+
+*[Sociotechnical system]: A system in which people, processes, organizations, and technology interact to produce outcomes. [...]
+
+*[sociotechnical systems]: A system in which people, processes, organizations, and technology interact to produce outcomes. [...]
 
 *[Subgroup]: A defined segment of a population evaluated separately from the overall population. [...]
 
@@ -140,8 +164,10 @@ Do not manually edit this file.
 
 *[Übung]: A glorious German word meaning exercise or practice.
 
-*[Version control]: A system for tracking changes to code over time so that specific versions can be identified and restored. [...]
+*[Version control]: A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]
 
-*[Version Control]: A system for tracking changes to code over time so that specific versions can be identified and restored. [...]
+*[Version Control]: A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]
 
-*[version control]: A system for tracking changes to code over time so that specific versions can be identified and restored. [...]
+*[version control]: A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]
+
+*[Weights & Biases]: An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.
