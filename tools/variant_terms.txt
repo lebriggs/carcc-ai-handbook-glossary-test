@@ -1,4 +1,4 @@
-# Generated: Oct 3, 2026
+# Generated: Oct 4, 2026
 #
 # Term variants (or stemming) used when generating glossary tooltips.
 # The first item on each line is the canonical term from glossary.md.
@@ -13,19 +13,24 @@
 #
 # Variant Terms List
 
+Access control | access control | access controls
 Audit log | Audit logs | audit logs
 Auditable infrastructure | auditable infrastructure
 Benchmarking | benchmarking
-Bias | bias | Biases | biases
+Bias | bias | biases
 Calibration plot | calibration plots
+Community governance | community governance
 Container | container | containers
 Controlled-access deposit | controlled-access deposit
+Custodianship | custodianship
+Data provenance | data provenance
 Datasheet | Datasheets | datasheets
 Explainability | explainability
 Fairness | fairness
 Fairness assessment | fairness assessment
 Interoperability | interoperability
 Interpretability | interpretability
+Lifecycle governance | lifecycle governance
 Model card | Model Card | model card | Model Cards | model cards
 Model evaluation | Model Evaluation | model evaluations
 Model performance | Model Performance | model performance
@@ -34,6 +39,7 @@ Provenance | provenance
 RCD | RCDs
 Repository | repositories | repository
 Reproducibility | reproducibility
+Sociotechnical system | sociotechnical systems
 Subgroup | subgroups
 Transparency | transparency
 Version control | Version Control | version control

@@ -3,8 +3,6 @@ hide:
   - toc
 ---
 
-<!-- markdownlint-disable MD001 MD033 -->
-
 <!-- HEY! DO NOT DELETE THIS CLASS! -->
 <!-- The glossary-page class is what style.css uses to style the A–Z letter headings. -->
 # Glossary {.glossary-page}
@@ -20,25 +18,108 @@ hide:
 
 A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite. Often used as a baseline for protecting research data against hardware failure, accidental deletion, and loss of a site.
 
+### Access control
+
+Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. Its primary purpose is to protect systems, data, applications, and infrastructure from unauthorized access while ensuring authorized users can perform their work.
+
 ### AI/ML
 
-Artificial intelligence and machine learning considered together.
+A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.
 
 ### Audit log
 
 Records of actions, configurations, versions, and other events associated with a system or workflow. Audit logs allow activities and results to be traced over time.
 
+### Auditable infrastructure
+
+Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. An auditor should be able to determine:
+
+- Who performed an action?
+- When was it performed?
+- What was changed?
+- Why was the change made?
+- Was it authorized?
+- Can the system's state be reconstructed?
+
+### Benchmarking
+
+The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. Benchmarking helps determine how models or model versions perform under comparable conditions.
+
 ### Bias
 
-Systematic error that can produce uneven or distorted results across groups, populations, or contexts. Bias can arise at multiple stages of the AI lifecycle, including data collection, preprocessing, modeling, evaluation, and deployment.
+A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. Bias can arise at multiple stages of the AI lifecycle, including data collection, preprocessing, modeling, evaluation, and deployment.
+
+### Calibration plot
+
+A plot used to assess how closely a model’s predicted probabilities correspond to observed outcomes. A well-calibrated model assigns probabilities that approximate how often the predicted event actually occurs.
+
+### Community governance
+
+Community governance is the framework of rules, decision-making processes, roles, and shared norms that a group uses to manage itself and achieve common goals. It emphasizes participation, transparency, shared responsibility, and community involvement in decision-making.
+
+### Container
+
+An isolated computing environment that packages software or code with the dependencies needed to run it. Containers provide a consistent runtime environment that helps computational workflows run portably and reproducibly across computing systems.
+
+### Controlled-access deposit
+
+The submission of research data to a repository where access is restricted to approved users rather than made openly available. Access is governed by a review process and data-use conditions, which may reflect participant consent and institutional requirements.
+
+### Custodianship
+
+The responsibility for the day-to-day management and protection of data or systems. In data governance and research computing, custodians typically implement and maintain the technical and operational controls that protect those assets on behalf of the person or group responsible for them.
+
+### Data provenance
+
+The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.
+
+### Datasheet
+
+Documentation that describes why a dataset was created and what it contains. It also documents how the data were collected or processed, along with intended uses and limitations.
+
+### Explainability
+
+The extent to which the reasons or factors behind a particular output or decision of a machine learning or AI model can be communicated with enough context for a human to understand why it occurred.
 
 ### Fairness
 
 The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. Fairness can be defined and measured in different ways depending on the research context.
 
+### Fairness assessment
+
+The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. This may involve comparing outcomes or error rates across groups using criteria that reflect relevant stakeholder, social, and technical considerations.
+
+### Interoperability
+
+The ability of different systems, tools, or platforms to exchange and use data or functionality across environments. This capability often depends on shared standards, formats, or protocols.
+
+### Interpretability
+
+The extent to which the overall behavior and results of a machine learning or AI model can be understood by humans.
+
+### Lifecycle governance
+
+The ongoing governance of data, models, systems, or other assets as they are created, used, maintained, archived, or decommissioned. It may also include changing or revoking access, permissions, or approvals as requirements change over time.
+
+### Model card
+
+A document that accompanies a trained model. It summarizes the model’s intended use, information about its training and evaluation data, performance metrics and results, and relevant limitations. This information helps users assess whether the model is appropriate for a particular context.
+
+### Model evaluation
+
+The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.
+
+### Model performance
+
+The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.
+
 ### Naïve Bayes
 
 A classification method that applies Bayes' theorem while assuming every feature is independent of the others. The assumption is rarely true, but it makes the method fast to train and a common baseline for text classification.
+
+### Precision–recall curve
+
+A plot used to evaluate a classification model by showing the tradeoff between precision and recall. Precision measures how often positive predictions are correct, while recall measures how many of the actual positive cases the model successfully identifies.
 
 ### Provenance
 
@@ -46,11 +127,23 @@ The documented origin, history, and handling of data, code, models, or other res
 
 ### QC & optimization
 
-Checking results and tuning performance, covering accuracy and efficiency.
+Processes used to check the quality and reliability of computational results and improve the performance or efficiency of a workflow, model, or system. Quality control focuses on identifying errors or inconsistencies, while optimization focuses on improving how well the system or workflow performs.
 
 ### RCD
 
-A research computing and data professional. Joy is found here!
+Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. RCD professionals help researchers use computing, data, software, and related technologies throughout the research lifecycle.
+
+### Repository
+
+A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. Repositories may provide metadata, persistent identifiers, access controls, and other services that support discovery, reuse, and long-term preservation.
+
+### Reproducibility
+
+The ability to recreate computational research results by repeating the original workflow using the same data or inputs. This requires sufficient documentation of the code, software environment, parameters, dependencies, and processing steps.
+
+### Sociotechnical system
+
+A system in which people, processes, organizations, and technology interact to produce outcomes. The core idea is that a system cannot be understood or improved by considering its technical and social components separately. They must be considered together.
 
 ### Subgroup
 
@@ -68,77 +161,10 @@ German term for overfitting, seen in German-language machine learning literature
 
 A glorious German word meaning exercise or practice.
 
-### Benchmarking
-
-The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. Benchmarking helps determine how models or model versions perform under comparable conditions.
-
-### Calibration plot
-
-A plot used to assess how closely a model’s predicted probabilities correspond to observed outcomes. A well-calibrated model assigns probabilities that approximate how often the predicted event actually occurs.
-
-### Container
-
-An isolated computing environment that packages an application with the software and dependencies needed to run it. Containers provide a consistent runtime environment that helps software run portably and reproducibly across computing systems.
-
-### Controlled-access deposit
-
-The submission of research data to a repository where access is restricted to approved users rather than made openly available. Access is governed by a review process and data-use conditions, which may reflect participant consent and institutional requirements.
-
-### Explainability
-
-The extent to which the reasons or factors behind a particular output or decision of a machine learning or AI model can be communicated with enough context for a human to understand why it occurred.
-
-### Fairness assessment
-
-The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. This may involve comparing outcomes or error rates across groups using criteria selected to reflect relevant stakeholder, social, and technical considerations.
-
-### Interoperability
-
-The ability of different systems, tools, or platforms to exchange and use data or functionality across environments. This capability often depends on shared standards, formats, or protocols.
-
-### Interpretability
-
-The extent to which the overall behavior and results of a machine learning or AI model can be understood by humans.
-
-### Model card
-
-A document that accompanies a trained model. It summarizes the model’s intended use, training and evaluation data, performance metrics and results, and relevant limitations. This information helps users assess whether the model is appropriate for a particular context.
-
-### Model evaluation
-
-The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.
-
-### Model performance
-
-The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.
-
-### Precision–recall curve
-
-A plot used to evaluate a classification model by showing the tradeoff between precision and recall. Precision measures how often positive predictions are correct, while recall measures how many of the actual positive cases the model successfully identifies.
-
-### Repository
-
-A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. Repositories may provide metadata, persistent identifiers, access controls, and other services that support discovery, reuse, and long-term preservation.
-
-### Reproducibility
-
-The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.
-
 ### Version control
 
-A system for tracking changes to code over time so that specific versions can be identified and restored. This helps connect computational results to the exact code used to produce them.
+A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. This helps connect computational results to the exact versions of the materials used to produce them.
 
-### Auditable infrastructure
+### Weights & Biases
 
-Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. An auditor should be able to determine:
-
-- Who performed an action?
-- When was it performed?
-- What was changed?
-- Why was the change made?
-- Was it authorized?
-- Can the system's state be reconstructed?
-
-### Datasheet
-
-Documentation that describes why a dataset was created and what it contains. It also documents how the data were collected or processed, along with intended uses and limitations.
+An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.
