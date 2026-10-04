@@ -44,6 +44,12 @@ h1.glossary-page ~ h2 {
     margin-bottom: 1rem;
 }
 
+/* Highlight the glossary term that a reader followed a link to. */
+h1.glossary-page ~ h3:target {
+    border-left: 3px solid #4057D9;
+    padding-left: 0.5rem;
+}
+
 /* MOBILE */
 
 /* Turn off the tooltip on devices that do not support hover.

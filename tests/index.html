@@ -537,8 +537,7 @@
 <p>This page lists behavior tests and edge cases for the glossary.</p>
 <ol>
 <li>
-<p>Add a test for stemming. ariants of a term share one count, so the number of underlined occurrences depends on the <code>MARKS_PER_PAGE</code> setting in <code>glossary_links.py</code>. At the <strong>default of 1</strong>:
-This first <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">Audit log</abbr></a> is underlined but this later audit logs is not.</p>
+<p>Add a test for stemming. ariants of a term share one count, so the number of underlined occurrences depends on the <code>MARKS_PER_PAGE</code> setting in <code>glossary_links.py</code>. At the <strong>default of 1</strong>: This first <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">Audit log</abbr></a> is underlined but this later audit logs is not.</p>
 </li>
 <li>
 <p>Add a test for <a class="glossary-link" href="../glossary/#qc-optimization"><abbr title="Checking results and tuning performance, covering accuracy and efficiency.">QC &amp; optimization</abbr></a>. Checks that an ampersand is handled correctly in the glossary link.</p>
@@ -584,13 +583,13 @@ Link to my favorite: <a href="https://youtu.be/dQw4w9WgXcQ">AI/ML Workflow Fun</
 <tr>
 <td>Exciting content.</td>
 <td>More exciting content.</td>
-<td>Even more exciting content.</td>
+<td><a class="glossary-link" href="../glossary/#subgroup"><abbr title="A defined segment of a population evaluated separately from the overall population. [...]">Subgroup</abbr></a> can have a link.</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
-<p>Add an <strong>exclusion</strong> test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.
+<p>Add an <strong>exclusion</strong> test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.<br />
 Let's add a reference here.<sup id="fnref:gebruDatasheetsDatasets2021"><a class="footnote-ref" href="#fn:gebruDatasheetsDatasets2021">1</a></sup><sup id="fnref:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">2</a></sup>  </p>
 </li>
 </ol>
