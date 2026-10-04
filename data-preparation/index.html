@@ -712,14 +712,14 @@
 
 <h1 id="data-preparation">Data Preparation</h1>
 <h2 id="definition">Definition</h2>
-<p>Data preparation for an <a class="glossary-link" href="../glossary/#aiml"><abbr title="Artificial intelligence and machine learning considered together.">AI/ML</abbr></a>-based workflow involves acquiring, cleaning,
+<p>Data preparation for an <a class="glossary-link" href="../glossary/#aiml"><abbr title="A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.">AI/ML</abbr></a>-based workflow involves acquiring, cleaning,
 transforming, exploring, and curating raw data to make it suitable for further
 processing and analysis. This includes gathering an understanding of how it was
 created, how it was collected, identifying its type (numerical, categorical,
 time series, mixed), why it is needed, what it signifies, its statistical
 summary, what are its edge cases, and what type of problem needs to be addressed
 with it. This stage is essentially an extension of the Problem Definition and
-<a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a> Resource Planning phase.</p>
+<a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a> Resource Planning phase.</p>
 <h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
 <ul>
 <li>Cleaning and curating raw global record of 4.3 billion tweets spanning time,
@@ -754,8 +754,8 @@ with it. This stage is essentially an extension of the Problem Definition and
 </tr>
 <tr>
 <td><strong>Quality Assurance</strong></td>
-<td>Ensure data quality, remove <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">bias</abbr></a>, check for completeness, consistency, &amp; outliers</td>
-<td>Custom scripts (Python/R), DVC (Data <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code over time so that specific versions can be identified and restored. [...]">Version Control</abbr></a>), FAIR principles</td>
+<td>Ensure data quality, remove <a class="glossary-link" href="../glossary/#bias"><abbr title="A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]">bias</abbr></a>, check for completeness, consistency, &amp; outliers</td>
+<td>Custom scripts (Python/R), DVC (Data <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]">Version Control</abbr></a>), FAIR principles</td>
 </tr>
 <tr>
 <td><strong>Privacy</strong></td>
@@ -778,7 +778,7 @@ with it. This stage is essentially an extension of the Problem Definition and
 <td>FeatureTools, Scikit-learn, Pandas, R (tidyverse, tidymodels, data.table)</td>
 </tr>
 <tr>
-<td><strong><a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.">Reproducibility</abbr></a> &amp; Versioning</strong></td>
+<td><strong><a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">Reproducibility</abbr></a> &amp; Versioning</strong></td>
 <td>Track data transformations and versions, ensure transparency</td>
 <td>DVC, git</td>
 </tr>
@@ -831,7 +831,7 @@ and propose solutions, resources, and services to overcome those challenges.</p>
 <tr>
 <td>Privacy, compliance, or data-sharing issues</td>
 <td>Risk of data misuse or non-compliance</td>
-<td>Provide secure storage, access control, and support for regulatory compliance</td>
+<td>Provide secure storage, <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access control</abbr></a>, and support for regulatory compliance</td>
 </tr>
 <tr>
 <td>Limited understanding of differential privacy concepts</td>
@@ -849,7 +849,7 @@ and propose solutions, resources, and services to overcome those challenges.</p>
 <li>Ensure data version control from the start (DVC, Git)</li>
 <li>Use lightweight libraries for small-scale/local testing before scaling up</li>
 <li>Monitor data pipeline bottlenecks (I/O, memory)</li>
-<li>Prefer reproducible workflows: <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]">containers</abbr></a>, notebooks, and tracked
+<li>Prefer reproducible workflows: <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">containers</abbr></a>, notebooks, and tracked
   transformations</li>
 <li>Type and amount of storage: local vs S3 vs shared POSIX vs parallel vs object
   store</li>
@@ -884,7 +884,7 @@ and propose solutions, resources, and services to overcome those challenges.</p>
     and how to execute it</li>
 </ul>
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

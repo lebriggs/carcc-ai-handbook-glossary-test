@@ -737,21 +737,21 @@ draft notes and still need to be written out.</p>
 transparent, safe, secure, and human-centered development and use of AI systems.
 One common organizing frame in responsible AI is FAccT
 <sup id="fnref:lauferFourYearsFAccT2022"><a class="footnote-ref" href="#fn:lauferFourYearsFAccT2022">1</a></sup>, which emphasizes <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a>, accountability, and
-<a class="glossary-link" href="../glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented. [...]">transparency</abbr></a> in sociotechnical systems. These principles are closely related to
+<a class="glossary-link" href="../glossary/#transparency"><abbr title="The extent to which an AI system's data sources, assumptions, methods, limitations, and decision processes are documented. [...]">transparency</abbr></a> in <a class="glossary-link" href="../glossary/#sociotechnical-system"><abbr title="A system in which people, processes, organizations, and technology interact to produce outcomes. [...]">sociotechnical systems</abbr></a>. These principles are closely related to
 additional concerns such as privacy and data protection, safety and security,
-human rights, lifecycle governance, and community governance
+human rights, <a class="glossary-link" href="../glossary/#lifecycle-governance"><abbr title="The ongoing governance of data, models, systems, or other assets as they are created, used, maintained, archived, or decommissioned. [...]">lifecycle governance</abbr></a>, and <a class="glossary-link" href="../glossary/#community-governance"><abbr title="Community governance is the framework of rules, decision-making processes, roles, and shared norms that a group uses to manage itself and achieve common goals. [...]">community governance</abbr></a>
 <sup id="fnref:NISTAIRiskManagement2023"><a class="footnote-ref" href="#fn:NISTAIRiskManagement2023">2</a></sup>.</p>
 <p>AI ethics is not a single checkpoint but a set of concerns that recur at every
 lifecycle stage, from problem definition through deployment and long-term
-stewardship. For <a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a> facilitators, the practical contribution is rarely to set
+stewardship. For <a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a> facilitators, the practical contribution is rarely to set
 ethical policy directly. Instead, RCD facilitators help build and coordinate the
 technical and operational conditions that make ethical commitments enforceable:
-<a class="glossary-link" href="../glossary/#auditable-infrastructure"><abbr title="Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. [...]">auditable infrastructure</abbr></a>, documented data <a class="glossary-link" href="../glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>, access controls,
+<a class="glossary-link" href="../glossary/#auditable-infrastructure"><abbr title="Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. [...]">auditable infrastructure</abbr></a>, documented <a class="glossary-link" href="../glossary/#data-provenance"><abbr title="The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.">data provenance</abbr></a>, <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access controls</abbr></a>,
 reproducible workflows, appropriate evaluation environments, and connections to
 institutional offices responsible for compliance, privacy, security, and
 research integrity. The subsections below outline core areas RCD facilitators
 should be prepared to support.</p>
-<p><strong>Fairness, Non-Discrimination, and <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">Bias</abbr></a>.</strong> Fairness concerns whether AI systems
+<p><strong>Fairness, Non-Discrimination, and <a class="glossary-link" href="../glossary/#bias"><abbr title="A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]">Bias</abbr></a>.</strong> Fairness concerns whether AI systems
 perform equitably across relevant groups, populations, contexts, or use cases.
 Bias can enter at multiple stages, including data collection, labeling,
 preprocessing, model selection, evaluation, deployment, and interpretation. RCD
@@ -765,8 +765,8 @@ Reporting sections for fairness, <a class="glossary-link" href="../glossary/#int
 section remain aspirational unless a project team can show how a result was
 produced, who made key decisions, and who is responsible for addressing errors,
 harms, or unexpected outcomes. From an RCD perspective, accountability is
-supported through auditability, provenance, and documentation: <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">audit logs</abbr></a> of
-experiment configurations, datasets, and results; <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code over time so that specific versions can be identified and restored. [...]">version control</abbr></a> for data,
+supported through auditability, <a class="glossary-link" href="../glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>, and documentation: <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">audit logs</abbr></a> of
+experiment configurations, datasets, and results; <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]">version control</abbr></a> for data,
 code, and model artifacts; documented approval pathways; and structured
 reporting such as <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document that accompanies a trained model. [...]">model cards</abbr></a> <sup id="fnref:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">3</a></sup>. These practices
 allow a team to trace biased, anomalous, or non-reproducible outcomes back to
@@ -794,13 +794,13 @@ secure environments, data governance, and compliance is addressed in the next
 subsection.</p>
 <p><strong>Long-term Stewardship.</strong> Stewardship addresses what happens to research
 artifacts after a project closes, including retention, preservation, continued
-access control, <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.">reproducibility</abbr></a>, archival responsibilities, and deletion
+access control, <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a>, archival responsibilities, and deletion
 obligations. AI projects may produce derived artifacts such as trained models,
-embeddings, logs, annotations, <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]">containers</abbr></a>, workflow metadata, or evaluation
+embeddings, logs, annotations, <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">containers</abbr></a>, workflow metadata, or evaluation
 outputs that continue to carry governance, privacy, reproducibility, or
 intellectual property implications after the original data processing is
 complete. Where data is governed by external frameworks or agreements,
-stewardship may also require custodianship arrangements and support for data
+stewardship may also require <a class="glossary-link" href="../glossary/#custodianship"><abbr title="The responsibility for the day-to-day management and protection of data or systems. [...]">custodianship</abbr></a> arrangements and support for data
 revocation.</p>
 <p><strong>Indigenous Data Sovereignty.</strong> Indigenous data sovereignty frameworks, such as
 CARE (Collective Benefit, Authority to Control, Responsibility, Ethics) and
@@ -846,7 +846,7 @@ PHI/PII, export control, controlled unclassified); characteristics of secure
 research environments (see the Internet2 "model" for secure research
 environments
 <a href="https://internet2.edu/tag/secure-research-environments-series/">series</a>); and
-<a class="glossary-link" href="../glossary/#aiml"><abbr title="Artificial intelligence and machine learning considered together.">AI/ML</abbr></a> technologies for data and model security, with pointers to external
+<a class="glossary-link" href="../glossary/#aiml"><abbr title="A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.">AI/ML</abbr></a> technologies for data and model security, with pointers to external
 resources or examples.</p>
 </blockquote>
 <p><strong>Data Governance.</strong> Governance covers the policies and controls applied to
@@ -1001,7 +1001,7 @@ and neglect of compliance and governance. Early partnership between researchers
 and RCD facilitators is essential to reduce the risks and ensure successful
 project execution and sustainable outcomes.</p>
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

@@ -737,7 +737,7 @@
 <p><strong>Model <a class="glossary-link" href="../glossary/#benchmarking"><abbr title="The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]">Benchmarking</abbr></a></strong> (<strong>MB</strong>): evaluating AI models on well-defined tasks
 using specified datasets, metrics, protocols, and hardware, to assess a model's
 quality (e.g., accuracy), efficiency (e.g., latency, throughput, cost),
-scalability, and robustness (reliability, <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">bias</abbr></a>).</p>
+scalability, and robustness (reliability, <a class="glossary-link" href="../glossary/#bias"><abbr title="A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]">bias</abbr></a>).</p>
 <p><strong>Quality Control</strong> (<strong>QC</strong>): testing, auditing, and ongoing monitoring for
 errors, biases, and inefficiencies relative to acceptance criteria for
 performance, reliability, and/or ethical standards.</p>
@@ -783,7 +783,7 @@ and costs.</p>
 <tbody>
 <tr>
 <td><strong>MB: Objective Definition and Performance Metrics Selection</strong></td>
-<td>Define benchmarking objectives and identify the metrics to evaluate <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> for the AI task and research goals.</td>
+<td>Define benchmarking objectives and identify the metrics to evaluate <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> for the AI task and research goals.</td>
 <td>Accuracy, precision, recall, F1-score, ROC-AUC, BLEU, ROUGE, BERTScore, perplexity, mAP, latency and throughput, <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">Fairness</abbr></a> Metrics, energy consumption, cost-per-inference, token-per-watt.</td>
 </tr>
 <tr>
@@ -794,7 +794,7 @@ and costs.</p>
 <tr>
 <td><strong>MB: Benchmark and Evaluation Framework Selection and Execution</strong></td>
 <td>Select appropriate benchmark suites and evaluation frameworks, execute benchmark runs, collect performance metrics, and compare results against baseline and/or SOTA models.</td>
-<td><strong>Benchmark suites</strong>: MLPerf, SuperGLUE, MMLU, GPQA, HumanEval, SWE-bench, HELM. <strong>Evaluation Frameworks</strong>: LM Evaluation Harness, HELM, OpenAI Eval, DeepEval, Ragas, Hugging Face Evaluate. <strong>Execution and Analysis</strong>: Weights &amp; Biases, TensorBoard, MLflow, OpenAI Evals, Scikit-learn, PyTorch Benchmark, NVIDIA Nsight.</td>
+<td><strong>Benchmark suites</strong>: MLPerf, SuperGLUE, MMLU, GPQA, HumanEval, SWE-bench, HELM. <strong>Evaluation Frameworks</strong>: LM Evaluation Harness, HELM, OpenAI Eval, DeepEval, Ragas, Hugging Face Evaluate. <strong>Execution and Analysis</strong>: <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a>, TensorBoard, MLflow, OpenAI Evals, Scikit-learn, PyTorch Benchmark, NVIDIA Nsight.</td>
 </tr>
 <tr>
 <td><strong>QC: Result validation and Error Analysis</strong></td>
@@ -840,12 +840,12 @@ and costs.</p>
 <li>Need assistance with benchmark run time workflow configuration, job
   scheduling, resource allocation, and performance monitoring.</li>
 <li>Containerize benchmarking environments and track software dependencies to
-  ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.">reproducibility</abbr></a>.</li>
+  ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a>.</li>
 </ul>
 <p><strong>Quality Control:</strong></p>
 <ul>
 <li>Assess compliance with institutional policies and regulations, navigate risk
-  assessment process, and implement data access control to securely guard the
+  assessment process, and implement data <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access control</abbr></a> to securely guard the
   sensitive or restricted data.</li>
 <li>Validate model performance, robustness, and reliability across diverse
   datasets and platforms; detect hallucinations and analyze failures.</li>
@@ -889,7 +889,7 @@ and costs.</p>
 <tr>
 <td>Reproducibility across platforms</td>
 <td>Results may be difficult to verify, compare, or publish.</td>
-<td>Provide robust software environment, <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]">containers</abbr></a>, and <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code over time so that specific versions can be identified and restored. [...]">version control</abbr></a>. Configure, automate, and document the workflow.</td>
+<td>Provide robust software environment, <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">containers</abbr></a>, and <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]">version control</abbr></a>. Configure, automate, and document the workflow.</td>
 </tr>
 <tr>
 <td>Compliance, institutional policies, regulatory requirements</td>
@@ -958,7 +958,7 @@ and costs.</p>
   introduction and guide.</li>
 </ul>
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

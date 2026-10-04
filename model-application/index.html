@@ -777,7 +777,7 @@ Product.</p>
   annotation experiments.</li>
 <li>Hosting a real-time image classification model on an edge device for a lab's
   microscopy pipeline.</li>
-<li>Using a <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages an application with the software and dependencies needed to run it. [...]">container</abbr></a> registry to launch a model inference service for genomics
+<li>Using a <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">container</abbr></a> registry to launch a model inference service for genomics
   workflows.</li>
 </ul>
 <h2 id="user-tasks-and-tools">User Tasks and Tools</h2>
@@ -800,7 +800,7 @@ Product.</p>
 <tr>
 <td><strong>B, I</strong></td>
 <td><strong>Model Packaging and Environment Setup</strong></td>
-<td>Bundle trained models with their dependencies, configurations, and runtime environments to ensure portability and <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original analysis using the same data and sufficiently documented code, workflows, software environment, parameters, dependencies, and processing steps.">reproducibility</abbr></a> across HPC, cloud, and edge systems.</td>
+<td>Bundle trained models with their dependencies, configurations, and runtime environments to ensure portability and <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a> across HPC, cloud, and edge systems.</td>
 <td>Apptainer/Singularity, Docker, Conda, MLflow Models, ONNX</td>
 </tr>
 <tr>
@@ -819,7 +819,7 @@ Product.</p>
 <td><strong>I</strong></td>
 <td><strong>Interactive visualization</strong></td>
 <td>Explore and interpret model results visually.</td>
-<td>JupyterHub/JupyterLab, TensorBoard, Weights &amp; <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic error that can produce uneven or distorted results across groups, populations, or contexts. [...]">Biases</abbr></a> (W&amp;B), Streamlit/Dash</td>
+<td>JupyterHub/JupyterLab, TensorBoard, <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a> (W&amp;B), Streamlit/Dash</td>
 </tr>
 <tr>
 <td><strong>RT</strong></td>
@@ -848,7 +848,7 @@ Product.</p>
 <tr>
 <td><strong>B, I, RT</strong></td>
 <td><strong>Model Management and Monitoring</strong></td>
-<td>Track, version, and monitor <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs its intended task, measured using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> and lifecycle across batch, interactive, and real-time deployments to ensure reliability, reproducibility, and continuous improvement (for project-deployed models; platform-managed models are addressed in the Cross-Cutting section)</td>
+<td>Track, version, and monitor <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> and lifecycle across batch, interactive, and real-time deployments to ensure reliability, reproducibility, and continuous improvement (for project-deployed models; platform-managed models are addressed in the Cross-Cutting section)</td>
 <td>MLflow, ClearML, W&amp;B, Neptune.ai</td>
 </tr>
 </tbody>
@@ -859,7 +859,7 @@ Product.</p>
 <li>Large or scaling models (e.g., serving a self-hosted Large Language Model
   for project use) exceed workstation or single-GPU setups</li>
 <li>High compute, memory, or storage demands (e.g., multi-GPU training,
-  distributed inference, vector databases) require <a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a>-managed HPC or cloud
+  distributed inference, vector databases) require <a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a>-managed HPC or cloud
   resources.</li>
 </ul>
 </li>
@@ -883,7 +883,7 @@ Product.</p>
   cloud environments aligned with compliance standards.</li>
 <li>Studies under IRB approval may fall within lower-security enclaves but
   still require RCD-managed resources for proper data handling, auditing,
-  and access control.</li>
+  and <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access control</abbr></a>.</li>
 </ul>
 </li>
 </ul>
@@ -1040,7 +1040,7 @@ Product.</p>
   guidance for compliant, trustworthy AI deployment</li>
 </ul>
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

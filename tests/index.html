@@ -541,7 +541,11 @@
 This first <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">Audit log</abbr></a> is underlined but this later audit logs is not.</p>
 </li>
 <li>
-<p>Add a test for <a class="glossary-link" href="../glossary/#qc-optimization"><abbr title="Checking results and tuning performance, covering accuracy and efficiency.">QC &amp; optimization</abbr></a>. Checks that an ampersand is handled correctly in the glossary link.</p>
+<p>Add a test for <a class="glossary-link" href="../glossary/#qc-optimization"><abbr title="Processes used to check the quality and reliability of computational results and improve the performance or efficiency of a workflow, model, or system. [...]">QC &amp; optimization</abbr></a>. Checks that an ampersand is handled correctly in the glossary link.</p>
+</li>
+<li>
+<p>Add a test for a variant of a term containing an ampersand. Confirms the variant scanner does not match "and" to "&amp;".<br />
+Weights and Biases does not link to the glossary term, <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a>.</p>
 </li>
 <li>
 <p>Add a test for a term that begins with a number: <a class="glossary-link" href="../glossary/#3-2-1-backup-rule"><abbr title="A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite. [...]">3-2-1 backup rule</abbr></a>. Checks that a term beginning with a number links correctly to its glossary entry.</p>
@@ -553,14 +557,14 @@ This first <a class="glossary-link" href="../glossary/#audit-log"><abbr title="R
 <p>Add a test that Überanpassung comes before <a class="glossary-link" href="../glossary/#ubung"><abbr title="A glorious German word meaning exercise or practice.">Übung</abbr></a> on the glossary page. Checks that accented terms are sorted correctly.</p>
 </li>
 <li>
-<p>Add a test for <a class="glossary-link" href="../glossary/#aiml"><abbr title="Artificial intelligence and machine learning considered together.">AI/ML</abbr></a>. The slash should be removed from the heading ID rather than turned into a hyphen.</p>
+<p>Add a test for <a class="glossary-link" href="../glossary/#aiml"><abbr title="A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.">AI/ML</abbr></a>. The slash should be removed from the heading ID rather than turned into a hyphen.</p>
 </li>
 <li>
 <p>Add a test for <a class="glossary-link" href="../glossary/#auditable-infrastructure"><abbr title="Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. [...]">auditable infrastructure</abbr></a>. Checks that a glossary definition can contain bullets.</p>
 </li>
 <li>
-<p><a class="glossary-link" href="../glossary/#rcd"><abbr title="A research computing and data professional. [...]">RCD</abbr></a> professionals help researchers understand the concept of <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a>.<br />
-Checks that fairness and <a class="glossary-link" href="../glossary/#fairness-assessment"><abbr title="The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. [...]">fairness assessment</abbr></a> are matched as separate glossary terms.</p>
+<p><a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a> professionals help researchers understand the concept of <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a>.<br />
+Checks that fairness and <a class="glossary-link" href="../glossary/#fairness-assessment"><abbr title="The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. [...]">fairness assessment</abbr></a> are matched as separate glossary terms. Another example is <a class="glossary-link" href="../glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a> and <a class="glossary-link" href="../glossary/#data-provenance"><abbr title="The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.">data provenance</abbr></a>.</p>
 </li>
 <li>
 <p>Add a test comparing a one-line definition with a multi-line definition. Checks that the tooltip for the multi-line definition includes <code>[...]</code>.<br />
@@ -568,7 +572,7 @@ Use <a class="glossary-link" href="../glossary/#explainability"><abbr title="The
 </li>
 <li>
 <p>Add an <strong>exclusion</strong> test. Confirm that a glossary term, AI/ML, inside an existing hyperlink stays a normal link instead of being turned into a glossary link.<br />
-Link to my favorite: <a href="https://youtu.be/dQw4w9WgXcQ">AI/ML Workflow Fun</a></p>
+Link to my favorite: <a href="https://youtu.be/QDia3e12czc">AI/ML Workflow Fun</a></p>
 </li>
 <li>
 <p>Add an <strong>exclusion</strong> test for a glossary term in a table column header. No glossary links in column headers.</p>
@@ -576,7 +580,7 @@ Link to my favorite: <a href="https://youtu.be/dQw4w9WgXcQ">AI/ML Workflow Fun</
 <thead>
 <tr>
 <th>Challenge</th>
-<th>Provenance should not be a glossary term here.</th>
+<th>Datasheet should not be a glossary term here.</th>
 <th>Neither should Container.</th>
 </tr>
 </thead>
@@ -591,11 +595,11 @@ Link to my favorite: <a href="https://youtu.be/dQw4w9WgXcQ">AI/ML Workflow Fun</
 </li>
 <li>
 <p>Add an <strong>exclusion</strong> test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.<br />
-Let's add a reference here.<sup id="fnref:gebruDatasheetsDatasets2021"><a class="footnote-ref" href="#fn:gebruDatasheetsDatasets2021">1</a></sup><sup id="fnref:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">2</a></sup>  </p>
+Let's add two references here.<sup id="fnref:gebruDatasheetsDatasets2021"><a class="footnote-ref" href="#fn:gebruDatasheetsDatasets2021">1</a></sup><sup id="fnref:mitchellModelCardsModel2019"><a class="footnote-ref" href="#fn:mitchellModelCardsModel2019">2</a></sup>  </p>
 </li>
 </ol>
 <!--
-Generated: Oct 3, 2026
+Generated: Oct 4, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.
