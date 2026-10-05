@@ -2,8 +2,8 @@
 
 This page lists behavior tests and edge cases for the glossary.
 
-1. Add a test for stemming. Variants of a term share one count, so the number of underlined occurrences depends on the `MARKS_PER_PAGE` setting in `glossary_links.py`. At the **default of 1**:  
-This first Audit log is underlined but this later audit logs is not.
+1. Add a test for term variants. Checks that all variants of the same glossary term share one count per page, controlled by the `MARKS_PER_PAGE` setting in `glossary_links.py`. At the **default of 1**:  
+The first Audit log is underlined, but the later audit logs is not.
 
 2. Add a test for QC & optimization. Checks that an ampersand is handled correctly in the glossary link.
 
@@ -20,8 +20,8 @@ Weights and Biases does not link to the glossary term, Weights & Biases.
 
 8. Add a test for auditable infrastructure. Checks that a glossary definition can contain bullets.
 
-9. RCD professionals help researchers understand the concept of fairness.  
-Checks that fairness and fairness assessment are matched as separate glossary terms. Another example is provenance and data provenance.
+9. Add a test for overlapping glossary terms. Checks that a longer glossary term and the shorter term contained within it are matched as separate entries.  
+Fairness assessment and fairness, or data provenance and provenance.
 
 10. Add a test comparing a one-line definition with a multi-line definition. Checks that the tooltip for the multi-line definition includes `[...]`.  
 Use Explainability for the one-line definition and Benchmarking for the multi-line definition.
