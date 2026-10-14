@@ -182,6 +182,14 @@ def on_page_content(html, page, config, files, **kwargs):
         # Keep the <abbr> element for tooltip styling, but wrap it in
         # a link to the matching heading on the full glossary page.
 
+        # A keyboard accessibility issue: 
+        # While navigating handbook pages via Tab, glossary links receive focus, but tooltips do not appear.
+        # In Microsoft Edge, moving the title attribute onto the link caused overlapping
+        # native Edge and Material tooltips. This issue is not easily resolved.
+        # Keyboard users can still follow links to the full glossary definitions.
+        # A similar issue was documented in Bootstrap (2015):
+        # https://github.com/twbs/bootstrap/issues/18692
+
         return (
             f'<a class="glossary-link" href="{target}#{slugify(heading)}">'
             f'<abbr title="{title}">{term}</abbr></a>'
