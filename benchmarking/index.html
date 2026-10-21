@@ -737,22 +737,22 @@
 <p><strong>Model <a class="glossary-link" href="../glossary/#benchmarking"><abbr title="The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]">Benchmarking</abbr></a></strong> (<strong>MB</strong>): evaluating AI models on well-defined tasks
 using specified datasets, metrics, protocols, and hardware, to assess a model's
 quality (e.g., accuracy), efficiency (e.g., latency, throughput, cost),
-scalability, and robustness (reliability, <a class="glossary-link" href="../glossary/#bias"><abbr title="A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]">bias</abbr></a>).</p>
+<a class="glossary-link" href="../glossary/#scalability"><abbr title="The ability of a computing system or workflow to handle growing workloads while maintaining acceptable performance. [...]">scalability</abbr></a>, and <a class="glossary-link" href="../glossary/#robustness"><abbr title="The ability of an AI model to maintain reliable performance when given noisy, unexpected, or slightly altered inputs. [...]">robustness</abbr></a> (reliability, <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic distortion or error in data, methods, or model results that can affect accuracy or produce unfair outcomes. [...]">bias</abbr></a>).</p>
 <p><strong>Quality Control</strong> (<strong>QC</strong>): testing, auditing, and ongoing monitoring for
 errors, biases, and inefficiencies relative to acceptance criteria for
 performance, reliability, and/or ethical standards.</p>
 <p><strong>Model Optimization</strong> (<strong>MO</strong>): iterative process to improve an AI model's
-performance, efficiency, and scalability for deployment while balancing accuracy
+performance, efficiency, and scalability for <a class="glossary-link" href="../glossary/#deployment"><abbr title="The process of making a trained AI model available for use in a research workflow or application. [...]">deployment</abbr></a> while balancing accuracy
 and costs.</p>
 <h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
 <ul>
 <li><strong>Benchmarking</strong>: for a new medical AI model that was finetuned based on a
-  BERT model, evaluate its performance on Named Entity Recognition (NER) for
+  <a class="glossary-link" href="../glossary/#bert"><abbr title="BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model architecture that can be adapted for tasks such as text classification and sentiment analysis.">BERT</abbr></a> model, evaluate its performance on Named Entity Recognition (NER) for
   clinical notes. Run benchmarks to compare its performance against
   <a href="https://academic.oup.com/bioinformatics/article/36/4/1234/5566506">BioBERT</a>
   or <a href="https://huggingface.co/medicalai/ClinicalBERT">ClinicalBERT</a> using the
-  same test dataset (e.g. the i2b2 benchmark dataset). Evaluate precision,
-  recall, F1-score, inference latency, and throughput using identical hardware
+  same test dataset (e.g. the i2b2 <a class="glossary-link" href="../glossary/#benchmark-dataset"><abbr title="A dataset used to evaluate and compare AI models under consistent conditions. [...]">benchmark dataset</abbr></a>). Evaluate precision,
+  recall, F1-score, <a class="glossary-link" href="../glossary/#inference"><abbr title="The process of using a trained AI model to generate predictions or results from new data. [...]">inference</abbr></a> latency, and throughput using identical hardware
   and software configurations.</li>
 <li><strong>Quality control</strong>: The new model needs to be assessed for its robustness and
   trustworthiness. For the above medical AI model, add noise to the data input
@@ -765,10 +765,10 @@ and costs.</p>
   various optimizations can be applied to improve model's performance. For
   example, if the new model's domain performance is poor, e.g. low F-1 score or
   precision, the model needs further domain-adaptive fine tuning by increasing
-  domain specific data sets or data augmentation and hyperparameter tuning using
+  domain specific data sets or <a class="glossary-link" href="../glossary/#data-augmentation"><abbr title="Artificially expanding a training dataset by modifying or combining existing data, such as altering images, audio, or video, without collecting new real-world data.">data augmentation</abbr></a> and <a class="glossary-link" href="../glossary/#hyperparameter"><abbr title="A setting that controls how a model is trained but is not learned from the data, such as the learning rate, batch size, or number of epochs. [...]">hyperparameter</abbr></a> tuning using
   Optuna or Ray Tune tools. To optimize the latency and scalability, identify
-  the bottlenecks and reduce the latency and operating cost by applying model
-  quantization, optimizing batch sizes and data pipelines, adopting parallel and
+  the <a class="glossary-link" href="../glossary/#bottleneck"><abbr title="A component or step that limits the overall speed, scale, or performance of a workflow.">bottlenecks</abbr></a> and reduce the latency and operating cost by applying model
+  <a class="glossary-link" href="../glossary/#quantization"><abbr title="Reducing the numerical precision used to represent and process a model’s values. [...]">quantization</abbr></a>, optimizing <a class="glossary-link" href="../glossary/#batch-size"><abbr title="The number of training examples a model processes before its parameters are updated. [...]">batch sizes</abbr></a> and <a class="glossary-link" href="../glossary/#data-pipeline"><abbr title="A sequence of automated or semi-automated steps that moves and transforms data from its source to its destination or analysis-ready form.">data pipelines</abbr></a>, adopting parallel and
   distributed computing for better throughput and resource utilization.</li>
 </ul>
 <h2 id="user-tasks-and-tools">User Tasks and Tools</h2>
@@ -784,37 +784,37 @@ and costs.</p>
 <tr>
 <td><strong>MB: Objective Definition and Performance Metrics Selection</strong></td>
 <td>Define benchmarking objectives and identify the metrics to evaluate <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> for the AI task and research goals.</td>
-<td>Accuracy, precision, recall, F1-score, ROC-AUC, BLEU, ROUGE, BERTScore, perplexity, mAP, latency and throughput, <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">Fairness</abbr></a> Metrics, energy consumption, cost-per-inference, token-per-watt.</td>
+<td>Accuracy, precision, recall, F1-score, ROC-AUC, BLEU, ROUGE, BERTScore, perplexity, mAP, latency and throughput, Fairness Metrics, energy consumption, cost-per-inference, token-per-watt.</td>
 </tr>
 <tr>
-<td><strong>MB: Dataset and Baseline Model Selection</strong></td>
+<td><strong>MB: Dataset and <a class="glossary-link" href="../glossary/#baseline-model"><abbr title="A model used as a reference for comparing the performance of other models. [...]">Baseline Model</abbr></a> Selection</strong></td>
 <td>Select representative benchmark datasets and baseline models appropriate for the research domain, use case, tasks, and community standards.</td>
 <td><strong>Datasets</strong>: ImageNet, CIFAR, COCO, SQuAD, GPQA, MMLU, PubMedQA, MIMIC. <strong>Baseline models</strong>: BERT, GPT-OSS, Llama, ResNet, ViT, YOLO. <strong>Data Resources</strong>: Hugging Face Datasets, Kaggle, UCI ML <a class="glossary-link" href="../glossary/#repository"><abbr title="A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]">repository</abbr></a>.</td>
 </tr>
 <tr>
 <td><strong>MB: Benchmark and Evaluation Framework Selection and Execution</strong></td>
 <td>Select appropriate benchmark suites and evaluation frameworks, execute benchmark runs, collect performance metrics, and compare results against baseline and/or SOTA models.</td>
-<td><strong>Benchmark suites</strong>: MLPerf, SuperGLUE, MMLU, GPQA, HumanEval, SWE-bench, HELM. <strong>Evaluation Frameworks</strong>: LM Evaluation Harness, HELM, OpenAI Eval, DeepEval, Ragas, Hugging Face Evaluate. <strong>Execution and Analysis</strong>: <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a>, TensorBoard, MLflow, OpenAI Evals, Scikit-learn, PyTorch Benchmark, NVIDIA Nsight.</td>
+<td><strong>Benchmark suites</strong>: MLPerf, SuperGLUE, MMLU, GPQA, HumanEval, SWE-bench, HELM. <strong>Evaluation Frameworks</strong>: LM Evaluation Harness, HELM, OpenAI Eval, DeepEval, Ragas, Hugging Face Evaluate. <strong>Execution and Analysis</strong>: Weights &amp; Biases, TensorBoard, MLflow, OpenAI Evals, <a class="glossary-link" href="../glossary/#scikit-learn"><abbr title="A Python library providing tools for data preprocessing, feature engineering, modeling, and evaluation.">Scikit-learn</abbr></a>, PyTorch Benchmark, NVIDIA Nsight.</td>
 </tr>
 <tr>
 <td><strong>QC: Result validation and Error Analysis</strong></td>
-<td>Validate the accuracy of the model's output and the results against ground truth, analyze errors, and detect overfitting/underfitting.</td>
+<td>Validate the accuracy of the model's output and the results against ground truth, analyze errors, and detect <a class="glossary-link" href="../glossary/#overfitting"><abbr title="When a model learns its training data too closely, including patterns that do not generalize to new data. [...]">overfitting</abbr></a>/<a class="glossary-link" href="../glossary/#underfitting"><abbr title="When a model is too simple, or trained too briefly, to capture the patterns in its training data. [...]">underfitting</abbr></a>.</td>
 <td>Deepchecks, Great Expectations, TensorFlow Model Analysis, Evidently AI, Scikit-learn, LIME, Confusion matrices, Calibration curves.</td>
 </tr>
 <tr>
 <td><strong>QC: Robustness, Trustworthiness, Reliability Evaluation</strong></td>
-<td>Evaluate model's fairness, biases, reliability, robustness, hallucinations, and consistency across use cases.</td>
-<td>Robustness Gym, Adversarial Robustness Toolbox (ART), Fairlearn, IBM AI Fairness 360, SHAP, Captum, Google <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document that accompanies a trained model. [...]">Model Cards</abbr></a> Toolkit, Compliance.ai, InterpretML.</td>
+<td>Evaluate model's fairness, biases, reliability, robustness, hallucinations, and <a class="glossary-link" href="../glossary/#consistency"><abbr title="The extent to which data follows the same definitions, formats, units, and rules throughout a dataset.">consistency</abbr></a> across use cases.</td>
+<td>Robustness Gym, Adversarial Robustness Toolbox (ART), Fairlearn, IBM AI Fairness 360, SHAP, Captum, Google <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document describing a trained AI model’s intended uses, training and evaluation data, performance, capabilities, risks, and known limitations. [...]">Model Cards</abbr></a> Toolkit, Compliance.ai, InterpretML.</td>
 </tr>
 <tr>
 <td><strong>QC: Compliance, Risk, and Operational Monitoring</strong></td>
 <td>Assess compliance with institutional and regulatory requirements. Evaluate security and privacy risks. Monitor models for drifting and performance degradation.</td>
-<td>NIST Privacy Framework, NIST AI Risk Management Framework, <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">Audit logs</abbr></a>, Prometheus, Grafana, Evidently AI, Alibi Detect, MLflow, ClearML.</td>
+<td>NIST Privacy Framework, <a class="glossary-link" href="../glossary/#nist-ai-risk-management-framework"><abbr title="A voluntary framework published by the U.S. [...]">NIST AI Risk Management Framework</abbr></a>, Audit logs, Prometheus, Grafana, Evidently AI, Alibi Detect, MLflow, ClearML.</td>
 </tr>
 <tr>
 <td><strong>MO: Model Performance Optimization</strong></td>
-<td>Improve model's accuracy, generalization, and robustness by hyperparameter tuning, architecture modification, feature engineering, data augmentation, and fine-tuning.</td>
-<td>Optuna, Ray Tune, Hyperopt, Weights &amp; Biases, PyTorch and TensorFlow libraries, MLflow, Scikit-learn, Parameter-Efficient Fine-Tuning (PEFT), Augmentor, Roboflow, NLPAug, TextAttack, AugLy.</td>
+<td>Improve model's accuracy, <a class="glossary-link" href="../glossary/#generalization"><abbr title="How well a model performs on data it has not seen before. [...]">generalization</abbr></a>, and robustness by hyperparameter tuning, architecture modification, <a class="glossary-link" href="../glossary/#feature-engineering"><abbr title="Creating, selecting, encoding, transforming, or reducing input variables so they are more useful for machine learning and can be used in a model.">feature engineering</abbr></a>, data augmentation, and <a class="glossary-link" href="../glossary/#fine-tuning"><abbr title="Further training an existing pretrained AI model on additional data to adapt it to a particular task or research domain. [...]">fine-tuning</abbr></a>.</td>
+<td>Optuna, Ray Tune, Hyperopt, Weights &amp; Biases, PyTorch and TensorFlow libraries, MLflow, Scikit-learn, Parameter-Efficient Fine-Tuning (<a class="glossary-link" href="../glossary/#peft"><abbr title="Parameter-efficient fine-tuning (PEFT) refers to methods that adapt a pretrained model by training a small number of additional or selected parameters rather than all of them. [...]">PEFT</abbr></a>), Augmentor, Roboflow, NLPAug, TextAttack, AugLy.</td>
 </tr>
 <tr>
 <td><strong>MO: Computation Efficiency Optimization</strong></td>
@@ -831,7 +831,7 @@ and costs.</p>
 <h2 id="researcher-and-educator-challenges">Researcher and Educator Challenges</h2>
 <p><strong>Model Benchmarking:</strong></p>
 <ul>
-<li>Acquire sufficient computing resources including CPU, GPU/TPU, memory, and
+<li>Acquire sufficient computing resources including <a class="glossary-link" href="../glossary/#cpu"><abbr title="A central processing unit (CPU) is the general-purpose processor used to execute program instructions.">CPU</abbr></a>, <a class="glossary-link" href="../glossary/#gpu"><abbr title="A graphics processing unit (GPU) is a processor capable of performing many operations in parallel and is often used for machine learning workloads.">GPU</abbr></a>/TPU, memory, and
   storage at different scales for benchmarking.</li>
 <li>Select suitable benchmark datasets, benchmark suites and frameworks, baseline
   models for the research domain.</li>
@@ -840,12 +840,12 @@ and costs.</p>
 <li>Need assistance with benchmark run time workflow configuration, job
   scheduling, resource allocation, and performance monitoring.</li>
 <li>Containerize benchmarking environments and track software dependencies to
-  ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a>.</li>
+  ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]">reproducibility</abbr></a>.</li>
 </ul>
 <p><strong>Quality Control:</strong></p>
 <ul>
 <li>Assess compliance with institutional policies and regulations, navigate risk
-  assessment process, and implement data <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access control</abbr></a> to securely guard the
+  assessment process, and implement data <a class="glossary-link" href="../glossary/#access-control"><abbr title="Policies, technologies, and procedures that determine who or what may access resources, under which conditions, and what actions are permitted. [...]">access control</abbr></a> to securely guard the
   sensitive or restricted data.</li>
 <li>Validate model performance, robustness, and reliability across diverse
   datasets and platforms; detect hallucinations and analyze failures.</li>
@@ -879,17 +879,17 @@ and costs.</p>
 <tr>
 <td>Assess and acquire computing resources to balance cost and performance</td>
 <td>Long runtime, high cost, or resource availability may affect scalability and project progress.</td>
-<td>Provide performance profiling tools to identify bottlenecks; recommend parallel and distributed computing configurations, on-prem or cloud options.</td>
+<td>Provide <a class="glossary-link" href="../glossary/#performance-profiling"><abbr title="The process of measuring how a program uses computing resources, such as CPUs, GPUs, memory, and storage. [...]">performance profiling</abbr></a> tools to identify bottlenecks; recommend parallel and distributed computing configurations, on-prem or cloud options.</td>
 </tr>
 <tr>
-<td>Select benchmarks and software stack suitable for the research domain</td>
+<td>Select benchmarks and <a class="glossary-link" href="../glossary/#software-stack"><abbr title="The collection of programming languages, libraries, applications, operating-system components, and infrastructure used to perform a workflow.">software stack</abbr></a> suitable for the research domain</td>
 <td>Inappropriate benchmarks may lead to misleading conclusions.</td>
 <td>Help identify representative benchmark suites and datasets, baseline models, and evaluation metrics appropriate for the research area.</td>
 </tr>
 <tr>
 <td>Reproducibility across platforms</td>
 <td>Results may be difficult to verify, compare, or publish.</td>
-<td>Provide robust software environment, <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">containers</abbr></a>, and <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code, data, and other project files over time so that specific versions can be identified and restored. [...]">version control</abbr></a>. Configure, automate, and document the workflow.</td>
+<td>Provide robust software environment, <a class="glossary-link" href="../glossary/#container"><abbr title="A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]">containers</abbr></a>, and <a class="glossary-link" href="../glossary/#version-control"><abbr title="A system for tracking changes to code, data, configuration, and other project files over time so that specific versions can be identified and restored. [...]">version control</abbr></a>. Configure, automate, and document the workflow.</td>
 </tr>
 <tr>
 <td>Compliance, institutional policies, regulatory requirements</td>
@@ -927,7 +927,7 @@ and costs.</p>
   energy consumption, operational costs when configuring the workflow and
   selecting optimization strategies.</li>
 <li>Evaluate robustness and reliability under noisy or adversarial inputs. Assess
-  fairness across all relevant <a class="glossary-link" href="../glossary/#subgroup"><abbr title="A defined segment of a population evaluated separately from the overall population. [...]">subgroups</abbr></a>. Conduct stress testing to ensure
+  fairness across all relevant subgroups. Conduct stress testing to ensure
   reliability.</li>
 </ul>
 <h2 id="selected-learning-resources">Selected Learning Resources</h2>
@@ -935,10 +935,10 @@ and costs.</p>
 <li><a href="https://mlcommons.org/benchmarks/">MLCommons Benchmarks</a>: standardized ML
   benchmarks for AI training and inference, and latest benchmarking results.</li>
 <li>Stanford <a href="https://crfm.stanford.edu/helm/">HELM</a>: a holistic framework for
-  evaluating foundation models.</li>
+  evaluating <a class="glossary-link" href="../glossary/#foundation-model"><abbr title="A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]">foundation models</abbr></a>.</li>
 <li><a href="https://github.com/EleutherAI/lm-evaluation-harness">LM Evaluation Harness (EleutherAI
   GitHub)</a>: open-source
-  toolkit for standardized benchmarking of LLMs.</li>
+  toolkit for standardized benchmarking of <a class="glossary-link" href="../glossary/#llm"><abbr title="A large language model (LLM) is trained on large collections of text to interpret and generate natural language. [...]">LLMs</abbr></a>.</li>
 <li><a href="https://info.langchain.com/eval-frameworks">LangChain evaluation frameworks</a>:
   build systematic evaluations.</li>
 <li><a href="https://www.ragas.io">Ragas</a>: a framework for RAG evaluation.</li>
@@ -958,7 +958,7 @@ and costs.</p>
   introduction and guide.</li>
 </ul>
 <!--
-Generated: Oct 4, 2026
+Generated: Oct 21, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

@@ -758,7 +758,7 @@
 <h2 id="definition">Definition</h2>
 <p>Model Application packages and deploys a trained model with its dependencies and
 integrates it into a production or research environment where it can serve end
-users or downstream systems by performing inference on new data. It includes
+users or downstream systems by performing <a class="glossary-link" href="../glossary/#inference"><abbr title="The process of using a trained AI model to generate predictions or results from new data. [...]">inference</abbr></a> on new data. It includes
 managing infrastructure and computational resources for <strong>batch (B)</strong>,
 <strong>interactive (I)</strong>, or <strong>real-time (RT) execution modes</strong>, along with
 monitoring, versioning, and scaling to ensure reliability, performance, and
@@ -771,13 +771,13 @@ Product.</p>
 <ul>
 <li>Creating a chatbot or AI agent using a trained model to provide real-time
   responses for research or user-facing applications.</li>
-<li>Running a climate prediction model overnight on HPC batch resources to
+<li>Running a climate prediction model overnight on <a class="glossary-link" href="../glossary/#hpc"><abbr title="High-performance computing (HPC) refers to computing infrastructure designed to process large or complex workloads using powerful systems, parallelism, and specialized resources.">HPC</abbr></a> batch resources to
   generate ensemble forecasts.</li>
-<li>Deploying an NLP model in an interactive JupyterHub session for text
-  annotation experiments.</li>
+<li>Deploying an <a class="glossary-link" href="../glossary/#nlp"><abbr title="Natural language processing (NLP) refers to methods for analyzing and processing human language in text or speech data.">NLP</abbr></a> model in an interactive JupyterHub session for text
+  <a class="glossary-link" href="../glossary/#annotation"><abbr title="The process of adding labels, categories, metadata, or other descriptive information to data.">annotation</abbr></a> experiments.</li>
 <li>Hosting a real-time image classification model on an edge device for a lab's
   microscopy pipeline.</li>
-<li>Using a <a class="glossary-link" href="../glossary/#container"><abbr title="An isolated computing environment that packages software or code with the dependencies needed to run it. [...]">container</abbr></a> registry to launch a model inference service for genomics
+<li>Using a <a class="glossary-link" href="../glossary/#container"><abbr title="A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]">container</abbr></a> registry to launch a model inference service for genomics
   workflows.</li>
 </ul>
 <h2 id="user-tasks-and-tools">User Tasks and Tools</h2>
@@ -795,31 +795,31 @@ Product.</p>
 <td><strong>B, I</strong></td>
 <td><strong>Model Inference for Simulations and Research Analysis</strong></td>
 <td>Run trained AI or ML models to generate predictions or insights across scientific simulations and data-driven research workflows.</td>
-<td>TensorFlow, PyTorch, Slurm, Apptainer/Singularity</td>
+<td>TensorFlow, PyTorch, <a class="glossary-link" href="../glossary/#slurm"><abbr title="A workload manager and job scheduler commonly used on HPC clusters to allocate resources and run batch jobs.">Slurm</abbr></a>, Apptainer/Singularity</td>
 </tr>
 <tr>
 <td><strong>B, I</strong></td>
 <td><strong>Model Packaging and Environment Setup</strong></td>
-<td>Bundle trained models with their dependencies, configurations, and runtime environments to ensure portability and <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a> across HPC, cloud, and edge systems.</td>
+<td>Bundle trained models with their dependencies, configurations, and runtime environments to ensure portability and <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]">reproducibility</abbr></a> across HPC, cloud, and edge systems.</td>
 <td>Apptainer/Singularity, Docker, Conda, MLflow Models, ONNX</td>
 </tr>
 <tr>
 <td><strong>B</strong></td>
 <td><strong>Data-Processing Pipelines</strong></td>
 <td>Schedule or automated processing of research datasets.</td>
-<td>Apache Spark MLlib, Apptainer/Singularity</td>
+<td><a class="glossary-link" href="../glossary/#apache-spark"><abbr title="A distributed computing framework used to process large datasets across multiple machines or cores.">Apache Spark</abbr></a> MLlib, Apptainer/Singularity</td>
 </tr>
 <tr>
 <td><strong>I</strong></td>
 <td><strong>Web-based model testing</strong></td>
 <td>On-demand testing of models in browser or web app.</td>
-<td>Jupyter Notebook/JupyterLab, Hugging Face Spaces</td>
+<td><a class="glossary-link" href="../glossary/#jupyter-notebook"><abbr title="An interactive document that combines executable code, outputs, visualizations, and explanatory text.">Jupyter Notebook</abbr></a>/JupyterLab, Hugging Face Spaces</td>
 </tr>
 <tr>
 <td><strong>I</strong></td>
 <td><strong>Interactive visualization</strong></td>
 <td>Explore and interpret model results visually.</td>
-<td>JupyterHub/JupyterLab, TensorBoard, <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a> (W&amp;B), Streamlit/Dash</td>
+<td>JupyterHub/JupyterLab, TensorBoard, Weights &amp; <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic distortion or error in data, methods, or model results that can affect accuracy or produce unfair outcomes. [...]">Biases</abbr></a> (W&amp;B), Streamlit/Dash</td>
 </tr>
 <tr>
 <td><strong>RT</strong></td>
@@ -848,7 +848,7 @@ Product.</p>
 <tr>
 <td><strong>B, I, RT</strong></td>
 <td><strong>Model Management and Monitoring</strong></td>
-<td>Track, version, and monitor <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> and lifecycle across batch, interactive, and real-time deployments to ensure reliability, reproducibility, and continuous improvement (for project-deployed models; platform-managed models are addressed in the Cross-Cutting section)</td>
+<td>Track, version, and monitor <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a> and lifecycle across batch, interactive, and real-time <a class="glossary-link" href="../glossary/#deployment"><abbr title="The process of making a trained AI model available for use in a research workflow or application. [...]">deployments</abbr></a> to ensure reliability, reproducibility, and continuous improvement (for project-deployed models; platform-managed models are addressed in the Cross-Cutting section)</td>
 <td>MLflow, ClearML, W&amp;B, Neptune.ai</td>
 </tr>
 </tbody>
@@ -857,9 +857,9 @@ Product.</p>
 <ul>
 <li>Models outgrow local resources<ul>
 <li>Large or scaling models (e.g., serving a self-hosted Large Language Model
-  for project use) exceed workstation or single-GPU setups</li>
+  for project use) exceed workstation or single-<a class="glossary-link" href="../glossary/#gpu"><abbr title="A graphics processing unit (GPU) is a processor capable of performing many operations in parallel and is often used for machine learning workloads.">GPU</abbr></a> setups</li>
 <li>High compute, memory, or storage demands (e.g., multi-GPU training,
-  distributed inference, vector databases) require <a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a>-managed HPC or cloud
+  distributed inference, vector databases) require RCD-managed HPC or cloud
   resources.</li>
 </ul>
 </li>
@@ -869,21 +869,21 @@ Product.</p>
   retraining.</li>
 </ul>
 </li>
-<li>Real-time inference performance becomes essential<ul>
+<li><a class="glossary-link" href="../glossary/#real-time-inference"><abbr title="Using a trained AI model to produce results within an application's response-time requirements. [...]">Real-time inference</abbr></a> performance becomes essential<ul>
 <li>Low-latency applications are required like wildfire-mapping drones or
   autonomous robotics.</li>
-<li>RCD resources enable real-time inference through accelerators and
+<li>RCD resources enable real-time inference through <a class="glossary-link" href="../glossary/#accelerator"><abbr title="Specialized hardware, such as a GPU or other device, designed to speed up particular computations.">accelerators</abbr></a> and
   orchestration platforms.</li>
 </ul>
 </li>
 <li>Compliance and security constraints<ul>
 <li>Projects subject to regulatory or institutional oversight require secure
   environments and controlled access.</li>
-<li>Projects with HIPAA, CUI, or GDPR constraints require isolated HPC or
+<li>Projects with <a class="glossary-link" href="../glossary/#hipaa"><abbr title="The Health Insurance Portability and Accountability Act (HIPAA) is a U.S. [...]">HIPAA</abbr></a>, <a class="glossary-link" href="../glossary/#cui"><abbr title="Controlled unclassified information (CUI) is U.S. [...]">CUI</abbr></a>, or GDPR constraints require isolated HPC or
   cloud environments aligned with compliance standards.</li>
-<li>Studies under IRB approval may fall within lower-security enclaves but
+<li>Studies under <a class="glossary-link" href="../glossary/#irb"><abbr title="An institutional review board (IRB) is a committee that reviews and oversees research involving human subjects to confirm that it meets ethical and regulatory requirements. [...]">IRB</abbr></a> approval may fall within lower-security enclaves but
   still require RCD-managed resources for proper data handling, auditing,
-  and <a class="glossary-link" href="../glossary/#access-control"><abbr title="Access control is the set of policies, technologies, and procedures that determines who can access what resources, under what conditions, and what actions they are permitted to perform. [...]">access control</abbr></a>.</li>
+  and <a class="glossary-link" href="../glossary/#access-control"><abbr title="Policies, technologies, and procedures that determine who or what may access resources, under which conditions, and what actions are permitted. [...]">access control</abbr></a>.</li>
 </ul>
 </li>
 </ul>
@@ -900,9 +900,9 @@ Product.</p>
 <tbody>
 <tr>
 <td><strong>Infrastructure &amp; Hardware</strong></td>
-<td><strong>Containerization &amp; Batch Processing</strong></td>
+<td><strong><a class="glossary-link" href="../glossary/#containerization"><abbr title="Packaging software together with the dependencies it needs so that it runs consistently across computing systems. [...]">Containerization</abbr></a> &amp; <a class="glossary-link" href="../glossary/#batch-processing"><abbr title="Running computing tasks without continuous user interaction, often through a job scheduler. [...]">Batch Processing</abbr></a></strong></td>
 <td>Work with researchers to support diverse research workflows that require scalable, reproducible execution across HPC and cloud environments.</td>
-<td>Use Slurm for scheduled batch jobs on HPC and Kubernetes or Apptainer/Singularity for containerized and scalable model serving.</td>
+<td>Use Slurm for scheduled batch jobs on HPC and Kubernetes or Apptainer/Singularity for containerized and scalable <a class="glossary-link" href="../glossary/#model-serving"><abbr title="Making a trained AI model available to receive inputs and return predictions or results to users or applications. [...]">model serving</abbr></a>.</td>
 </tr>
 <tr>
 <td><strong>Infrastructure &amp; Hardware</strong></td>
@@ -925,14 +925,14 @@ Product.</p>
 <tr>
 <td><strong>Software &amp; Workflows</strong></td>
 <td><strong>User Interfaces &amp; Accessibility</strong></td>
-<td>Lower the barrier for researchers to test and deploy models, including LLMs, interactively without complex DevOps setup.</td>
+<td>Lower the barrier for researchers to test and deploy models, including <a class="glossary-link" href="../glossary/#llm"><abbr title="A large language model (LLM) is trained on large collections of text to interpret and generate natural language. [...]">LLMs</abbr></a>, interactively without complex DevOps setup.</td>
 <td>Provide Hugging Face Inference API, Ollama, JupyterHub/JupyterLab, and Streamlit/Dash for accessible model testing and sharing.</td>
 </tr>
 <tr>
 <td><strong>Governance &amp; Operations</strong></td>
 <td><strong>Security Compliance</strong></td>
 <td>Help interpret and implement security and data compliance standards for regulated projects.</td>
-<td>Ensure HIPAA/GDPR/CUI compliance through encryption at rest/in transit and isolated, policy-aligned compute environments.</td>
+<td>Ensure HIPAA/GDPR/CUI compliance through <a class="glossary-link" href="../glossary/#encryption-at-rest"><abbr title="Protecting stored data through encryption.">encryption at rest</abbr></a>/in transit and isolated, policy-aligned compute environments.</td>
 </tr>
 <tr>
 <td><strong>Governance &amp; Operations</strong></td>
@@ -952,7 +952,7 @@ Product.</p>
 <li>Optimize early for deployment needs<ul>
 <li>Profile and optimize on target hardware early, since deployment hardware
   may differ from training systems.</li>
-<li>Tune batch sizes, threading, and model precision during inference to match
+<li>Tune <a class="glossary-link" href="../glossary/#batch-size"><abbr title="The number of training examples a model processes before its parameters are updated. [...]">batch sizes</abbr></a>, threading, and model precision during inference to match
   production environments.</li>
 <li>Reduce latency by placing jobs close to data (node locality, caching
   strategies).</li>
@@ -962,13 +962,13 @@ Product.</p>
 </li>
 <li>Plan storage and tracking from the start<ul>
 <li>Use parallel file systems for large data I/O (e.g., training checkpoints).</li>
-<li>For metadata-heavy workloads like Anaconda or Python virtual environments,
+<li>For <a class="glossary-link" href="../glossary/#metadata"><abbr title="Information that describes data, such as its origin, format, contents, collection conditions, ownership, or processing history.">metadata</abbr></a>-heavy workloads like Anaconda or Python virtual environments,
   use local SSDs on compute nodes or storage like NetApp or VAST.</li>
 <li>Version models and experiments early with MLflow and ClearML.</li>
 </ul>
 </li>
 <li>Monitor and update deployed models<ul>
-<li>Continuously track performance, drift, and <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a> over time.</li>
+<li>Continuously track performance, drift, and fairness over time.</li>
 <li>Schedule periodic retraining or model refreshes to maintain accuracy and
   compliance.</li>
 <li>Integrate lifecycle monitoring tools (e.g., MLflow, ClearML) to ensure
@@ -985,7 +985,7 @@ Product.</p>
 <li>Match the deployment method to reliability, latency, and scaling
   requirements (e.g., batch jobs on HPC clusters, interactive notebooks,
   REST APIs, or edge devices).</li>
-<li>Use CPUs for low-throughput batch jobs, GPUs/accelerators for
+<li>Use <a class="glossary-link" href="../glossary/#cpu"><abbr title="A central processing unit (CPU) is the general-purpose processor used to execute program instructions.">CPUs</abbr></a> for low-throughput batch jobs, GPUs/accelerators for
   high-throughput or low-latency tasks.</li>
 <li>Containerize models (Apptainer, Docker) and manage with Slurm or
   Kubernetes.</li>
@@ -996,13 +996,13 @@ Product.</p>
 </li>
 <li>Storage and I/O<ul>
 <li>Parallel file systems for large model/data I/O (Lustre).</li>
-<li>Object stores, NVMe SSDs, or vector DBs for real-time or metadata-heavy
+<li><a class="glossary-link" href="../glossary/#object-store"><abbr title="A storage system that manages data as objects, typically containing data, metadata, and a unique identifier rather than a traditional hierarchical file path.">Object stores</abbr></a>, NVMe SSDs, or vector DBs for real-time or metadata-heavy
   workloads (e.g., VAST).</li>
 </ul>
 </li>
 <li>Network and latency<ul>
 <li>Optimize interconnects (InfiniBand, high-speed Ethernet) to reduce
-  inference bottlenecks.</li>
+  inference <a class="glossary-link" href="../glossary/#bottleneck"><abbr title="A component or step that limits the overall speed, scale, or performance of a workflow.">bottlenecks</abbr></a>.</li>
 <li>Use node locality and caching strategies to minimize data transfer
   overhead for real-time tasks.</li>
 </ul>
@@ -1040,7 +1040,7 @@ Product.</p>
   guidance for compliant, trustworthy AI deployment</li>
 </ul>
 <!--
-Generated: Oct 4, 2026
+Generated: Oct 21, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

@@ -534,45 +534,32 @@
 
 
 <h1 id="behavior-tests-edge-cases">Behavior Tests &amp; Edge Cases</h1>
-<p>This page lists behavior tests and edge cases for the glossary.</p>
+<p>This page lists behavior tests and <a class="glossary-link" href="../glossary/#edge-case"><abbr title="An unusual, extreme, or boundary situation that may expose weaknesses in a data-processing or analysis workflow.">edge cases</abbr></a> for the glossary.</p>
 <ol>
 <li>
 <p>Add a test for term variants. Checks that all variants of the same glossary term share one count per page, controlled by the <code>MARKS_PER_PAGE</code> setting in <code>glossary_links.py</code>. At the <strong>default of 1</strong>:<br />
-The first <a class="glossary-link" href="../glossary/#audit-log"><abbr title="Records of actions, configurations, versions, and other events associated with a system or workflow. [...]">Audit log</abbr></a> is underlined, but the later audit logs is not.</p>
+The first <a class="glossary-link" href="../glossary/#accelerator"><abbr title="Specialized hardware, such as a GPU or other device, designed to speed up particular computations.">accelerators</abbr></a> is underlined, but the later Accelerator is not.</p>
 </li>
 <li>
-<p>Add a test for <a class="glossary-link" href="../glossary/#qc-optimization"><abbr title="Processes used to check the quality and reliability of computational results and improve the performance or efficiency of a workflow, model, or system. [...]">QC &amp; optimization</abbr></a>. Checks that an ampersand is handled correctly in the glossary link.</p>
+<p>Add a test for <a class="glossary-link" href="../glossary/#objective-key-results"><abbr title="A goal-setting method that pairs a stated objective with a small number of measurable results used to track progress toward it. [...]">Objective &amp; key results</abbr></a>. Checks that an ampersand is handled correctly in the glossary link.</p>
 </li>
 <li>
-<p>Add a test for a variant of a term containing an ampersand. Confirms the variant scanner does not match "and" to "&amp;".<br />
-Weights and Biases does not link to the glossary term, <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a>.</p>
+<p>Add a test for <a class="glossary-link" href="../glossary/#aiml-workflow"><abbr title="An AI/ML (artificial intelligence or machine learning) workflow is the sequence of activities used to develop and apply an AI or machine learning system. [...]">AI/ML workflow</abbr></a>. The slash should be removed from the heading ID rather than turned into a hyphen.</p>
 </li>
 <li>
-<p>Add a test for a term that begins with a number: <a class="glossary-link" href="../glossary/#3-2-1-backup-rule"><abbr title="A data backup practice: keep three copies of the data, on two different types of storage, with one copy held offsite. [...]">3-2-1 backup rule</abbr></a>. Checks that a term beginning with a number links correctly to its glossary entry.</p>
-</li>
-<li>
-<p>Add a test for a term that includes an accent: <a class="glossary-link" href="../glossary/#uberanpassung"><abbr title="German term for overfitting, seen in German-language machine learning literature. [...]">Überanpassung</abbr></a> and <a class="glossary-link" href="../glossary/#naive-bayes"><abbr title="A classification method that applies Bayes' theorem while assuming every feature is independent of the others. [...]">Naïve Bayes</abbr></a>. Checks that accented characters produce the correct glossary links.</p>
-</li>
-<li>
-<p>Add a test that Überanpassung comes before <a class="glossary-link" href="../glossary/#ubung"><abbr title="A glorious German word meaning exercise or practice.">Übung</abbr></a> on the glossary page. Checks that accented terms are sorted correctly.</p>
-</li>
-<li>
-<p>Add a test for <a class="glossary-link" href="../glossary/#aiml"><abbr title="A collective term for artificial intelligence and machine learning, used when referring to methods, tools, systems, or workflows that may involve either or both.">AI/ML</abbr></a>. The slash should be removed from the heading ID rather than turned into a hyphen.</p>
-</li>
-<li>
-<p>Add a test for <a class="glossary-link" href="../glossary/#auditable-infrastructure"><abbr title="Auditable infrastructure is infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. [...]">auditable infrastructure</abbr></a>. Checks that a glossary definition can contain bullets.</p>
+<p>Add a test for <a class="glossary-link" href="../glossary/#auditable-infrastructure"><abbr title="Infrastructure designed so that its configuration, operations, access, and changes can be independently verified through records, logs, and documented controls. [...]">auditable infrastructure</abbr></a>. Checks that a glossary definition can contain bullets.</p>
 </li>
 <li>
 <p>Add a test for overlapping glossary terms. Checks that a longer glossary term and the shorter term contained within it are matched as separate entries.<br />
-<a class="glossary-link" href="../glossary/#fairness-assessment"><abbr title="The evaluation of whether a machine learning or AI model’s outcomes meet fairness criteria appropriate to its intended context. [...]">Fairness assessment</abbr></a> and <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a>, or <a class="glossary-link" href="../glossary/#data-provenance"><abbr title="The documented history of data: where it came from, how it has been transformed or processed, who has modified it, and how it has been used.">data provenance</abbr></a> and <a class="glossary-link" href="../glossary/#provenance"><abbr title="The documented origin, history, and handling of data, code, models, or other research artifacts.">provenance</abbr></a>.</p>
+<a class="glossary-link" href="../glossary/#real-time-inference"><abbr title="Using a trained AI model to produce results within an application's response-time requirements. [...]">Real-time inference</abbr></a> and <a class="glossary-link" href="../glossary/#inference"><abbr title="The process of using a trained AI model to generate predictions or results from new data. [...]">Inference</abbr></a>, or <a class="glossary-link" href="../glossary/#deployment-plan"><abbr title="A description of how a completed model or workflow will be made available for use, including the environments, accounts, support channels, and ongoing costs involved. [...]">Deployment plan</abbr></a> and <a class="glossary-link" href="../glossary/#deployment"><abbr title="The process of making a trained AI model available for use in a research workflow or application. [...]">Deployment</abbr></a></p>
 </li>
 <li>
 <p>Add a test comparing a one-line definition with a multi-line definition. Checks that the tooltip for the multi-line definition includes <code>[...]</code>.<br />
-Use <a class="glossary-link" href="../glossary/#explainability"><abbr title="The extent to which the reasons or factors behind a particular output or decision of a machine learning or AI model can be communicated with enough context for a human to understand why it occurred.">Explainability</abbr></a> for the one-line definition and <a class="glossary-link" href="../glossary/#benchmarking"><abbr title="The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]">Benchmarking</abbr></a> for the multi-line definition.</p>
+Use <a class="glossary-link" href="../glossary/#explainability"><abbr title="How well people can understand why an AI or machine learning model produced a particular result or decision.">Explainability</abbr></a> for the one-line definition and <a class="glossary-link" href="../glossary/#benchmarking"><abbr title="The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]">Benchmarking</abbr></a> for the multi-line definition.</p>
 </li>
 <li>
-<p>Add an <strong>exclusion</strong> test. Confirm that a glossary term, AI/ML, inside an existing hyperlink stays a normal link instead of being turned into a glossary link.<br />
-Link to my favorite: <a href="https://youtu.be/QDia3e12czc">AI/ML Workflow Fun</a></p>
+<p>Add an <strong>exclusion</strong> test. Confirm that a glossary term inside an existing hyperlink stays a normal link instead of being turned into a glossary link.<br />
+Link to my favourite: <a href="https://youtu.be/QDia3e12czc">ARX For Fun And Profit</a></p>
 </li>
 <li>
 <p>Add an <strong>exclusion</strong> test for a glossary term in a table column header. No glossary links in column headers.</p>
@@ -580,7 +567,7 @@ Link to my favorite: <a href="https://youtu.be/QDia3e12czc">AI/ML Workflow Fun</
 <thead>
 <tr>
 <th>Challenge</th>
-<th>Datasheet should not be a glossary term here.</th>
+<th>Feature encoding should not be a glossary term here.</th>
 <th>Neither should Container.</th>
 </tr>
 </thead>
@@ -588,7 +575,7 @@ Link to my favorite: <a href="https://youtu.be/QDia3e12czc">AI/ML Workflow Fun</
 <tr>
 <td>Exciting content.</td>
 <td>More exciting content.</td>
-<td><a class="glossary-link" href="../glossary/#subgroup"><abbr title="A defined segment of a population evaluated separately from the overall population. [...]">Subgroup</abbr></a> can have a link.</td>
+<td><a class="glossary-link" href="../glossary/#spacy"><abbr title="A Python library for natural-language processing.">spaCy</abbr></a> can have a link.</td>
 </tr>
 </tbody>
 </table>
@@ -599,7 +586,7 @@ Let's add two references here.<sup id="fnref:gebruDatasheetsDatasets2021"><a cla
 </li>
 </ol>
 <!--
-Generated: Oct 4, 2026
+Generated: Oct 21, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

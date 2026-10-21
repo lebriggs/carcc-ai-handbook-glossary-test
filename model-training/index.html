@@ -756,7 +756,7 @@
 
 <h1 id="model-training-and-tuning">Model Training and Tuning</h1>
 <h2 id="definition">Definition</h2>
-<p>Optimizing model parameters and hyperparameters through iterative learning to
+<p>Optimizing <a class="glossary-link" href="../glossary/#model-parameters"><abbr title="The numerical values inside a model that are adjusted during training and that determine how the model produces its outputs. [...]">model parameters</abbr></a> and <a class="glossary-link" href="../glossary/#hyperparameter"><abbr title="A setting that controls how a model is trained but is not learned from the data, such as the learning rate, batch size, or number of epochs. [...]">hyperparameters</abbr></a> through iterative learning to
 enable a model to generalize from data; includes configuring, executing and
 improving the training process.</p>
 <h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
@@ -766,25 +766,25 @@ improving the training process.</p>
   images labelled "NORMAL" or "PNEUMONIA". These images contain subtle patterns
   distinguishing healthy lungs from pneumonia and CNN's convolutional layers
   learn to identify those patterns. Due to high-resolution images and large
-  datasets, training is accelerated on GPU-enabled HPC resources.</li>
-<li>Fine-tuning a sentiment classifier: Use a pre-trained transformer (e.g., BERT)
+  datasets, training is accelerated on <a class="glossary-link" href="../glossary/#gpu"><abbr title="A graphics processing unit (GPU) is a processor capable of performing many operations in parallel and is often used for machine learning workloads.">GPU</abbr></a>-enabled <a class="glossary-link" href="../glossary/#hpc"><abbr title="High-performance computing (HPC) refers to computing infrastructure designed to process large or complex workloads using powerful systems, parallelism, and specialized resources.">HPC</abbr></a> resources.</li>
+<li><a class="glossary-link" href="../glossary/#fine-tuning"><abbr title="Further training an existing pretrained AI model on additional data to adapt it to a particular task or research domain. [...]">Fine-tuning</abbr></a> a sentiment classifier: Use a pre-trained <a class="glossary-link" href="../glossary/#transformer"><abbr title="A model architecture that uses attention mechanisms to weigh the relationships among elements of an input sequence. [...]">transformer</abbr></a> (e.g., <a class="glossary-link" href="../glossary/#bert"><abbr title="BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model architecture that can be adapted for tasks such as text classification and sentiment analysis.">BERT</abbr></a>)
   and fine-tune it on a sentiment-labelled review dataset such as IMDb. The IMDb
   dataset contains around 100 k movie reviews labeled positive or negative.
   Fine-tuning BERT on such a dataset adapts its language understanding to the
   sentiment classification task, but the model's computational requirements are
   high, so fine-tuning is often performed on GPU-enabled HPC resources</li>
-<li>Tuning dropout and batch size for better generalization: Dropout randomly
+<li>Tuning <a class="glossary-link" href="../glossary/#dropout"><abbr title="A regularization technique that randomly ignores a portion of a model's units during each training step. [...]">dropout</abbr></a> and <a class="glossary-link" href="../glossary/#batch-size"><abbr title="The number of training examples a model processes before its parameters are updated. [...]">batch size</abbr></a> for better <a class="glossary-link" href="../glossary/#generalization"><abbr title="How well a model performs on data it has not seen before. [...]">generalization</abbr></a>: Dropout randomly
   disables a fraction of neurons during training, forcing the network to learn
-  more generalized features and reducing overfitting. Selecting an appropriate
+  more generalized <a class="glossary-link" href="../glossary/#feature"><abbr title="An input variable, attribute, or measurable property used by a machine learning model.">features</abbr></a> and reducing <a class="glossary-link" href="../glossary/#overfitting"><abbr title="When a model learns its training data too closely, including patterns that do not generalize to new data. [...]">overfitting</abbr></a>. Selecting an appropriate
   dropout rate (often between 0.2 and 0.5) and adjusting batch size are both
   crucial: small batch sizes introduce noise in gradient updates, which acts as
-  a form of regularization and can improve generalization while also reducing
+  a form of <a class="glossary-link" href="../glossary/#regularization"><abbr title="Techniques that constrain a model during training to discourage it from fitting noise in the training data. [...]">regularization</abbr></a> and can improve generalization while also reducing
   memory requirements. Larger batches converge faster but risk overfitting, so
   tuning involves balancing these effects.</li>
 <li>Conducting grid or Bayesian hyper-parameter search: To select optimal
-  learning-rate and weight-decay values, practitioners often use grid search or
-  Bayesian optimization. In grid search, you define sets of possible values
-  (e.g., learning rates [0.001, 0.01, 0.1] and batch sizes [16, 32, 64]) and
+  learning-rate and weight-decay values, practitioners often use <a class="glossary-link" href="../glossary/#grid-search"><abbr title="A hyperparameter search that evaluates every combination of a predefined set of values. [...]">grid search</abbr></a> or
+  <a class="glossary-link" href="../glossary/#bayesian-optimization"><abbr title="A hyperparameter search that builds a probabilistic model of how settings affect performance and uses it to choose which combination to try next. [...]">Bayesian optimization</abbr></a>. In grid search, you define sets of possible values
+  (e.g., <a class="glossary-link" href="../glossary/#learning-rate"><abbr title="The hyperparameter that controls how much a model's parameters change in response to each update during training. [...]">learning rates</abbr></a> [0.001, 0.01, 0.1] and batch sizes [16, 32, 64]) and
   train a model on every combination; although exhaustive, this approach becomes
   computationally expensive with many parameters. Bayesian optimization builds a
   probabilistic model of the objective function and sequentially explores
@@ -805,32 +805,32 @@ improving the training process.</p>
 <tr>
 <td><strong>Configuring training</strong></td>
 <td>Set hyperparameters like learning rate, batch size, and epochs to control optimization</td>
-<td>Python, TensorFlow, PyTorch, Keras, scikit-learn</td>
+<td>Python, TensorFlow, PyTorch, Keras, <a class="glossary-link" href="../glossary/#scikit-learn"><abbr title="A Python library providing tools for data preprocessing, feature engineering, modeling, and evaluation.">scikit-learn</abbr></a></td>
 </tr>
 <tr>
 <td><strong>Monitoring training</strong></td>
-<td>Track loss curves and metrics on training/validation sets to detect slow convergence or over-/under-fitting</td>
-<td><a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a>, MLflow, Comet.ml, SageMaker/Vertex AI dashboards</td>
+<td>Track loss curves and metrics for the <a class="glossary-link" href="../glossary/#training-set"><abbr title="The portion of a dataset used to train a model by adjusting its parameters based on the examples provided. [...]">training set</abbr></a> and <a class="glossary-link" href="../glossary/#validation-set"><abbr title="A separate portion of a dataset used during model development to evaluate performance and guide tuning decisions. [...]">validation set</abbr></a> to detect slow <a class="glossary-link" href="../glossary/#convergence"><abbr title="The point at which further training produces little or no improvement in a model's loss or evaluation metrics. [...]">convergence</abbr></a> or over-/under-fitting</td>
+<td>Weights &amp; <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic distortion or error in data, methods, or model results that can affect accuracy or produce unfair outcomes. [...]">Biases</abbr></a>, MLflow, Comet.ml, SageMaker/Vertex AI dashboards</td>
 </tr>
 <tr>
 <td><strong>Improving stability &amp; generalization</strong></td>
-<td>Apply regularization, dropout, early stopping, and mixed-precision techniques to prevent over-fitting.</td>
-<td>Jupyter Notebooks, VS Code, PyCharm, Keras/TensorFlow callbacks</td>
+<td>Apply regularization, dropout, <a class="glossary-link" href="../glossary/#early-stopping"><abbr title="Ending a training run once performance on the validation set stops improving. [...]">early stopping</abbr></a>, and mixed-precision techniques to prevent over-fitting.</td>
+<td><a class="glossary-link" href="../glossary/#jupyter-notebook"><abbr title="An interactive document that combines executable code, outputs, visualizations, and explanatory text.">Jupyter Notebooks</abbr></a>, VS Code, PyCharm, Keras/TensorFlow callbacks</td>
 </tr>
 <tr>
 <td><strong>Training execution</strong></td>
 <td>Launch jobs on single or multiple GPUs/nodes and manage resources and checkpoints.</td>
-<td>SLURM, Kubernetes, Singularity/Apptainer, Conda/Mamba</td>
+<td><a class="glossary-link" href="../glossary/#slurm"><abbr title="A workload manager and job scheduler commonly used on HPC clusters to allocate resources and run batch jobs.">SLURM</abbr></a>, Kubernetes, Singularity/Apptainer, Conda/Mamba</td>
 </tr>
 <tr>
 <td><strong>Hyperparameter search &amp; experimentation</strong></td>
 <td>Define and explore hyperparameter spaces via grid, random, or Bayesian search; run multiple trials.</td>
-<td>Ray Tune, Optuna, Hyperopt, Google Cloud AutoML, Azure AutoML</td>
+<td>Ray Tune, Optuna, Hyperopt, Google Cloud <a class="glossary-link" href="../glossary/#automl"><abbr title="Automated machine learning (AutoML) uses tools and services that automate parts of model development, such as hyperparameter search, architecture selection, or preprocessing choices. [...]">AutoML</abbr></a>, Azure AutoML</td>
 </tr>
 <tr>
 <td><strong>Applying search strategies</strong></td>
-<td>Use grid search, random search, Bayesian optimization or population-based training to refine models.</td>
-<td>Ray Tune, Optuna, Hyperopt, Model <a class="glossary-link" href="../glossary/#repository"><abbr title="A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]">repositories</abbr></a> such as Hugging Face Hub</td>
+<td>Use grid search, <a class="glossary-link" href="../glossary/#random-search"><abbr title="A hyperparameter search that samples combinations of values at random rather than testing all of them. [...]">random search</abbr></a>, Bayesian optimization or <a class="glossary-link" href="../glossary/#population-based-training"><abbr title="A tuning approach that trains several models at the same time and periodically copies and adjusts the settings of the better-performing ones. [...]">population-based training</abbr></a> to refine models.</td>
+<td>Ray Tune, Optuna, Hyperopt, <a class="glossary-link" href="../glossary/#model-repository"><abbr title="A managed service for publishing, discovering, and downloading trained models together with their weights and documentation. [...]">Model repositories</abbr></a> such as Hugging Face Hub</td>
 </tr>
 </tbody>
 </table>
@@ -844,11 +844,11 @@ improving the training process.</p>
   concurrent jobs that require HPC resources to be executed in a timely manner.</li>
 <li>During model training and tuning, I/O-intensive workloads (e.g., streaming
   TB-scale images or sequences) demand high-bandwidth parallel file systems to
-  prevent data pipelines from becoming a bottleneck.</li>
+  prevent <a class="glossary-link" href="../glossary/#data-pipeline"><abbr title="A sequence of automated or semi-automated steps that moves and transforms data from its source to its destination or analysis-ready form.">data pipelines</abbr></a> from becoming a <a class="glossary-link" href="../glossary/#bottleneck"><abbr title="A component or step that limits the overall speed, scale, or performance of a workflow.">bottleneck</abbr></a>.</li>
 <li>Memory and storage requirements exceed local capacity, or checkpoints consume
   terabytes of fast storage.</li>
 <li>Cloud compute is cost-prohibitive for sustained experimentation, making
-  on-premises <a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a> resources more economical.</li>
+  on-premises RCD resources more economical.</li>
 </ul>
 <h2 id="rcd-challenges-implications-solutions">RCD Challenges, Implications &amp; Solutions</h2>
 <table>
@@ -873,11 +873,11 @@ improving the training process.</p>
 <tr>
 <td>Experimentation complexity</td>
 <td>Large hyperparameter spaces make manual tuning infeasible and generate numerous concurrent jobs.</td>
-<td>Leverage automated Hyper Parameter Optimization (HPO) tools and job arrays; prioritize and batch experiments; monitor resource consumption</td>
+<td>Leverage automated Hyper Parameter Optimization (<a class="glossary-link" href="../glossary/#hpo"><abbr title="Hyperparameter optimization (HPO) is the process of systematically searching for hyperparameter values that produce the best model performance. [...]">HPO</abbr></a>) tools and job arrays; prioritize and batch experiments; monitor resource consumption</td>
 </tr>
 <tr>
 <td>Compute architecture</td>
-<td>Choosing between different GPU types affects throughput, cost and feasibility; limited CPU-to-GPU bandwidth creates bottlenecks.</td>
+<td>Choosing between different GPU types affects throughput, cost and feasibility; limited <a class="glossary-link" href="../glossary/#cpu"><abbr title="A central processing unit (CPU) is the general-purpose processor used to execute program instructions.">CPU</abbr></a>-to-GPU bandwidth creates bottlenecks.</td>
 <td>Select hardware with adequate memory; use NVLink when possible; optimize data placement and prefetching.</td>
 </tr>
 <tr>
@@ -889,14 +889,14 @@ improving the training process.</p>
 </table>
 <h2 id="tips-tricks-and-troubleshooting">Tips, Tricks, and Troubleshooting</h2>
 <ul>
-<li>Design training workflows with scalability in mind—plan for distributed data
+<li>Design training workflows with <a class="glossary-link" href="../glossary/#scalability"><abbr title="The ability of a computing system or workflow to handle growing workloads while maintaining acceptable performance. [...]">scalability</abbr></a> in mind—plan for distributed data
   and model parallelism before starting.</li>
 <li>Track experiments systematically using tools like MLflow or Weights &amp; Biases;
   include hyperparameters, metrics and artifacts.</li>
 <li>Monitor I/O and compute utilization to identify bottlenecks; adjust batch
   sizes and prefetch settings accordingly.</li>
 <li>Containerize environments with Apptainer (formerly singularity) and lock
-  package versions to ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating the original workflow using the same data or inputs. [...]">reproducibility</abbr></a>.</li>
+  package versions to ensure <a class="glossary-link" href="../glossary/#reproducibility"><abbr title="The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]">reproducibility</abbr></a>.</li>
 <li>Checkpoint frequently and test restore procedures to minimize progress loss
   during hardware failures.</li>
 </ul>
@@ -905,11 +905,11 @@ improving the training process.</p>
 <li>GPU type and count: availability of high-memory GPUs (A100/H100) and
   interconnects (NVLink/InfiniBand).</li>
 <li>Storage performance: local NVMe vs. parallel file systems (Lustre/GPFS) vs.
-  object stores; dataset size and file count.</li>
-<li>Data security and compliance: encrypt data at rest/in transit; ensure PII
+  <a class="glossary-link" href="../glossary/#object-store"><abbr title="A storage system that manages data as objects, typically containing data, metadata, and a unique identifier rather than a traditional hierarchical file path.">object stores</abbr></a>; dataset size and file count.</li>
+<li>Data security and compliance: encrypt data at rest/in transit; ensure <a class="glossary-link" href="../glossary/#pii"><abbr title="Personally identifiable information (PII) is information that can identify a person directly or in combination with other data. [...]">PII</abbr></a>
   (Personally Identifiable Information) or controlled-unclassified information
   is handled appropriately.</li>
-<li>Scheduling and <a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a>: prioritize critical workloads while allowing
+<li>Scheduling and fairness: prioritize critical workloads while allowing
   exploratory jobs to run with preemptible resources.</li>
 <li>Cost management: monitor energy consumption and cloud/on-prem costs; select
   efficient hardware.</li>
@@ -941,12 +941,12 @@ improving the training process.</p>
   Models</a>:
   A short course by DeepLearning.AI teaching how to finetune large language
   models: when to use fine-tuning vs prompt engineering, how to prepare data,
-  train, evaluate, and deploy your own LLM with updated weights.</li>
+  train, evaluate, and deploy your own <a class="glossary-link" href="../glossary/#llm"><abbr title="A large language model (LLM) is trained on large collections of text to interpret and generate natural language. [...]">LLM</abbr></a> with updated weights.</li>
 <li><a href="http://deeplearningbook.org/">Deep Learning</a> (Goodfellow, Bengio &amp;
   Courville): the full text of this MIT Press book is freely available online</li>
 </ul>
 <!--
-Generated: Oct 4, 2026
+Generated: Oct 21, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.

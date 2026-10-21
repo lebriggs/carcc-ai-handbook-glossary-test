@@ -734,45 +734,45 @@
 
 <h1 id="model-selection-andor-development">Model Selection and/or Development</h1>
 <h2 id="definition">Definition</h2>
-<p>Foundation Model Selection and/or Development is the process of identifying,
+<p><a class="glossary-link" href="../glossary/#foundation-model"><abbr title="A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]">Foundation Model</abbr></a> Selection and/or Development is the process of identifying,
 creating, training, and optimizing large-scale neural network architectures that
 serves as the basis for the project's various AI applications. Work typically
 includes:</p>
 <ul>
-<li>Evaluating existing foundation models - including Large Language Models (LLMs)
-  and vision or multimodal models - and their license agreements (open
+<li>Evaluating existing foundation models - including Large Language Models (<a class="glossary-link" href="../glossary/#llm"><abbr title="A large language model (LLM) is trained on large collections of text to interpret and generate natural language. [...]">LLMs</abbr></a>)
+  and vision or <a class="glossary-link" href="../glossary/#multimodal-model"><abbr title="A model that accepts or produces more than one type of data, such as text together with images or audio. [...]">multimodal models</abbr></a> - and their license agreements (open
   weight/open source)</li>
 <li>Collecting and preprocessing massive datasets in preparation for large-scale
-  model training, while adhering to the data management plan.</li>
-<li>Designing or adapting model architectures (with hundreds of millions or
+  model training, while adhering to the <a class="glossary-link" href="../glossary/#data-management-plan"><abbr title="A data management plan (DMP) describes how data will be collected, stored, protected, shared, and retained over the life of a project and often beyond it. [...]">data management plan</abbr></a>.</li>
+<li>Designing or adapting <a class="glossary-link" href="../glossary/#model-architecture"><abbr title="The structural design of a model, including the types of layers it uses and how they are connected. [...]">model architectures</abbr></a> (with hundreds of millions or
   trillions of parameters), or tuning existing foundation models.</li>
-<li>Comprehensive AI <a class="glossary-link" href="../glossary/#model-evaluation"><abbr title="The process of assessing how a model performs and behaves using relevant data, metrics, and other analyses appropriate to its intended use.">Model Evaluation</abbr></a>.</li>
+<li>Comprehensive AI <a class="glossary-link" href="../glossary/#model-evaluation"><abbr title="The process of assessing a model’s performance and behavior using data, metrics, and analyses suited to its intended use. [...]">Model Evaluation</abbr></a>.</li>
 </ul>
 <h2 id="examples-of-specific-tasks">Examples of Specific Tasks</h2>
 <ul>
 <li>Decision: Select/Adopt an existing foundational model, ensuring its licensing
   terms permit the project's intended aims, or develop a new model if necessary.</li>
-<li>Selecting a pre-trained Time-Series Transformer model architecture and
-  adapting it for integration into an existing HPC batch process to generate
+<li>Selecting a pre-trained Time-Series <a class="glossary-link" href="../glossary/#transformer"><abbr title="A model architecture that uses attention mechanisms to weigh the relationships among elements of an input sequence. [...]">Transformer</abbr></a> model architecture and
+  adapting it for integration into an existing <a class="glossary-link" href="../glossary/#hpc"><abbr title="High-performance computing (HPC) refers to computing infrastructure designed to process large or complex workloads using powerful systems, parallelism, and specialized resources.">HPC</abbr></a> batch process to generate
   ensemble forecasts for regional climate prediction</li>
-<li>Adapting a general Whisper model by fine-tuning it on a secured GPU cluster
+<li>Adapting a general Whisper model by <a class="glossary-link" href="../glossary/#fine-tuning"><abbr title="Further training an existing pretrained AI model on additional data to adapt it to a particular task or research domain. [...]">fine-tuning</abbr></a> it on a secured <a class="glossary-link" href="../glossary/#gpu"><abbr title="A graphics processing unit (GPU) is a processor capable of performing many operations in parallel and is often used for machine learning workloads.">GPU</abbr></a> cluster
   with a proprietary dataset of legal depositions to achieve high accuracy when
   automatically transcribing highly specialized legal terminology</li>
-<li>Fine-tuning an open foundation model, such as Llama 3.x, using PEFT/LoRA
-  techniques on internal scientific literature hosted on <a class="glossary-link" href="../glossary/#rcd"><abbr title="Research computing and data (RCD) refers to the people, expertise, services, and infrastructure that support computational and data-intensive research. [...]">RCD</abbr></a>-managed object
+<li>Fine-tuning an open foundation model, such as Llama 3.x, using <a class="glossary-link" href="../glossary/#peft"><abbr title="Parameter-efficient fine-tuning (PEFT) refers to methods that adapt a pretrained model by training a small number of additional or selected parameters rather than all of them. [...]">PEFT</abbr></a>/<a class="glossary-link" href="../glossary/#lora"><abbr title="Low-rank adaptation (LoRA) is a parameter-efficient fine-tuning method that inserts small trainable components into a model while leaving the original weights unchanged. [...]">LoRA</abbr></a>
+  techniques on internal scientific literature hosted on RCD-managed object
   store to create a domain-specific conversational AI tool for summarizing
   research findings</li>
-<li>Evaluate model for <a class="glossary-link" href="../glossary/#bias"><abbr title="A systematic tendency in data, methods, models, or decisions that can distort results or produce uneven outcomes across groups, populations, or contexts. [...]">bias</abbr></a> with a medical language model (like BERT) using tools
+<li>Evaluate model for <a class="glossary-link" href="../glossary/#bias"><abbr title="Systematic distortion or error in data, methods, or model results that can affect accuracy or produce unfair outcomes. [...]">bias</abbr></a> with a medical language model (like <a class="glossary-link" href="../glossary/#bert"><abbr title="BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based language model architecture that can be adapted for tasks such as text classification and sentiment analysis.">BERT</abbr></a>) using tools
   like Fairlearn and RCD-provided JupyterHub to ensure equal prediction accuracy
-  across diverse patient groups before deployment</li>
-<li>Creating a standardized <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document that accompanies a trained model. [...]">Model Card</abbr></a> for a fine-tuned ResNet model used in
+  across diverse patient groups before <a class="glossary-link" href="../glossary/#deployment"><abbr title="The process of making a trained AI model available for use in a research workflow or application. [...]">deployment</abbr></a></li>
+<li>Creating a standardized <a class="glossary-link" href="../glossary/#model-card"><abbr title="A document describing a trained AI model’s intended uses, training and evaluation data, performance, capabilities, risks, and known limitations. [...]">Model Card</abbr></a> for a fine-tuned ResNet model used in
   microscopic image classification, documenting key parameters, performance
   metrics (precision-recall), and publishing it through an RCD-supported data
   <a class="glossary-link" href="../glossary/#repository"><abbr title="A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]">repository</abbr></a></li>
 </ul>
 <h2 id="when-are-rcd-resources-needed">When Are RCD Resources Needed?</h2>
 <p>RCD resources become essential in several AI development and deployment phases:</p>
-<p><strong>Pre-Training Phase:</strong></p>
+<p><strong><a class="glossary-link" href="../glossary/#pre-training"><abbr title="The initial training of a model on a large, general dataset before it is adapted to a specific task. [...]">Pre-Training</abbr></a> Phase:</strong></p>
 <ul>
 <li>When assembling domain-specific data beyond public datasets</li>
 <li>When privacy/security concerns prohibit using commercial cloud platforms</li>
@@ -783,17 +783,17 @@ includes:</p>
 <li>When adapting models like Llama 2 to institutional research domains</li>
 <li>When implementing PEFT/LoRA techniques on specialized datasets</li>
 <li>When balancing between Notebook/Google Colab and full cluster-scale approaches</li>
-<li>Executing distributed training across GPU/TPU clusters</li>
+<li>Executing <a class="glossary-link" href="../glossary/#distributed-training"><abbr title="Running a single training job across multiple GPUs or compute nodes. [...]">distributed training</abbr></a> across GPU/TPU clusters</li>
 </ul>
 <p><strong>Evaluation &amp; Iteration:</strong></p>
 <ul>
 <li>When developing rigorous domain-specific benchmarks</li>
-<li>When computing comprehensive bias/<a class="glossary-link" href="../glossary/#fairness"><abbr title="The extent to which an AI system performs equitably across relevant groups, populations, contexts, or use cases. [...]">fairness</abbr></a> metrics</li>
+<li>When computing comprehensive bias/fairness metrics</li>
 </ul>
 <p><strong>Deployment &amp; Maintenance:</strong></p>
 <ul>
-<li>When model serving requires continuous data refreshing</li>
-<li>When building inference pipelines with research data integration</li>
+<li>When <a class="glossary-link" href="../glossary/#model-serving"><abbr title="Making a trained AI model available to receive inputs and return predictions or results to users or applications. [...]">model serving</abbr></a> requires continuous data refreshing</li>
+<li>When building <a class="glossary-link" href="../glossary/#inference"><abbr title="The process of using a trained AI model to generate predictions or results from new data. [...]">inference</abbr></a> pipelines with research data integration</li>
 </ul>
 <p><strong>Collaboration &amp; Scaling:</strong></p>
 <ul>
@@ -823,7 +823,7 @@ includes:</p>
 <tr>
 <td>Limited Computational Resources</td>
 <td>Makes full model training impractical for most institutions; Restricts scope of AI research projects</td>
-<td>Parameter-efficient methods (LoRA); Cloud Academic Infrastructure: Google, IBM, AWS/VAST/Azure/NVIDIA/NAIRR grants; Gradient accumulation techniques</td>
+<td>Parameter-efficient methods (LoRA); Cloud Academic Infrastructure: Google, IBM, AWS/VAST/Azure/NVIDIA/NAIRR grants; <a class="glossary-link" href="../glossary/#gradient-accumulation"><abbr title="A training technique that combines information about how to adjust a model from several smaller batches before updating its parameters. [...]">Gradient accumulation</abbr></a> techniques</td>
 </tr>
 <tr>
 <td>Data Privacy and Security</td>
@@ -833,7 +833,7 @@ includes:</p>
 <tr>
 <td>Model Deployment Scale</td>
 <td>Full-scale models require significant inference resources</td>
-<td>Model quantization; Distributed inference architectures; <a class="glossary-link" href="../glossary/#weights-biases"><abbr title="An AI development platform used to track experiments, visualize training runs, compare model performance, and manage models and related artifacts.">Weights &amp; Biases</abbr></a> for tracking experiment performance</td>
+<td>Model <a class="glossary-link" href="../glossary/#quantization"><abbr title="Reducing the numerical precision used to represent and process a model’s values. [...]">quantization</abbr></a>; Distributed inference architectures; Weights &amp; Biases for tracking experiment performance</td>
 </tr>
 </tbody>
 </table>
@@ -851,7 +851,7 @@ includes:</p>
 <li>When fine-tuning large models, leverage parameter-efficient techniques like
   PEFT/LoRA combined with memory optimization frameworks such as DeepSpeed or
   PyTorch FSDP to reduce memory requirements</li>
-<li>Use experiment tracking tools like Weights &amp; Biases to monitor training
+<li>Use <a class="glossary-link" href="../glossary/#experiment-tracking"><abbr title="Recording the hyperparameters, code versions, metrics, and outputs associated with each training run. [...]">experiment tracking</abbr></a> tools like Weights &amp; Biases to monitor training
   progress and <a class="glossary-link" href="../glossary/#model-performance"><abbr title="The degree to which a model performs as intended, assessed using metrics appropriate to the model type, intended use, and evaluation context.">model performance</abbr></a></li>
 <li>For multimodal applications, consider specialized models like DALL-E, Stable
   Diffusion, or Flamingo rather than building custom solutions. For example,
@@ -881,7 +881,7 @@ includes:</p>
 <h2 id="selected-learning-resources">Selected Learning Resources</h2>
 <ul>
 <li>Selected Models<ul>
-<li><a href="https://arxiv.org/abs/1706.03762">Transformer</a> (NLP),
+<li><a href="https://arxiv.org/abs/1706.03762">Transformer</a> (<a class="glossary-link" href="../glossary/#nlp"><abbr title="Natural language processing (NLP) refers to methods for analyzing and processing human language in text or speech data.">NLP</abbr></a>),
   <a href="https://arxiv.org/abs/1810.04805">BERT</a> (NLP),
   <a href="https://arxiv.org/abs/2303.08774">GPT-4</a> (NLP),
   <a href="https://arxiv.org/abs/2302.13971">Llama</a> (NLP),
@@ -922,7 +922,7 @@ includes:</p>
   Andrew Ng</li>
 </ul>
 <!--
-Generated: Oct 4, 2026
+Generated: Oct 21, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.
