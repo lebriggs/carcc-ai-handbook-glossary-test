@@ -35,7 +35,7 @@ RCD Resource Planning phase.
 | **Data Cleaning** | Remove duplicates, handle outliers, missing values, formatting issues, errors | OpenRefine, Pandas, Tidyverse, Scikit-learn, Jupyter |
 | **Quality Assurance** | Ensure data quality, remove bias, check for completeness, consistency, & outliers | Custom scripts (Python/R), DVC (Data Version Control), FAIR principles |
 | **Privacy** | Remove, mask, or swap identifiers, aggregate sensitive fields, document methods to support transparency and privacy compliance | OpenRefine, R (sdcMicro, anonymizer, custom scripts with tidyverse), Python (Faker, custom scripts with pandas), ARX |
-| **Transformation** | Normalize, scale, augment (audio, image, video), index data, text tokenization, optimize storage & query performance | Scikit-learn, Pandas, spaCy, R (dplyr, stringr, spaCy, tidytext), Hadoop/Spark |
+| **Transformation** | Normalize, apply feature scaling, augment (audio, image, video), index data, text tokenization, optimize storage & query performance | Scikit-learn, Pandas, spaCy, R (dplyr, stringr, spaCy, tidytext), Hadoop/Spark |
 | **Exploratory Data Analysis** | Visualize distributions, spot anomalies, patterns, and correlations | Matplotlib, Seaborn, Plotly, Bokeh, Excel, R (dplyr, ggplot2) |
 | **Feature Engineering** | Create/select/dimension reduce/encode/transform features, address multicollinearity | FeatureTools, Scikit-learn, Pandas, R (tidyverse, tidymodels, data.table) |
 | **Reproducibility & Versioning** | Track data transformations and versions, ensure transparency | DVC, git |
@@ -85,8 +85,7 @@ and propose solutions, resources, and services to overcome those challenges.
   store
 * Storage size, file count, and directory structure can affect performance and
   data management downstream
-* Consider data security classification and encryption needs (at rest, in
-  transit, in use)
+* Consider data security classification and requirements for encryption at rest, encryption in transit, and encryption in use.
 * Track cloud costs for data transfer and storage; budget for cloud egress if
   applicable
 

@@ -1,4 +1,4 @@
-# Generated: Oct 4, 2026
+# Generated: Oct 21, 2026
 #
 # Term variants (or stemming) used when generating glossary tooltips.
 # The first item on each line is the canonical term from glossary.md.
@@ -13,33 +13,135 @@
 #
 # Variant Terms List
 
+Accelerator | accelerators
 Access control | access control | access controls
-Audit log | Audit logs | audit logs
+Annotation | annotation | annotations
+Anonymization | anonymization
 Auditable infrastructure | auditable infrastructure
+Baseline model | Baseline Model | Baseline models | baseline models
+Batch processing | Batch Processing
+Batch size | batch size | batch sizes
+Bayesian optimization | Bayesian Optimization
+Benchmark dataset | benchmark dataset | benchmark datasets
 Benchmarking | benchmarking
-Bias | bias | biases
+Bias | bias | Biases | biases
+Bottleneck | bottleneck | bottlenecks
 Calibration plot | calibration plots
+Cloud egress | cloud egress
 Community governance | community governance
+Completeness | completeness
+Consistency | consistency
 Container | container | containers
+Containerization | containerization
 Controlled-access deposit | controlled-access deposit
+Convergence | convergence
+Correlation | correlations
+Count matrix | count matrix
+CPU | CPUs
 Custodianship | custodianship
+Data augmentation | data augmentation
+Data cleaning | Data Cleaning
+Data management plan | data management plan
+Data pipeline | data pipeline | data pipelines
+Data preparation | data preparation
 Data provenance | data provenance
+Data quality | data quality
+Data transformation | data transformations
+Data version control | Data Version Control | data version control
 Datasheet | Datasheets | datasheets
+Deployment | deployment | deployments
+Differential privacy | differential privacy
+Disk I/O | disk I/O
+Distributed training | distributed training
+Dropout | dropout
+DUA | DUAs
+Duplicate | duplicates
+Early stopping | early stopping
+Edge case | edge cases
+Encryption at rest | encryption at rest
+Encryption in transit | encryption in transit
+Encryption in use | encryption in use
+Experiment tracking | experiment tracking
 Explainability | explainability
-Fairness | fairness
+Exploratory data analysis | Exploratory Data Analysis
 Fairness assessment | fairness assessment
+Feature | features
+Feature engineering | Feature Engineering | feature engineering
+Feature scaling | feature scaling
+Fine-tuning | Fine-Tuning | fine-tuning
+Formatting issue | formatting issues
+Foundation model | Foundation Model | foundation model | Foundation Models | foundation models
+Generalization | generalization
+Git | git
+GPU | GPUs
+Grid search | grid search
+Hybrid infrastructure | hybrid infrastructure
+Hyperparameter | hyperparameter | hyperparameters
+IDE | IDEs
+Identifier | identifiers
+Indigenous data sovereignty | Indigenous Data Sovereignty
+Inference | inference
 Interoperability | interoperability
 Interpretability | interpretability
+Jupyter notebook | Jupyter Notebook | Jupyter Notebooks
+Labeling scheme | labeling scheme
+Learning rate | learning rate | learning rates
 Lifecycle governance | lifecycle governance
+LLM | LLMs
+Maintainability | maintainability
+Metadata | metadata
+Missing value | missing values
+Model architecture | model architecture | model architectures
 Model card | Model Card | model card | Model Cards | model cards
 Model evaluation | Model Evaluation | model evaluations
+Model parameters | model parameters
 Model performance | Model Performance | model performance
+Model repository | Model repositories
+Model serving | model serving
+Multicollinearity | multicollinearity
+Multimodal model | multimodal models
+Object store | object store | Object stores | object stores
+Objective & key results | Objective & Key Results
+OpenDP | opendp
+Outlier | outliers
+Overfitting | overfitting
+pandas | Pandas
+Performance profiling | performance profiling
+Population-based training | population-based training
+Pre-training | Pre-Training | pre-training
 Precision–recall curve | precision–recall curves
-Provenance | provenance
-RCD | RCDs
-Repository | repositories | repository
+Problem statement | problem statement
+Project sustainability | Project Sustainability
+Quality assurance | Quality Assurance
+Quantization | quantization
+RACI chart | RACI charts
+Random search | random search
+Raw data | raw data
+RCD facilitator | RCD facilitators
+Real-time inference | real-time inference
+Regularization | regularization
+Repository | repository
 Reproducibility | reproducibility
+Research computing and data | Research Computing and Data
+Robustness | robustness
+Scalability | scalability
+scikit-learn | Scikit-learn
+seaborn | Seaborn
+Secure enclave | secure enclaves
+Shared filesystem | shared filesystems
+Slurm | SLURM
 Sociotechnical system | sociotechnical systems
-Subgroup | subgroups
-Transparency | transparency
-Version control | Version Control | version control
+Software stack | software stack
+Statistical summary | statistical summary
+Success criteria | success criteria
+Support model | support model
+Synthetic data | synthetic data
+Technical feasibility | technical feasibility
+Text tokenization | text tokenization
+tidyverse | Tidyverse
+Tracked transformation | tracked transformations
+Training set | training set
+Transformer | transformer
+Underfitting | underfitting
+Validation set | validation set
+Version control | version control

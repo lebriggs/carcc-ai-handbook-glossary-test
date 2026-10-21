@@ -48,7 +48,7 @@ project.
 | Compute resource plan | Describe expected workload, timelines, interactivity needs, and deadlines. | Estimate CPU/GPU, memory, storage, job scheduling, cloud/on-prem options and costs. | Nsight Profiler, Schedulers (Slurm), Grafana, DeepSpeed, Infracost, and/or Kubecost. |
 | Research Ethics and compliance | Determine whether IRB, DUA, HIPAA, CUI, FERPA, Indigenous data governance, or sponsor rules apply. | Route to appropriate institutional offices and map requirements to secure technical environments. | Institutional risk and compliance offices and policies, IRB review, NIST Privacy Framework, and institutional AI policies. |
 | Project plan | Create a comprehensive project plan based on the above, with team roles, deliverables, timeline, and RCD resource plan. | Identify technical milestones, dependencies, hardware and software tools, feasibility and risks, and checkpoints. | Confluence/JIRA, Asana, Microsoft Project, Smartsheet, Trello, and/or GitHub Projects. |
-| Sustainability | Decide whether the work is exploratory, grant-funded, production-facing, or long-term. | Advise on maintainability, reproducibility, handoff, support model, and operational costs. | MLOps tools, GitHub, Prometheus, Grafana, and/or Infracost. |
+| Project Sustainability | Decide whether the work is exploratory, grant-funded, production-facing, or long-term. | Advise on maintainability, reproducibility, handoff, support model, and operational costs. | MLOps tools, GitHub, Prometheus, Grafana, and/or Infracost. |
 
 ## When Should Researchers Engage RCD?
 

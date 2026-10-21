@@ -44,7 +44,7 @@ improving the training process.
 | Task Area | Description | Tools/Resources |
 | ----- | ----- | ----- |
 | **Configuring training** | Set hyperparameters like learning rate, batch size, and epochs to control optimization | Python, TensorFlow, PyTorch, Keras, scikit-learn |
-| **Monitoring training** | Track loss curves and metrics on training/validation sets to detect slow convergence or over-/under-fitting | Weights & Biases, MLflow, Comet.ml, SageMaker/Vertex AI dashboards |
+| **Monitoring training** | Track loss curves and metrics for the training set and validation set to detect slow convergence or over-/under-fitting | Weights & Biases, MLflow, Comet.ml, SageMaker/Vertex AI dashboards |
 | **Improving stability & generalization** | Apply regularization, dropout, early stopping, and mixed-precision techniques to prevent over-fitting. | Jupyter Notebooks, VS Code, PyCharm, Keras/TensorFlow callbacks |
 | **Training execution** | Launch jobs on single or multiple GPUs/nodes and manage resources and checkpoints. | SLURM, Kubernetes, Singularity/Apptainer, Conda/Mamba |
 | **Hyperparameter search & experimentation** | Define and explore hyperparameter spaces via grid, random, or Bayesian search; run multiple trials. | Ray Tune, Optuna, Hyperopt, Google Cloud AutoML, Azure AutoML |
