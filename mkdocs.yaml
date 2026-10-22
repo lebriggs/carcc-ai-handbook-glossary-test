@@ -41,4 +41,7 @@ plugins:
 
 extra_css:
   - stylesheets/style.css
+
+extra_javascript:
+  - javascripts/glossary_tooltips.js
   
