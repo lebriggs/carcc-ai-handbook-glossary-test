@@ -1,5 +1,5 @@
 <!--
-Generated: Oct 21, 2026
+Generated: Oct 22, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.
@@ -641,8 +641,6 @@ Do not manually edit this file.
 *[Reproducibility]: The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]
 
 *[reproducibility]: The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]
-
-*[Research computing and data]: Research Computing and Data (RCD) encompasses the staff, infrastructure, and services that support computational and data-intensive research at an institution. [...]
 
 *[Research Computing and Data]: Research Computing and Data (RCD) encompasses the staff, infrastructure, and services that support computational and data-intensive research at an institution. [...]
 

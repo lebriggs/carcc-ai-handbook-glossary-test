@@ -1,4 +1,4 @@
-# Generated: Oct 21, 2026
+# Generated: Oct 22, 2026
 #
 # Term variants (or stemming) used when generating glossary tooltips.
 # The first item on each line is the canonical term from glossary.md.
@@ -122,7 +122,6 @@ Real-time inference | real-time inference
 Regularization | regularization
 Repository | repository
 Reproducibility | reproducibility
-Research computing and data | Research Computing and Data
 Robustness | robustness
 Scalability | scalability
 scikit-learn | Scikit-learn
