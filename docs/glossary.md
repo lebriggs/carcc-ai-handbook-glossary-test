@@ -722,7 +722,7 @@ A managed system or service for storing, preserving, and providing access to res
 
 The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. This depends on recording code, parameters, software environments, dependencies, and processing steps, and may yield the same or substantially similar results. Early planning for documentation, computing environments, and version control helps support reproducibility.
 
-### Research computing and data
+### Research Computing and Data
 
 Research Computing and Data (RCD) encompasses the staff, infrastructure, and services that support computational and data-intensive research at an institution. RCD groups provide computing systems, storage, software support, training, and consultation.
 
