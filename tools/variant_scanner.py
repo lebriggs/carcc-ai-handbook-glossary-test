@@ -41,6 +41,9 @@ DOCS_SOURCE = here("docs")
 # Glossary source file
 GLOSSARY_SOURCE = here("docs", "glossary.md")
 
+# Manually maintained term exceptions
+EXCEPTION_SOURCE = here("tools", "term_exceptions.txt")
+
 # Output file
 VARIANT_OUTPUT = here("tools", "variant_terms.txt")
 
@@ -95,6 +98,18 @@ for line in glossary_lines:
     if line.startswith("### "):
         terms.append(line.removeprefix("### ").strip())
 
+# Read manually maintained exceptions.
+# The first item is the glossary term; the remaining items are search forms.
+exception_forms = {}
+
+for line in Path(EXCEPTION_SOURCE).read_text(encoding="utf-8").splitlines():
+    # Ignore comments and blank lines.
+    if not line.strip() or line.lstrip().startswith("#"):
+        continue
+
+    parts = [part.strip() for part in line.split("|")]
+    canonical_term = parts[0]
+    exception_forms[canonical_term] = parts[1:]
 
 # Build the possible forms to search for.
 # Each canonical glossary term is searched as written and as a possible plural.
@@ -107,7 +122,9 @@ inflector = inflect.engine()
 search_forms = {}
 
 for term in terms:
+    # Start with the glossary term, then add any manually listed exceptions.
     forms = {term}
+    forms.update(exception_forms.get(term, []))
 
     # Pluralize the final word so multi-word glossary terms stay intact.
     # Example: model cards

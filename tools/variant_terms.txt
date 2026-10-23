@@ -1,4 +1,4 @@
-# Generated: Oct 22, 2026
+# Generated: Oct 23, 2026
 #
 # Term variants (or stemming) used when generating glossary tooltips.
 # The first item on each line is the canonical term from glossary.md.
@@ -61,6 +61,7 @@ Edge case | edge cases
 Encryption at rest | encryption at rest
 Encryption in transit | encryption in transit
 Encryption in use | encryption in use
+Epoch | epochs
 Experiment tracking | experiment tracking
 Explainability | explainability
 Exploratory data analysis | Exploratory Data Analysis

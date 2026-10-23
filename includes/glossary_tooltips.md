@@ -1,5 +1,5 @@
 <!--
-Generated: Oct 22, 2026
+Generated: Oct 23, 2026
 
 Glossary behavior for terms listed in this file:
 Terms are matched wherever they appear in the handbook.
@@ -285,6 +285,8 @@ Do not manually edit this file.
 *[Ensemble model]: A model that combines the predictions of several models to produce a single result. [...]
 
 *[Epoch]: One complete pass through the training dataset. [...]
+
+*[epochs]: One complete pass through the training dataset. [...]
 
 *[Experiment tracking]: Recording the hyperparameters, code versions, metrics, and outputs associated with each training run. [...]
 

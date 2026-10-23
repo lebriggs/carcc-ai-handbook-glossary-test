@@ -1,0 +1,7 @@
+# Variant Term Exceptions
+#
+# Manually maintained exceptions.
+# The first item in each line is the canonical term from glossary.md.
+# Pattern: Canonical term | variant | another variant
+#
+Epoch | Epochs | epoch | epochs
