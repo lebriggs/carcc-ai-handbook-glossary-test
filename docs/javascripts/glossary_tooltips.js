@@ -1,4 +1,14 @@
-// Reset glossary tooltips when Back/Forward restores a cached page.
+/*
+ * Prevent glossary tooltips from staying open after Back/Forward navigation.
+ *
+ * Windows browsers send mouseleave during navigation, telling Material
+ * the pointer has left. In macOS Safari, that event appears to be missed,
+ * leaving the tooltip open when the cached page is restored.
+ *
+ * This script sends mouseleave when a cached page is restored, allowing
+ * Material to clear its hover state and close the glossary tooltip.
+ */
+
 window.addEventListener("pageshow", (event) => {
   if (!event.persisted) return;
 

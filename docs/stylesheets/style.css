@@ -9,7 +9,15 @@
    too faint to read as interactive. This code makes it more visible. */
 
 .md-typeset abbr {
-  border-bottom: 1.5px dashed var(--md-accent-fg-color);
+  border-bottom: 1.75px dashed #4057d9;
+}
+
+/* Safari and DuckDuckGo on macOS: use 2px because fractional borders render thinly.
+   This feature check targets WebKit; it also applies to Safari on iOS. */
+@supports (hanging-punctuation: first) {
+  .md-typeset abbr {
+    border-bottom-width: 2px;
+  }
 }
 
 /* Increase the size of the tooltip text. */
