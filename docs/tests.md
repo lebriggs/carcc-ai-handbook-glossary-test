@@ -5,7 +5,7 @@ This page lists behavior tests and edge cases for the glossary.
 1. Add a test for term variants. Checks that all variants of the same glossary term share one count per page, controlled by the `MARKS_PER_PAGE` setting in `glossary_links.py`. At the **default of 1**:  
 The first accelerators is underlined, but the later Accelerator is not.
 
-2. Add a test a manual term exception: epochs.
+2. Add a test for a manual term exception: epochs.
 
 3. Add a test for Objective & key results. Checks that an ampersand is handled correctly in the glossary link.
 
