@@ -9,7 +9,7 @@
    too faint to read as interactive. This code makes it more visible. */
 
 .md-typeset abbr {
-  border-bottom: 1.75px dashed #4057d9;
+  border-bottom: 1.5px dashed #4057d9;
 }
 
 /* Safari and DuckDuckGo on macOS: use 2px because fractional borders render thinly.
