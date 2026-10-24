@@ -541,6 +541,10 @@
 The first <a class="glossary-link" href="../glossary/#accelerator"><abbr title="Specialized hardware, such as a GPU or other device, designed to speed up particular computations.">accelerators</abbr></a> is underlined, but the later Accelerator is not.</p>
 </li>
 <li>
+<p>Add a test for links between glossary definitions. Checks that only the first occurrence of each related term is linked within a definition, with counts reset for each new definition by <code>MARKS_PER_DEFINITION</code>.<br />
+Use <a class="glossary-link" href="../glossary/#training-set"><abbr title="The portion of a dataset used to train a model by adjusting its parameters based on the examples provided. [...]">Training set</abbr></a>, <a class="glossary-link" href="../glossary/#validation-set"><abbr title="A separate portion of a dataset used during model development to evaluate performance and guide tuning decisions. [...]">Validation set</abbr></a>, and <a class="glossary-link" href="../glossary/#test-set"><abbr title="A separate portion of a dataset reserved for evaluating a model's final performance on data not used for training or tuning. [...]">Test set</abbr></a>. Each definition should link to the other two once.</p>
+</li>
+<li>
 <p>Add a test for a manual term exception: <a class="glossary-link" href="../glossary/#epoch"><abbr title="One complete pass through the training dataset. [...]">epochs</abbr></a>.</p>
 </li>
 <li>
@@ -582,6 +586,9 @@ Link to my favourite: <a href="https://youtu.be/QDia3e12czc">ARX For Fun And Pro
 </tr>
 </tbody>
 </table>
+</li>
+<li>
+<p>Add an <strong>exclusion</strong> test for glossary headings and self-links. Headings should stay unlinked. In <a class="glossary-link" href="../glossary/#data-management-plan"><abbr title="A data management plan (DMP) describes how data will be collected, stored, protected, shared, and retained over the life of a project and often beyond it. [...]">Data management plan</abbr></a>, its own name should stay plain text. In <a class="glossary-link" href="../glossary/#dvc"><abbr title="[Data Version Control](https://dvc.org/) (DVC) is an open-source software tool for tracking datasets, data transformations, and machine learning artifacts alongside code.">DVC</abbr></a>, the software name should link to its external website, not the <a class="glossary-link" href="../glossary/#data-version-control"><abbr title="The practice of tracking and managing changes to datasets over time so that specific versions can be identified, compared, and restored.">Data version control</abbr></a> glossary entry.</p>
 </li>
 <li>
 <p>Add an <strong>exclusion</strong> test for reference footnotes. Checks that glossary terms in reference footnotes receive neither tooltips nor glossary links.<br />
