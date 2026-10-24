@@ -74,6 +74,8 @@ Do not manually edit this file.
 
 *[benchmark dataset]: A dataset used to evaluate and compare AI models under consistent conditions. [...]
 
+*[Benchmark datasets]: A dataset used to evaluate and compare AI models under consistent conditions. [...]
+
 *[benchmark datasets]: A dataset used to evaluate and compare AI models under consistent conditions. [...]
 
 *[Benchmarking]: The systematic evaluation and comparison of machine learning or AI models using specified datasets, tasks, metrics, and evaluation conditions. [...]
@@ -104,6 +106,8 @@ Do not manually edit this file.
 
 *[Categorical data]: Data representing distinct categories, groups or labels, such as species, departments, or experimental conditions.
 
+*[categorical data]: Data representing distinct categories, groups or labels, such as species, departments, or experimental conditions.
+
 *[Checkpointing]: Periodically saving a model's current parameters and training state to storage. [...]
 
 *[Cloud egress]: Data transferred out of a cloud provider’s infrastructure, often subject to usage charges.
@@ -127,6 +131,8 @@ Do not manually edit this file.
 *[Container]: A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]
 
 *[container]: A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]
+
+*[Containers]: A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]
 
 *[containers]: A portable, packaged software environment containing code, dependencies, and configuration needed to run an application or workflow consistently across computing systems. [...]
 
@@ -176,6 +182,8 @@ Do not manually edit this file.
 
 *[Data distribution]: The way values or observations are spread across a dataset.
 
+*[data distributions]: The way values or observations are spread across a dataset.
+
 *[Data management plan]: A data management plan (DMP) describes how data will be collected, stored, protected, shared, and retained over the life of a project and often beyond it. [...]
 
 *[data management plan]: A data management plan (DMP) describes how data will be collected, stored, protected, shared, and retained over the life of a project and often beyond it. [...]
@@ -206,6 +214,8 @@ Do not manually edit this file.
 
 *[Data type]: The structural or semantic form of data, such as numerical, categorical, time-series, text, image, audio, video, or mixed data.
 
+*[data types]: The structural or semantic form of data, such as numerical, categorical, time-series, text, image, audio, video, or mixed data.
+
 *[Data validation]: Checking whether data conforms to expected formats, ranges, rules, schemas, or scientific constraints.
 
 *[Data version control]: The practice of tracking and managing changes to datasets over time so that specific versions can be identified, compared, and restored.
@@ -215,6 +225,8 @@ Do not manually edit this file.
 *[data version control]: The practice of tracking and managing changes to datasets over time so that specific versions can be identified, compared, and restored.
 
 *[Datasheet]: Structured documentation describing a dataset’s origin, composition, collection methods, intended uses, limitations, and maintenance. [...]
+
+*[datasheet]: Structured documentation describing a dataset’s origin, composition, collection methods, intended uses, limitations, and maintenance. [...]
 
 *[Datasheets]: Structured documentation describing a dataset’s origin, composition, collection methods, intended uses, limitations, and maintenance. [...]
 
@@ -260,7 +272,7 @@ Do not manually edit this file.
 
 *[duplicates]: Two or more records that represent the same observation or entity.
 
-*[DVC]: Data Version Control (DVC) is an open-source software tool for tracking datasets, data transformations, and machine learning artifacts alongside code.
+*[DVC]: [Data Version Control](https://dvc.org/) (DVC) is an open-source software tool for tracking datasets, data transformations, and machine learning artifacts alongside code.
 
 *[Early stopping]: Ending a training run once performance on the validation set stops improving. [...]
 
@@ -310,6 +322,8 @@ Do not manually edit this file.
 
 *[Feature]: An input variable, attribute, or measurable property used by a machine learning model.
 
+*[feature]: An input variable, attribute, or measurable property used by a machine learning model.
+
 *[features]: An input variable, attribute, or measurable property used by a machine learning model.
 
 *[Feature encoding]: Converting data, often categorical data, into a numerical representation that a model can use.
@@ -343,6 +357,8 @@ Do not manually edit this file.
 *[foundation model]: A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]
 
 *[Foundation Models]: A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]
+
+*[Foundation models]: A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]
 
 *[foundation models]: A large AI model trained on broad, general-purpose data that can be adapted to many different downstream tasks. [...]
 
@@ -390,6 +406,8 @@ Do not manually edit this file.
 
 *[Identifier]: A field or value that identifies a person, organization, record, or other entity.
 
+*[identifier]: A field or value that identifies a person, organization, record, or other entity.
+
 *[identifiers]: A field or value that identifies a person, organization, record, or other entity.
 
 *[Indexing]: Creating an efficient lookup structure or identifier to improve data access, searches, or queries.
@@ -415,6 +433,8 @@ Do not manually edit this file.
 *[IRB]: An institutional review board (IRB) is a committee that reviews and oversees research involving human subjects to confirm that it meets ethical and regulatory requirements. [...]
 
 *[Job scheduler]: The software that queues submitted computing jobs and allocates shared cluster resources among users according to policy. [...]
+
+*[job scheduler]: The software that queues submitted computing jobs and allocates shared cluster resources among users according to policy. [...]
 
 *[Jupyter notebook]: An interactive document that combines executable code, outputs, visualizations, and explanatory text.
 
@@ -442,7 +462,7 @@ Do not manually edit this file.
 
 *[LLMs]: A large language model (LLM) is trained on large collections of text to interpret and generate natural language. [...]
 
-*[LoRA]: Low-rank adaptation (LoRA) is a parameter-efficient fine-tuning method that inserts small trainable components into a model while leaving the original weights unchanged. [...]
+*[LoRA]: Low-rank adaptation (LoRA) is a parameter-efficient fine-tuning method that inserts small trainable components into a model while leaving the original model weights unchanged. [...]
 
 *[Loss function]: A measure of how far a model's outputs are from the expected values, used to guide parameter updates during training. [...]
 
@@ -462,6 +482,8 @@ Do not manually edit this file.
 
 *[Mixed data]: A dataset containing multiple data types, such as numerical, categorical, text, image, or time-series information.
 
+*[mixed data]: A dataset containing multiple data types, such as numerical, categorical, text, image, or time-series information.
+
 *[Mixed-precision training]: Training that represents some values at lower numerical precision in order to reduce memory use and speed up computation. [...]
 
 *[Model architecture]: The structural design of a model, including the types of layers it uses and how they are connected. [...]
@@ -480,11 +502,11 @@ Do not manually edit this file.
 
 *[model cards]: A document describing a trained AI model’s intended uses, training and evaluation data, performance, capabilities, risks, and known limitations. [...]
 
-*[Model evaluation]: The process of assessing a model’s performance and behavior using data, metrics, and analyses suited to its intended use. [...]
+*[Model evaluation]: The process of assessing model performance and behavior using data, metrics, and analyses suited to its intended use. [...]
 
-*[Model Evaluation]: The process of assessing a model’s performance and behavior using data, metrics, and analyses suited to its intended use. [...]
+*[Model Evaluation]: The process of assessing model performance and behavior using data, metrics, and analyses suited to its intended use. [...]
 
-*[model evaluations]: The process of assessing a model’s performance and behavior using data, metrics, and analyses suited to its intended use. [...]
+*[model evaluations]: The process of assessing model performance and behavior using data, metrics, and analyses suited to its intended use. [...]
 
 *[Model license]: The terms that govern how a model and its weights may be used, modified, and redistributed. [...]
 
@@ -502,11 +524,15 @@ Do not manually edit this file.
 
 *[Model repositories]: A managed service for publishing, discovering, and downloading trained models together with their weights and documentation. [...]
 
-*[Model serving]: Making a trained AI model available to receive inputs and return predictions or results to users or applications. [...]
+*[model repository]: A managed service for publishing, discovering, and downloading trained models together with their weights and documentation. [...]
 
-*[model serving]: Making a trained AI model available to receive inputs and return predictions or results to users or applications. [...]
+*[Model serving]: Making a trained AI model available for inference. [...]
+
+*[model serving]: Making a trained AI model available for inference. [...]
 
 *[Model weights]: Numerical values learned during training that help determine how a model processes inputs and produces outputs. [...]
+
+*[model weights]: Numerical values learned during training that help determine how a model processes inputs and produces outputs. [...]
 
 *[Multicollinearity]: A situation in which two or more features are strongly related to one another, potentially complicating model interpretation or estimation.
 
@@ -516,6 +542,8 @@ Do not manually edit this file.
 
 *[Multimodal model]: A model that accepts or produces more than one type of data, such as text together with images or audio. [...]
 
+*[Multimodal models]: A model that accepts or produces more than one type of data, such as text together with images or audio. [...]
+
 *[multimodal models]: A model that accepts or produces more than one type of data, such as text together with images or audio. [...]
 
 *[NIST AI Risk Management Framework]: A voluntary framework published by the U.S. [...]
@@ -523,6 +551,8 @@ Do not manually edit this file.
 *[NLP]: Natural language processing (NLP) refers to methods for analyzing and processing human language in text or speech data.
 
 *[Normalization]: Rescaling or restructuring data to make values more comparable or to meet the assumptions of a particular method.
+
+*[normalization]: Rescaling or restructuring data to make values more comparable or to meet the assumptions of a particular method.
 
 *[Numerical data]: Data represented as numbers, such as measurements, counts, or continuous values.
 
@@ -540,6 +570,8 @@ Do not manually edit this file.
 
 *[Open-weight model]: A model whose trained weights are published so that others can download, inspect, and adapt them. [...]
 
+*[Open-weight models]: A model whose trained weights are published so that others can download, inspect, and adapt them. [...]
+
 *[OpenDP]: A software library available for R and Python that supports implementing differential privacy in statistical analyses. [...]
 
 *[opendp]: A software library available for R and Python that supports implementing differential privacy in statistical analyses. [...]
@@ -547,6 +579,8 @@ Do not manually edit this file.
 *[OpenRefine]: An interactive tool for cleaning, transforming, and reconciling messy tabular data.
 
 *[Outlier]: An observation that differs substantially from the other observations in a dataset. [...]
+
+*[Outliers]: An observation that differs substantially from the other observations in a dataset. [...]
 
 *[outliers]: An observation that differs substantially from the other observations in a dataset. [...]
 
@@ -638,6 +672,10 @@ Do not manually edit this file.
 
 *[Repository]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
 
+*[Repositories]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
+
+*[repositories]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
+
 *[repository]: A managed system or service for storing, preserving, and providing access to research outputs such as data, code, images, publications, or models. [...]
 
 *[Reproducibility]: The ability to recreate computational research results by repeating a documented workflow with the same data or inputs. [...]
@@ -662,9 +700,9 @@ Do not manually edit this file.
 
 *[Seaborn]: A Python library built on Matplotlib that simplifies statistical visualizations, including comparisons between variables, distributions, and correlations.
 
-*[Secure enclave]: A computing environment configured and documented specifically for restricted or sensitive data, with controlled access, monitoring, and limited data movement. [...]
+*[Secure enclave]: A computing environment configured and documented specifically for restricted or sensitive data, with access control, monitoring, and limited data movement. [...]
 
-*[secure enclaves]: A computing environment configured and documented specifically for restricted or sensitive data, with controlled access, monitoring, and limited data movement. [...]
+*[secure enclaves]: A computing environment configured and documented specifically for restricted or sensitive data, with access control, monitoring, and limited data movement. [...]
 
 *[Shared filesystem]: A storage system that allows multiple users, computers, or compute nodes to access the same files.
 
@@ -712,6 +750,8 @@ Do not manually edit this file.
 
 *[Test set]: A separate portion of a dataset reserved for evaluating a model's final performance on data not used for training or tuning. [...]
 
+*[test set]: A separate portion of a dataset reserved for evaluating a model's final performance on data not used for training or tuning. [...]
+
 *[Text tokenization]: Splitting text into smaller units—such as words, subwords, or characters—for processing by language models or other NLP systems.
 
 *[text tokenization]: Splitting text into smaller units—such as words, subwords, or characters—for processing by language models or other NLP systems.
@@ -721,6 +761,8 @@ Do not manually edit this file.
 *[Tidyverse]: A collection of R packages designed for data import, cleaning, transformation, visualization, and analysis.
 
 *[Time-series data]: Observations recorded in temporal order, often at regular intervals.
+
+*[time-series data]: Observations recorded in temporal order, often at regular intervals.
 
 *[Tracked transformation]: A documented and versioned change applied to data, such as filtering, normalization, labeling, or feature creation.
 
@@ -733,6 +775,8 @@ Do not manually edit this file.
 *[Transformer]: A model architecture that uses attention mechanisms to weigh the relationships among elements of an input sequence. [...]
 
 *[transformer]: A model architecture that uses attention mechanisms to weigh the relationships among elements of an input sequence. [...]
+
+*[Transformers]: A model architecture that uses attention mechanisms to weigh the relationships among elements of an input sequence. [...]
 
 *[Underfitting]: When a model is too simple, or trained too briefly, to capture the patterns in its training data. [...]
 

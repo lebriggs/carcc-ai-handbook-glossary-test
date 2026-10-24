@@ -292,7 +292,7 @@ Two or more records that represent the same observation or entity.
 
 ### DVC
 
-Data Version Control (DVC) is an open-source software tool for tracking datasets, data transformations, and machine learning artifacts alongside code.
+[Data Version Control](https://dvc.org/) (DVC) is an open-source software tool for tracking datasets, data transformations, and machine learning artifacts alongside code.
 
 ### Early stopping
 
@@ -492,7 +492,7 @@ A large language model (LLM) is trained on large collections of text to interpre
 
 ### LoRA
 
-Low-rank adaptation (LoRA) is a parameter-efficient fine-tuning method that inserts small trainable components into a model while leaving the original weights unchanged. LoRA reduces memory and computing requirements compared with full fine-tuning, potentially allowing researchers to use fewer GPUs.
+Low-rank adaptation (LoRA) is a parameter-efficient fine-tuning method that inserts small trainable components into a model while leaving the original model weights unchanged. LoRA reduces memory and computing requirements compared with full fine-tuning, potentially allowing researchers to use fewer GPUs.
 
 ### Loss function
 
@@ -532,7 +532,7 @@ A document describing a trained AI model’s intended uses, training and evaluat
 
 ### Model evaluation
 
-The process of assessing a model’s performance and behavior using data, metrics, and analyses suited to its intended use. Evaluation can include benchmarks and checks for bias or fairness when comparing models.
+The process of assessing model performance and behavior using data, metrics, and analyses suited to its intended use. Evaluation can include benchmarks and checks for bias or fairness when comparing models.
 
 ### Model license
 
@@ -552,7 +552,7 @@ A managed service for publishing, discovering, and downloading trained models to
 
 ### Model serving
 
-Making a trained AI model available to receive inputs and return predictions or results to users or applications. Model serving often uses an API to allow other software to interact with the model.
+Making a trained AI model available for inference. Users or applications send inputs to the model and receive predictions or results, often through an API.
 
 ### Model weights
 
@@ -744,7 +744,7 @@ A Python library built on Matplotlib that simplifies statistical visualizations,
 
 ### Secure enclave
 
-A computing environment configured and documented specifically for restricted or sensitive data, with controlled access, monitoring, and limited data movement. Enclaves allow projects to work with regulated data on institutional infrastructure rather than general-purpose systems.
+A computing environment configured and documented specifically for restricted or sensitive data, with access control, monitoring, and limited data movement. Enclaves allow projects to work with regulated data on institutional infrastructure rather than general-purpose systems.
 
 ### Shared filesystem
 
@@ -800,7 +800,7 @@ An assessment of whether a proposed approach can actually be carried out with th
 
 ### Test set
 
-A separate portion of a dataset reserved for evaluating a model's final performance on data not used for training or tuning. Keeping the test set separate from the training and validation sets helps ensure an independent assessment of model performance.
+A separate portion of a dataset reserved for evaluating a model's final performance on data not used for training or tuning. Keeping the test set separate from the training set and validation set helps ensure an independent assessment of model performance.
 
 ### Text tokenization
 
@@ -820,7 +820,7 @@ A documented and versioned change applied to data, such as filtering, normalizat
 
 ### Training set
 
-The portion of a dataset used to train a model by adjusting its parameters based on the examples provided. Keeping the training set separate from the validation and test sets helps prevent evaluation results from being influenced by data used to train the model.
+The portion of a dataset used to train a model by adjusting its parameters based on the examples provided. Keeping the training set separate from the validation set and test set helps prevent evaluation results from being influenced by data used to train the model.
 
 ### Transformer
 
@@ -832,7 +832,7 @@ When a model is too simple, or trained too briefly, to capture the patterns in i
 
 ### Validation set
 
-A separate portion of a dataset used during model development to evaluate performance and guide tuning decisions. Keeping the validation set separate from the training and test sets allows researchers to tune the model without using data reserved for final evaluation.
+A separate portion of a dataset used during model development to evaluate performance and guide tuning decisions. Keeping the validation set separate from the training set and test set allows researchers to tune the model without using data reserved for final evaluation.
 
 ### Version control
 
